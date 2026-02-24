@@ -149,6 +149,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "KenonAttack",
+                    "type": "Button",
+                    "id": "f7baf388-c938-473c-b31f-75acb25a1cfc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -622,6 +631,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "PotionsMana",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e880595-498a-480a-a56f-345a145a5964",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "KenonAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

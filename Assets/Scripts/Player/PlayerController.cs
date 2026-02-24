@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     public float _speedChangeRate = 10;
     public float targetAngle;
 
+    //MovementAnimation
+    public float _animationSpeed;
+
     //Suelo
     [Header("Ground")]
     public Transform _sensorPosition;
@@ -67,7 +70,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         _controller = GetComponent<CharacterController>();
-        //_animator = GetComponentInChildren<Animator>();
+        _animator = GetComponent<Animator>();
 
         _moveAction = InputSystem.actions["Move"];
         _jumpAction = InputSystem.actions["Jump"];
@@ -92,7 +95,9 @@ public class PlayerController : MonoBehaviour
         if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown)
         {
             StartCoroutine(Dash());
-        }        
+        }     
+
+        //_animator.SetBool("Jump", true);   
 
         Movement();
 
@@ -115,6 +120,15 @@ public class PlayerController : MonoBehaviour
 
         _speed = Mathf.SmoothDamp(_speed, targetSpeed * direction.magnitude, ref _smoothSpeed, 0.1f);
 
+        _animationSpeed = Mathf.Lerp(_animationSpeed, targetSpeed, Time.deltaTime * _speedChangeRate);
+
+        if(_animationSpeed < 0.1f)
+        {
+            _animationSpeed = 0;
+        }
+
+        _animator.SetFloat("Speed", _animationSpeed);
+
         if (direction != Vector3.zero)
         {
             targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
@@ -126,26 +140,28 @@ public class PlayerController : MonoBehaviour
 
         Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
         _controller.Move(_speed * Time.deltaTime * moveDirection.normalized  + _playerGravity * Time.deltaTime);
+
     }
 
         void Jump()
     {
         if(_jumpTimeOutDelta <= 0)
         {
+            _animator.SetTrigger("Jump");
             _playerGravity.y = Mathf.Sqrt(_jumpHeight * -2 * _gravity);
         }
     }
 
     void Gravity()
     {
-        //_animator.SetBool("Grounded", IsGrounded());
+        _animator.SetBool("Grounded", IsGrounded());
 
         if(IsGrounded())
         {
             _fallTimeOutDelta = fallTimeOut;
             
             //_animator.SetBool("Jump", false);
-            //_animator.SetBool("Fall", false);
+            _animator.SetBool("Fall", false);
             if(_playerGravity.y < 0)
             {
                 _playerGravity.y = -2;
@@ -166,11 +182,16 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                //_animator.SetBool("Fall", true);
+                _animator.SetBool("Fall", true);
             }
             
             _playerGravity.y += _gravity * Time.deltaTime;
         }
+    }
+
+    bool IsGrounded()
+    {
+        return Physics.CheckSphere(_sensorPosition.position, _sensorRadius, _groundLayer);
     }
 
     IEnumerator Dash()
@@ -195,11 +216,6 @@ public class PlayerController : MonoBehaviour
         isDashOnCooldown = true;
         yield return new WaitForSecondsRealtime(dashCooldown);
         isDashOnCooldown = false;
-    }
-
-    bool IsGrounded()
-    {
-        return Physics.CheckSphere(_sensorPosition.position, _sensorRadius, _groundLayer);
     }
 
     void Interact()

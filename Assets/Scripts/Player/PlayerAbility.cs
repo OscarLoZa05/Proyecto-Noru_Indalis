@@ -58,6 +58,7 @@ public class PlayerAbility : MonoBehaviour
     public bool canKenonAttack = false;
     [SerializeField] private Vector3 hitBoxKenonLocalOffset;
     [SerializeField] private Vector3 hitBoxKenonSize;
+    [SerializeField] private GameObject _kenonModel;
 
     PlayerController _playerController;
     PlayerResources _playerResource;
@@ -71,6 +72,7 @@ public class PlayerAbility : MonoBehaviour
         _ability2 = InputSystem.actions["WaterState"];
         _ability3 = InputSystem.actions["FireState"];
         _ability4 = InputSystem.actions["FireAttack"];
+        _kenonAbility = InputSystem.actions["KenonAttack"];
     }
 
     // Update is called once per frame
@@ -110,6 +112,10 @@ public class PlayerAbility : MonoBehaviour
             ability4Used = true;
             currentCooldown4 = 0;
             //imageAbility4.fillAmount = 0;
+        }
+        if(_kenonAbility.WasPressedThisFrame())
+        {
+            StartCoroutine(Kenon());
         }
 
         if(ability1Used)
@@ -217,6 +223,14 @@ public class PlayerAbility : MonoBehaviour
             _playerResource.currentHealth = Mathf.Clamp(_playerResource.currentHealth, 0, _playerResource.maxHealth);
             yield return new WaitForSeconds(2);
         }
+    }
+
+    IEnumerator Kenon()
+    {
+        _kenonModel.SetActive(true);
+        yield return new WaitForSeconds(2);
+        _kenonModel.SetActive(false);
+
     }
 
     void ManaUsed(int ManaWasted)
