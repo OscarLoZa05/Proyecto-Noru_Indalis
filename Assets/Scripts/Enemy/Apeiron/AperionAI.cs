@@ -22,7 +22,7 @@ public class AperionAI : MonoBehaviour
     //Attacking
     [SerializeField] private float _attackRange = 2f;
     [SerializeField] private float _attackTimer;
-    [SerializeField] private float _attackDilay = 5;
+    [SerializeField] private float _attackDelay = 5;
 
     //Waiting
     
@@ -36,7 +36,7 @@ public class AperionAI : MonoBehaviour
     {
         currentState = EnemyState.Patrolling;
         _enemyAgent.SetDestination(_player.position);
-        _attackTimer = _attackDilay;
+        _attackTimer = _attackDelay;
         PatrollingPoints();
     }
 
@@ -95,7 +95,6 @@ public class AperionAI : MonoBehaviour
         }
         _enemyAgent.SetDestination(_player.position);
 
-
     }
 
     void Attacking()
@@ -106,17 +105,13 @@ public class AperionAI : MonoBehaviour
             return;
         }
 
+        _enemyAgent.SetDestination(_player.position);
         _attackTimer += Time.deltaTime;
-        if(_attackTimer > _attackDilay)
+        if(_attackTimer > _attackDelay)
             {
                 Debug.Log("Attacking!");
                 _attackTimer = 0;
             }
-    }
-
-    void Waiting()
-    {
-        
     }
 
     public bool OnRange(float distance)
