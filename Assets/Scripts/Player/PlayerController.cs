@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _jumpAction;
     private InputAction _interactAction;
     private InputAction _dashAction;
+    private InputAction _aimingAction;
     
     //Movimiento
     [Header("Movement")]
@@ -67,6 +68,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 _lastMoveDirection;
     private bool isDashing = false;
 
+    //Camara
+    [Header("Apuntado")]
+    [SerializeField] private bool _isAiming = false;
+
     void Awake()
     {
         _controller = GetComponent<CharacterController>();
@@ -77,6 +82,8 @@ public class PlayerController : MonoBehaviour
         _interactAction = InputSystem.actions["Interact"];
         _dashAction = InputSystem.actions["Dash"];
 
+        _aimingAction = InputSystem.actions["Aiming"];
+
         _mainCamera = Camera.main.transform;
     }
     void Update()
@@ -84,17 +91,22 @@ public class PlayerController : MonoBehaviour
         _moveValue = _moveAction.ReadValue<Vector2>();
 
         //Acciones
-        if (_jumpAction.WasPerformedThisFrame() && IsGrounded())
+        if(_jumpAction.WasPerformedThisFrame() && IsGrounded())
         {
             Jump();
         }
-        if (_interactAction.WasPressedThisFrame())
+        if(_interactAction.WasPressedThisFrame())
         {
             Interact();
         }
         if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown)
         {
             StartCoroutine(Dash());
+        }
+
+        if(_aimingAction.WasPressedThisFrame())
+        {
+            Aiming();
         }     
 
         //_animator.SetBool("Jump", true);   
@@ -109,41 +121,69 @@ public class PlayerController : MonoBehaviour
     {
         if(isDashing) return;
         
-        Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
-
-        float targetSpeed = _playerSpeed;
-        
-        if(direction == Vector3.zero)
+        if(_isAiming == false)
         {
-            targetSpeed = 0;
+            Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
+
+            float targetSpeed = _playerSpeed;
+            
+            if(direction == Vector3.zero)
+            {
+                targetSpeed = 0;
+            }
+
+            _speed = Mathf.SmoothDamp(_speed, targetSpeed * direction.magnitude, ref _smoothSpeed, 0.1f);
+
+            _animationSpeed = Mathf.Lerp(_animationSpeed, targetSpeed, Time.deltaTime * _speedChangeRate);
+
+            if(_animationSpeed < 0.1f)
+            {
+                _animationSpeed = 0;
+            }
+
+            _animator.SetFloat("Speed", _animationSpeed);
+
+            if (direction != Vector3.zero)
+            {
+                targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
+                float smoothAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, _smoothTime);
+                transform.rotation = Quaternion.Euler(0, smoothAngle, 0);
+
+                _lastMoveDirection = (Quaternion.Euler(0, targetAngle, 0) * Vector3.forward).normalized;
+            }
+
+            Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
+            _controller.Move(_speed * Time.deltaTime * moveDirection.normalized  + _playerGravity * Time.deltaTime);
         }
-
-        _speed = Mathf.SmoothDamp(_speed, targetSpeed * direction.magnitude, ref _smoothSpeed, 0.1f);
-
-        _animationSpeed = Mathf.Lerp(_animationSpeed, targetSpeed, Time.deltaTime * _speedChangeRate);
-
-        if(_animationSpeed < 0.1f)
+        else if(_isAiming == true)
         {
-            _animationSpeed = 0;
-        }
+            
+            Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
 
-        _animator.SetFloat("Speed", _animationSpeed);
+            //_animator.SetFloat("Horizontal", _moveValue.x);
+            //_animator.SetFloat("Vertical", _moveValue.y);
 
-        if (direction != Vector3.zero)
-        {
-            targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
-            float smoothAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, _smoothTime);
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
+            float smoothAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, _mainCamera.eulerAngles.y, ref _turnSmoothVelocity, _smoothTime);
+
             transform.rotation = Quaternion.Euler(0, smoothAngle, 0);
 
-            _lastMoveDirection = (Quaternion.Euler(0, targetAngle, 0) * Vector3.forward).normalized;
+            if (direction != Vector3.zero)
+            {
+                Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
+
+                _controller.Move(moveDirection.normalized * _playerSpeed * Time.deltaTime);
+            } 
         }
-
-        Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
-        _controller.Move(_speed * Time.deltaTime * moveDirection.normalized  + _playerGravity * Time.deltaTime);
-
     }
 
-        void Jump()
+    void Aiming()
+    {
+        _isAiming = !_isAiming;
+        Debug.Log(_isAiming);
+    }
+
+    void Jump()
     {
         if(_jumpTimeOutDelta <= 0)
         {

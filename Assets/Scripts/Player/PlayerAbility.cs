@@ -172,7 +172,7 @@ public class PlayerAbility : MonoBehaviour
             {
                 if(enemy.transform.gameObject.layer == 7)
                 {
-                    Rigidbody _enemyRigidBody = enemy.GetComponent<Rigidbody>();
+                    AperionAI _apeiron = enemy.GetComponent<AperionAI>();
 
                     Vector3 directionToEnemy = (enemy.transform.position - transform.position).normalized;
 
@@ -183,8 +183,10 @@ public class PlayerAbility : MonoBehaviour
 
                     Vector3 force = (directionToEnemy * forceMultiplier);
 
-                    _enemyRigidBody.AddForce(0, 2, 0, ForceMode.Impulse);
-                    _enemyRigidBody.AddForce(force * playerForceImpulse, ForceMode.Impulse);
+                    //_apeiron.ApplyKnockback(force);
+
+                    //_enemyRigidBody.AddForce(0, 2, 0, ForceMode.Impulse);
+                    //_enemyRigidBody.AddForce(force * playerForceImpulse, ForceMode.Impulse);
                     
 
                     Debug.Log(force);

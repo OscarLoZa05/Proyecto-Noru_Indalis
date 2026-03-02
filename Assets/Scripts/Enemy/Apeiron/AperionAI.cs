@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.AI;
 
 public class AperionAI : MonoBehaviour
@@ -127,7 +128,6 @@ public class AperionAI : MonoBehaviour
             return false;
         }  
     }
-
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
