@@ -1156,12 +1156,12 @@ TextureImporter:
       name: Sprite Sheet Interfacer_48
       rect:
         serializedVersion: 2
-        x: 1631
-        y: 1453
+        x: 1633
+        y: 1452
         width: 249
         height: 241
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1183,7 +1183,7 @@ TextureImporter:
         width: 266
         height: 264
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

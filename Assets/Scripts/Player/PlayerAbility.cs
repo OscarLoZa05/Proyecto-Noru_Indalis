@@ -13,7 +13,7 @@ public class PlayerAbility : MonoBehaviour
     private InputAction _ability3;
     private InputAction _ability4;
     private InputAction _kenonAbility;
-    /*
+    
     //Canvas
     [Header("Canvas")]
     public Image manaBarImage;
@@ -21,7 +21,8 @@ public class PlayerAbility : MonoBehaviour
     public Image imageAbility2;
     public Image imageAbility3;
     public Image imageAbility4;
-    */
+    public Image kenonImage;
+    
 
     //WaterAbilities
     [Header("WAttack")]
@@ -87,7 +88,7 @@ public class PlayerAbility : MonoBehaviour
             ManaUsed(manaWasted1);
             ability1Used = true;
             currentCooldown1 = 0;
-            //imageAbility1.fillAmount = 0;
+            imageAbility1.fillAmount = 0;
         }
         if(_ability2.WasPressedThisFrame() && ability2Used == false && _playerResource.currentMana >= manaWasted2)
         {
@@ -95,7 +96,7 @@ public class PlayerAbility : MonoBehaviour
             ManaUsed(manaWasted2);
             ability2Used = true;
             currentCooldown2 = 0;
-            //imageAbility2.fillAmount = 0;
+            imageAbility2.fillAmount = 0;
         }
         if(_ability3.WasPressedThisFrame() && ability3Used == false && _playerResource.currentMana >= manaWasted3)
         {
@@ -103,7 +104,7 @@ public class PlayerAbility : MonoBehaviour
             ManaUsed(manaWasted3);
             ability3Used = true;
             currentCooldown3 = 0;
-            //imageAbility3.fillAmount = 0;
+            imageAbility3.fillAmount = 0;
         }
         if(_ability4.WasPressedThisFrame() && ability4Used == false && _playerResource.currentMana >= manaWasted4)
         {
@@ -111,7 +112,7 @@ public class PlayerAbility : MonoBehaviour
             ManaUsed(manaWasted4);
             ability4Used = true;
             currentCooldown4 = 0;
-            //imageAbility4.fillAmount = 0;
+            imageAbility4.fillAmount = 0;
         }
         if(_kenonAbility.WasPressedThisFrame())
         {
@@ -122,7 +123,7 @@ public class PlayerAbility : MonoBehaviour
         {
             currentCooldown1 += Time.deltaTime;
             float progressAbility1 = currentCooldown1 / cooldownAbility1;
-            //imageAbility1.fillAmount = progressAbility1;
+            imageAbility1.fillAmount = progressAbility1;
 
             if(currentCooldown1 >= cooldownAbility1)
             {
@@ -133,7 +134,7 @@ public class PlayerAbility : MonoBehaviour
         {
             currentCooldown2 += Time.deltaTime;
             float progressAbility2 = currentCooldown2 / cooldownAbility2;
-            //imageAbility2.fillAmount = progressAbility2;
+            imageAbility2.fillAmount = progressAbility2;
 
             if(currentCooldown2 >= cooldownAbility2)
             {
@@ -144,7 +145,7 @@ public class PlayerAbility : MonoBehaviour
         {
             currentCooldown3 += Time.deltaTime;
             float progressAbility3 = currentCooldown3 / cooldownAbility3;
-            //imageAbility3.fillAmount = progressAbility3;
+            imageAbility3.fillAmount = progressAbility3;
 
             if(currentCooldown3 >= cooldownAbility3)
             {
@@ -155,7 +156,18 @@ public class PlayerAbility : MonoBehaviour
         {
             currentCooldown4 += Time.deltaTime;
             float progressAbility4 = currentCooldown4 / cooldownAbility4;
-            //imageAbility4.fillAmount = progressAbility4;
+            imageAbility4.fillAmount = progressAbility4;
+
+            if(currentCooldown4 >= cooldownAbility4)
+            {
+                ability4Used = false;
+            }
+        }
+        if(ability4Used)
+        {
+            currentCooldown4 += Time.deltaTime;
+            float progressAbility4 = currentCooldown4 / cooldownAbility4;
+            imageAbility4.fillAmount = progressAbility4;
 
             if(currentCooldown4 >= cooldownAbility4)
             {
