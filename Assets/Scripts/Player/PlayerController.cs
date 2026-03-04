@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     //MovementAnimation
     public float _animationSpeed;
+    private float _smoothSpeed = 0f;
 
     //Suelo
     [Header("Ground")]
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour
     float _jumpTimeOutDelta;
     float _fallTimeOutDelta;
     
+    //Dash
     [Header("Dash Cooldown")]
     [SerializeField] private float dashCooldown = 1.25f;
     private bool isDashOnCooldown = false;
@@ -70,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
     //Camara
     [Header("Apuntado")]
-    [SerializeField] private bool _isAiming = false;
+    public bool isAiming = false;
 
     void Awake()
     {
@@ -91,7 +93,7 @@ public class PlayerController : MonoBehaviour
         _moveValue = _moveAction.ReadValue<Vector2>();
 
         //Acciones
-        if(_jumpAction.WasPerformedThisFrame() && IsGrounded())
+        if(_jumpAction.WasPerformedThisFrame() && IsGrounded() && isAiming == false)
         {
             Jump();
         }
@@ -116,13 +118,14 @@ public class PlayerController : MonoBehaviour
         Gravity();
     }
 
-    private float _smoothSpeed = 0f;
+    
     void Movement()
     {
         if(isDashing) return;
         
-        if(_isAiming == false)
+        if(isAiming == false)
         {
+            
             Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
 
             float targetSpeed = _playerSpeed;
@@ -155,7 +158,7 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
             _controller.Move(_speed * Time.deltaTime * moveDirection.normalized  + _playerGravity * Time.deltaTime);
         }
-        else if(_isAiming == true)
+        else if(isAiming == true)
         {
             
             Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
@@ -179,8 +182,9 @@ public class PlayerController : MonoBehaviour
 
     void Aiming()
     {
-        _isAiming = !_isAiming;
-        Debug.Log(_isAiming);
+        isAiming = !isAiming;
+        _animator.SetBool("IsAiming", isAiming);
+        Debug.Log(isAiming);
     }
 
     void Jump()

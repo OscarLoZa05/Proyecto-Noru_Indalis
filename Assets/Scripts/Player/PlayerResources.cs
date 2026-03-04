@@ -5,8 +5,8 @@ public class PlayerResources : MonoBehaviour
 {
 
     //Inputs
-    private InputAction healthPotionInput;
-    private InputAction manaPotionInput;
+    private InputAction _healthPotionInput;
+    private InputAction _manaPotionInput;
     
     //ManaBar
     [Header("Mana")]
@@ -36,8 +36,8 @@ public class PlayerResources : MonoBehaviour
     {
         _playerAbility = GetComponent<PlayerAbility>();
 
-        healthPotionInput = InputSystem.actions["PotionsHealth"];
-        manaPotionInput = InputSystem.actions["PotionsMana"];
+        _healthPotionInput = InputSystem.actions["PotionsHealth"];
+        _manaPotionInput = InputSystem.actions["PotionsMana"];
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

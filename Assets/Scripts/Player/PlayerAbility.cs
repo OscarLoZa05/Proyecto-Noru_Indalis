@@ -7,13 +7,16 @@ using Unity.VisualScripting;
 public class PlayerAbility : MonoBehaviour
 {
 
+    #region Inputs
     //Inputs
     private InputAction _ability1;
     private InputAction _ability2;
     private InputAction _ability3;
     private InputAction _ability4;
     private InputAction _kenonAbility;
+    #endregion
     
+    #region Canvas
     //Canvas
     [Header("Canvas")]
     public Image manaBarImage;
@@ -22,8 +25,9 @@ public class PlayerAbility : MonoBehaviour
     public Image imageAbility3;
     public Image imageAbility4;
     public Image kenonImage;
+    #endregion
     
-
+    #region WaterAbility
     //WaterAbilities
     [Header("WAttack")]
     public float cooldownAbility1 = 15;
@@ -38,7 +42,9 @@ public class PlayerAbility : MonoBehaviour
     public float currentCooldown2 = 10;
     public bool ability2Used = false;
     public int manaWasted2 = 25;
+    #endregion
 
+    #region FireAbility
     //FireAbilities
     [Header("FState")]
     public float cooldownAbility3 = 10;
@@ -54,16 +60,21 @@ public class PlayerAbility : MonoBehaviour
     [SerializeField] private Vector3 hitBoxLocalOffset = new Vector3(0f, 1f, 3f);
     [SerializeField] private Vector3 hitBoxSize = new Vector3(5f, 4f, 10f); 
     public int manaWasted4 = 50;
+    #endregion
 
+    #region Kenon
     [Header("Kenon")]
     public bool canKenonAttack = false;
     [SerializeField] private Vector3 hitBoxKenonLocalOffset;
     [SerializeField] private Vector3 hitBoxKenonSize;
     [SerializeField] private GameObject _kenonModel;
+    #endregion
 
+    #region Components
     PlayerController _playerController;
     PlayerResources _playerResource;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    #endregion
+
     void Awake()
     {
         _playerController = GetComponent<PlayerController>();
@@ -82,6 +93,7 @@ public class PlayerAbility : MonoBehaviour
 
         //fireAttackRange  = transform.rotation * rangeAttack;
 
+        #region Abilities
         if(_ability1.WasPressedThisFrame() && ability1Used == false && _playerResource.currentMana >= manaWasted1)
         {
             WAttack();
@@ -118,7 +130,9 @@ public class PlayerAbility : MonoBehaviour
         {
             StartCoroutine(Kenon());
         }
+        #endregion 
 
+        #region UI Abilities
         if(ability1Used)
         {
             currentCooldown1 += Time.deltaTime;
@@ -174,8 +188,10 @@ public class PlayerAbility : MonoBehaviour
                 ability4Used = false;
             }
         }
+        #endregion
     }
 
+    #region Water
     void WAttack()
     {
         Debug.Log("Habilidad 1 Usada");
@@ -213,7 +229,9 @@ public class PlayerAbility : MonoBehaviour
         yield return new WaitForSeconds(5);
         _playerController._playerSpeed = 5;
     }
+    #endregion
 
+    #region Fire
     void FAttack()
     {
         Debug.Log("Habilidad 3 Usada");
@@ -238,14 +256,16 @@ public class PlayerAbility : MonoBehaviour
             yield return new WaitForSeconds(2);
         }
     }
+    #endregion
 
+    #region Kenon
     IEnumerator Kenon()
     {
         _kenonModel.SetActive(true);
         yield return new WaitForSeconds(2);
         _kenonModel.SetActive(false);
-
     }
+    #endregion
 
     void ManaUsed(int ManaWasted)
     {
