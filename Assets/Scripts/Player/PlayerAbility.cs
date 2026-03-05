@@ -19,7 +19,6 @@ public class PlayerAbility : MonoBehaviour
     #region Canvas
     //Canvas
     [Header("Canvas")]
-    public Image manaBarImage;
     public Image imageAbility1;
     public Image imageAbility2;
     public Image imageAbility3;
@@ -42,6 +41,7 @@ public class PlayerAbility : MonoBehaviour
     public float currentCooldown2 = 10;
     public bool ability2Used = false;
     public int manaWasted2 = 25;
+    public int waterSpeed = 8;
     #endregion
 
     #region FireAbility
@@ -52,6 +52,7 @@ public class PlayerAbility : MonoBehaviour
     public int chargeAbility;
     public bool ability3Used = false;
     public int manaWasted3 = 50;
+    public int lifeHealed = 10;
 
     [Header("FAttack")]
     public float cooldownAbility4 = 10;
@@ -225,7 +226,7 @@ public class PlayerAbility : MonoBehaviour
     IEnumerator WState()
     {
         Debug.Log("Habilidad 2 Usada");
-        _playerController._playerSpeed = 20;
+        _playerController._playerSpeed = waterSpeed;
         yield return new WaitForSeconds(5);
         _playerController._playerSpeed = 5;
     }
@@ -249,10 +250,11 @@ public class PlayerAbility : MonoBehaviour
     {
         Debug.Log("Habilidad 4 Usada");
 
-        for (chargeAbility = 0; chargeAbility <= 4; chargeAbility++)
+        for (chargeAbility = 0; chargeAbility <= 3; chargeAbility++)
         {
-            _playerResource.currentHealth += 10;
+            _playerResource.currentHealth += lifeHealed;
             _playerResource.currentHealth = Mathf.Clamp(_playerResource.currentHealth, 0, _playerResource.maxHealth);
+            _playerResource.UpdateHealthBar();
             yield return new WaitForSeconds(2);
         }
     }
@@ -270,13 +272,9 @@ public class PlayerAbility : MonoBehaviour
     void ManaUsed(int ManaWasted)
     {
         _playerResource.currentMana -= ManaWasted;
-        
         _playerResource.UpdateManaBar();
     }
     
-
-
-
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;

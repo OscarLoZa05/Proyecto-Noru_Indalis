@@ -13,11 +13,13 @@ public class PlayerResources : MonoBehaviour
     public float currentMana = 100;
     public float maxMana = 100;
     public float mana;
+    public Image manaBarImage;
 
     //ManaHealth
     [Header("Health")]
     public float maxHealth = 100;
     public float currentHealth = 100;
+    public Image healthBarImage;
 
     [Header("TextsPotions")]
     public Text manaText;
@@ -27,8 +29,6 @@ public class PlayerResources : MonoBehaviour
     [Header("Potions")]
     public int manaPotions = 0;
     public int healthPotions = 0;
-    public int healthPotionAmount = 25;
-    public int manaPotionAmount = 25;
 
     private PlayerAbility _playerAbility;
 
@@ -39,13 +39,13 @@ public class PlayerResources : MonoBehaviour
         _healthPotionInput = InputSystem.actions["PotionsHealth"];
         _manaPotionInput = InputSystem.actions["PotionsMana"];
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
@@ -53,6 +53,21 @@ public class PlayerResources : MonoBehaviour
     public void UpdateManaBar()
     {
         float mana = currentMana / maxMana;
-        //manaBarImage.fillAmount = currentMana;
+        manaBarImage.fillAmount = mana;
     }
+    public void ManaText()
+    {
+        manaText.text = "x" + manaPotions.ToString();
+    } 
+    
+    public void UpdateHealthBar()
+    {
+        float life = currentHealth / maxHealth;
+        healthBarImage.fillAmount = life;
+    }
+
+    public void HealthText()
+    {
+        healthText.text = "x" + healthPotions.ToString();
+    } 
 }

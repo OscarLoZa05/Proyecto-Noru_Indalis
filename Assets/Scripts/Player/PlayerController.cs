@@ -1,6 +1,9 @@
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.Scripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController _controller;
     private Animator _animator;
     private Transform _mainCamera;
+    private PlayerResources _playerResource;
 
     //Inputs
     public Vector2 _moveValue;
@@ -17,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private InputAction _interactAction;
     private InputAction _dashAction;
     private InputAction _aimingAction;
+    private InputAction _manaAction;
+    private InputAction _healthAction;
+    private InputAction Prueba;
     
     //Movimiento
     [Header("Movement")]
@@ -73,16 +80,26 @@ public class PlayerController : MonoBehaviour
     //Camara
     [Header("Apuntado")]
     public bool isAiming = false;
+    [SerializeField] private GameObject _crosshair;
+
+    //Potions
+    [Header("Potions")]
+    [SerializeField] private int _manaReg = 25;
+    [SerializeField] private int _healthReg = 25;
 
     void Awake()
     {
         _controller = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
+        _playerResource = GetComponent<PlayerResources>();
 
         _moveAction = InputSystem.actions["Move"];
         _jumpAction = InputSystem.actions["Jump"];
         _interactAction = InputSystem.actions["Interact"];
         _dashAction = InputSystem.actions["Dash"];
+        _manaAction = InputSystem.actions["PotionsMana"];
+        _healthAction = InputSystem.actions["PotionsHealth"];
+        Prueba = InputSystem.actions["Hola"];
 
         _aimingAction = InputSystem.actions["Aiming"];
 
@@ -109,6 +126,21 @@ public class PlayerController : MonoBehaviour
         if(_aimingAction.WasPressedThisFrame())
         {
             Aiming();
+        }
+        if(_manaAction.WasPressedThisFrame())
+        {
+            Mana();
+        }
+        if(_healthAction.WasPressedThisFrame())
+        {
+            Health();
+        }
+
+
+
+        if(Prueba.WasPressedThisFrame())
+        {
+            LoseHealth();
         }     
 
         //_animator.SetBool("Jump", true);   
@@ -163,8 +195,8 @@ public class PlayerController : MonoBehaviour
             
             Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
 
-            //_animator.SetFloat("Horizontal", _moveValue.x);
-            //_animator.SetFloat("Vertical", _moveValue.y);
+            _animator.SetFloat("Horizontal", _moveValue.x);
+            _animator.SetFloat("Vertical", _moveValue.y);
 
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
             float smoothAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, _mainCamera.eulerAngles.y, ref _turnSmoothVelocity, _smoothTime);
@@ -183,6 +215,7 @@ public class PlayerController : MonoBehaviour
     void Aiming()
     {
         isAiming = !isAiming;
+        _crosshair.SetActive(isAiming);
         _animator.SetBool("IsAiming", isAiming);
         Debug.Log(isAiming);
     }
@@ -276,6 +309,27 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
+    }
+
+    void LoseHealth()
+    {
+        _playerResource.currentHealth -= 25;
+        _playerResource.UpdateHealthBar();
+    }
+
+    void Mana()
+    {
+        _playerResource.currentMana += _manaReg;
+        _playerResource.manaPotions --;
+        _playerResource.UpdateManaBar();
+        _playerResource.ManaText();
+    }
+    void Health()
+    {
+        _playerResource.currentHealth += _healthReg;
+        _playerResource.healthPotions --;
+        _playerResource.UpdateHealthBar();
+        _playerResource.HealthText();
     }
 
     void OnDrawGizmos()
