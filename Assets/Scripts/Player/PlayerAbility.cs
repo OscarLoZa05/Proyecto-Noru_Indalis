@@ -228,7 +228,7 @@ public class PlayerAbility : MonoBehaviour
         Debug.Log("Habilidad 2 Usada");
         _playerController._playerSpeed = waterSpeed;
         yield return new WaitForSeconds(5);
-        _playerController._playerSpeed = 5;
+        _playerController._playerSpeed = 9;
     }
     #endregion
 
