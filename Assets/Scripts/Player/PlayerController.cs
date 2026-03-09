@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     //Movimiento
     [Header("Movement")]
     public float _playerSpeed = 9;
+    public float _playerMovementSpeed = 9;
     private float _playerForce = 2;
     private float _pushForce = 10;
     private float _smoothTime = 0.2f;
@@ -134,8 +135,6 @@ public class PlayerController : MonoBehaviour
         {
             LoseHealth();
         }     
-
-        //_animator.SetBool("Jump", true);   
 
         Movement();
 

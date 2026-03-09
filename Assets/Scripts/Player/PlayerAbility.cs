@@ -42,7 +42,8 @@ public class PlayerAbility : MonoBehaviour
     public float currentCooldown2 = 10;
     public bool ability2Used = false;
     public int manaWasted2 = 25;
-    public int waterSpeed = 8;
+    public int waterSpeed = 11;
+    public float boostState = 4;
     #endregion
 
     #region FireAbility
@@ -230,8 +231,8 @@ public class PlayerAbility : MonoBehaviour
     {
         Debug.Log("Habilidad 2 Usada");
         _playerController._playerSpeed = waterSpeed;
-        yield return new WaitForSeconds(5);
-        _playerController._playerSpeed = 9;
+        yield return new WaitForSeconds(boostState);
+        _playerController._playerSpeed = _playerController._playerMovementSpeed;
     }
     #endregion
 
@@ -240,13 +241,8 @@ public class PlayerAbility : MonoBehaviour
     {
         Debug.Log("Habilidad 3 Usada");
 
-        Vector3 hitboxWorldCenter = transform.TransformPoint(hitBoxLocalOffset);
 
-        /*Collider[] enemies = Physics.OverlapBox(hitBoxWorldCenter, hitBoxSize * 0.5f, transform.rotation);
-            foreach (Collider enemy in enemies)
-            {
 
-            }*/
     }
 
     IEnumerator FState()
@@ -282,10 +278,5 @@ public class PlayerAbility : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, maxDistance);
-
-        Gizmos.color = Color.red;
-        Gizmos.matrix = transform.localToWorldMatrix;
-        Gizmos.DrawWireCube(hitBoxLocalOffset, hitBoxSize);
-
     }
 }
