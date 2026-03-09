@@ -309,21 +309,6 @@ public class PlayerController : MonoBehaviour
         _playerResource.UpdateHealthBar();
     }
 
-    void Mana()
-    {
-        _playerResource.currentMana += _manaReg;
-        _playerResource.manaPotions --;
-        _playerResource.UpdateManaBar();
-        _playerResource.ManaText();
-    }
-    void Health()
-    {
-        _playerResource.currentHealth += _healthReg;
-        _playerResource.healthPotions --;
-        _playerResource.UpdateHealthBar();
-        _playerResource.HealthText();
-    }
-
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;

@@ -7,6 +7,8 @@ public class Chest : MonoBehaviour, IInteractable
     private Animator _animator;
     private PlayerResources _playerResources;
 
+    [SerializeField] private ParticleSystem _chestParticles;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -30,6 +32,7 @@ public class Chest : MonoBehaviour, IInteractable
             _playerResources.healthPotions++;
             _playerResources.ManaText();
             _playerResources.HealthText();
+            Destroy(_chestParticles);
         }
         return;
         

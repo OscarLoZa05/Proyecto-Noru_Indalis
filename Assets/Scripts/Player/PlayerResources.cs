@@ -66,6 +66,7 @@ public class PlayerResources : MonoBehaviour
         manaPotions --;
         ManaText();
         UpdateManaBar();
+        currentMana = Mathf.Clamp(currentMana, 0, maxMana);
     }
     void Health()
     {
@@ -73,6 +74,7 @@ public class PlayerResources : MonoBehaviour
         manaPotions --;
         HealthText();
         UpdateHealthBar();
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     }
 
     public void UpdateManaBar()

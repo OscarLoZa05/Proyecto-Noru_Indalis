@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.VisualScripting;
+using UnityEngine.VFX;
 
 public class PlayerAbility : MonoBehaviour
 {
@@ -69,6 +70,7 @@ public class PlayerAbility : MonoBehaviour
     [SerializeField] private Vector3 hitBoxKenonLocalOffset;
     [SerializeField] private Vector3 hitBoxKenonSize;
     [SerializeField] private GameObject _kenonModel;
+    [SerializeField] private VisualEffect _kenonEffect;
     #endregion
 
     #region Components
@@ -129,6 +131,7 @@ public class PlayerAbility : MonoBehaviour
         }
         if(_kenonAbility.WasPressedThisFrame())
         {
+            _kenonEffect.Play();
             StartCoroutine(Kenon());
         }
         #endregion 
