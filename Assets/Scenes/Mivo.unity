@@ -26184,6 +26184,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2305558605586560439, guid: acf923948d7857e4c838e2269e02a3e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305558605586560439, guid: acf923948d7857e4c838e2269e02a3e8, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6202012362232107243, guid: acf923948d7857e4c838e2269e02a3e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 103.39088

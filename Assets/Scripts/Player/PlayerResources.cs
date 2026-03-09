@@ -14,12 +14,14 @@ public class PlayerResources : MonoBehaviour
     public float maxMana = 100;
     public float mana;
     public Image manaBarImage;
+    [SerializeField] private int _manaReg = 25;
 
     //ManaHealth
     [Header("Health")]
     public float maxHealth = 100;
     public float currentHealth = 100;
     public Image healthBarImage;
+    [SerializeField] private int _healthReg = 25;
 
     [Header("TextsPotions")]
     public Text manaText;
@@ -28,7 +30,7 @@ public class PlayerResources : MonoBehaviour
     //Potions
     [Header("Potions")]
     public int manaPotions = 0;
-    public int healthPotions = 0;
+    public int healthPotions = 0;    
 
     private PlayerAbility _playerAbility;
 
@@ -48,8 +50,31 @@ public class PlayerResources : MonoBehaviour
 
     void Update()
     {
-        
+        if(_manaPotionInput.WasPressedThisFrame() && manaPotions > 0)
+        {
+            Mana();
+        }
+        if(_healthPotionInput.WasPressedThisFrame() && healthPotions > 0)
+        {
+            Health();
+        }
     }
+
+    void Mana()
+    {
+        currentMana += _manaReg;
+        manaPotions --;
+        ManaText();
+        UpdateManaBar();
+    }
+    void Health()
+    {
+        currentHealth += _manaReg;
+        manaPotions --;
+        HealthText();
+        UpdateHealthBar();
+    }
+
     public void UpdateManaBar()
     {
         float mana = currentMana / maxMana;

@@ -12,6 +12,11 @@ public class PlayerShooting : MonoBehaviour
     private Transform _mainCamera;
     private PlayerController _pCotroller;
 
+
+    [Header("Shooting")]
+    [SerializeField] private float shootTimer;
+    [SerializeField] private float shootDelay = 0.75f;
+
     //Shoot
     [SerializeField] private Transform _bulletSpawn;
 
@@ -31,10 +36,16 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_attackInput.WasPressedThisFrame())
+        if(shootTimer < shootDelay)
+        {
+            shootTimer += Time.deltaTime;
+        }
+
+        if(_attackInput.WasPressedThisFrame() && shootTimer >= shootDelay)
         {
             Attack();
             _animator.SetTrigger("IsAttacking");
+            shootTimer = 0;
         }
     }
 

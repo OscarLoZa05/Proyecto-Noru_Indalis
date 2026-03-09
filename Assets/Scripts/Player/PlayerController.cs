@@ -118,22 +118,14 @@ public class PlayerController : MonoBehaviour
         {
             Interact();
         }
-        if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown)
+        if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown && !isAiming)
         {
             StartCoroutine(Dash());
         }
 
-        if(_aimingAction.WasPressedThisFrame())
+        if(_aimingAction.WasPressedThisFrame() && IsGrounded())
         {
             Aiming();
-        }
-        if(_manaAction.WasPressedThisFrame())
-        {
-            Mana();
-        }
-        if(_healthAction.WasPressedThisFrame())
-        {
-            Health();
         }
 
 
