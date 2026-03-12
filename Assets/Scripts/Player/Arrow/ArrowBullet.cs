@@ -3,7 +3,7 @@ using UnityEngine;
 public class ArrowBullet : MonoBehaviour
 {
 
-    private Rigidbody _rb;
+    private Rigidbody _rigidBody;
 
     [SerializeField] private float _arrowVelocity = 5;
 
@@ -11,7 +11,7 @@ public class ArrowBullet : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
+        _rigidBody = GetComponent<Rigidbody>();
     }
     void Start()
     {
@@ -21,6 +21,6 @@ public class ArrowBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rb.linearVelocity = transform.forward * _arrowVelocity;
+        _rigidBody.linearVelocity = transform.forward * _arrowVelocity;
     }
 }

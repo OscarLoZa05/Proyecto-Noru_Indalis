@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &802930309627745346
+--- !u!1 &36092101061925748
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,30 +8,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3472241861004045659}
+  - component: {fileID: 3233688743737969009}
   m_Layer: 0
-  m_Name: GroundSensor
+  m_Name: Nillo_Indice3.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3472241861004045659
+--- !u!4 &3233688743737969009
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802930309627745346}
+  m_GameObject: {fileID: 36092101061925748}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.17878036, y: -0.0016511818, z: 0.011422696, w: 0.98382133}
+  m_LocalPosition: {x: -1.8626451e-11, y: 0.00056460383, z: -2.0489097e-10}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6163974538044540815}
+  m_Father: {fileID: 7384384716844336222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &842830603483893496
+--- !u!1 &45375557047324073
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,7 +39,2484 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2747202212110571048}
+  - component: {fileID: 3902927909169405781}
+  m_Layer: 0
+  m_Name: Nillo_Capa3.L.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3902927909169405781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45375557047324073}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.014104038, y: 0.025942776, z: 0.0071378336, w: 0.9995385}
+  m_LocalPosition: {x: 7.4505804e-11, y: 0.0014956319, z: -5.2154064e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4136654004814348841}
+  m_Father: {fileID: 7227916240384252033}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &265386934302614858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2794021980840047046}
+  m_Layer: 0
+  m_Name: Nillo_Brazo.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2794021980840047046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265386934302614858}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40891737, y: 0.020866714, z: 0.112844646, w: 0.9053272}
+  m_LocalPosition: {x: 9.3132255e-12, y: 0.0026812535, z: -0.0000000024973996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7897485643347270061}
+  - {fileID: 7686358313075742100}
+  - {fileID: 8140120311627039604}
+  - {fileID: 3781343798065106622}
+  m_Father: {fileID: 6901861024685106579}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &399270053083182169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7053698432648877609}
+  m_Layer: 0
+  m_Name: Nillo_Cadera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7053698432648877609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399270053083182169}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7600478, y: -0.000000020252143, z: -0.00000020571501, w: 0.6498672}
+  m_LocalPosition: {x: -8.4050034e-10, y: 0.017574472, z: -0.0035253146}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2855946462884361134}
+  - {fileID: 760298766203817696}
+  - {fileID: 3048867671121924953}
+  - {fileID: 2808701132888250162}
+  - {fileID: 1345334650805725176}
+  m_Father: {fileID: 428668089380351968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &473657829423781189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1697147032468687971}
+  m_Layer: 0
+  m_Name: Nillo_Capa2.L.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1697147032468687971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473657829423781189}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0005430324, y: 0.04831769, z: 0.000493473, w: 0.99883175}
+  m_LocalPosition: {x: 1.0710209e-10, y: 0.0014984427, z: 2.9220246e-10}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5689496694790307376}
+  m_Father: {fileID: 9193083609941991489}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &543529701076539752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362995414609732494}
+  m_Layer: 0
+  m_Name: Nillo_Pierna.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &362995414609732494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543529701076539752}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.056433007, y: -0.00009604667, z: 0.15555201, w: 0.98621446}
+  m_LocalPosition: {x: 2.0489097e-10, y: 0.005220658, z: 1.6763806e-10}
+  m_LocalScale: {x: 0.99999976, y: 1.0000001, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7004364064977828730}
+  m_Father: {fileID: 2118847491819048712}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &548221943605954963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3004195311750408415}
+  m_Layer: 0
+  m_Name: Nillo_Capa2.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3004195311750408415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548221943605954963}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.10404985, y: -0.13300699, z: -0.005578846, w: 0.98562247}
+  m_LocalPosition: {x: 3.7252902e-11, y: 0.00302977, z: -0.0000000015646219}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3855757088129933531}
+  m_Father: {fileID: 4999653314317592817}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &554181657743063590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2628588171186182506}
+  m_Layer: 0
+  m_Name: Nillo_Ojos.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2628588171186182506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554181657743063590}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.57954663, y: -0.08109425, z: 0.11298726, w: 0.802984}
+  m_LocalPosition: {x: -0.00056226784, y: 0.0011917856, z: 0.00024079921}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3563966102051931861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &579664656105407149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8769369432769868716}
+  m_Layer: 0
+  m_Name: Nillo_Pelo1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8769369432769868716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579664656105407149}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.28952733, y: -0.047277324, z: -0.24331392, w: 0.92451996}
+  m_LocalPosition: {x: 0.0009522013, y: 0.0034045698, z: -0.0011924623}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3343154480437753082}
+  m_Father: {fileID: 3563966102051931861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &602827386169522940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2404290683265811714}
+  m_Layer: 0
+  m_Name: Nillo_Capa3.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2404290683265811714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602827386169522940}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.007001503, y: -0.042691864, z: 0.004136221, w: 0.9990552}
+  m_LocalPosition: {x: 1.8626451e-11, y: 0.0014984445, z: -5.727634e-10}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4072893137831477181}
+  m_Father: {fileID: 1278093163434779425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &633692818050824192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962921881902096995}
+  m_Layer: 0
+  m_Name: Nillo_Pulgar2.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1962921881902096995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633692818050824192}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.09250279, y: -0.059463646, z: -0.19886369, w: 0.9738381}
+  m_LocalPosition: {x: -7.4505804e-11, y: 0.00060528255, z: -5.3551047e-10}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3546085119857068895}
+  m_Father: {fileID: 7483026775365594372}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &633742872595249984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2118847491819048712}
+  m_Layer: 0
+  m_Name: Nillo_Muslo2.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2118847491819048712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633742872595249984}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.14640018, y: 0.03764065, z: 0.13485865, w: 0.97926676}
+  m_LocalPosition: {x: 3.4924594e-11, y: 0.00232802, z: 1.1641532e-12}
+  m_LocalScale: {x: 0.9999998, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 362995414609732494}
+  m_Father: {fileID: 2808701132888250162}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &863210393164709373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7686358313075742100}
+  m_Layer: 0
+  m_Name: Nillo_Ropa.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7686358313075742100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863210393164709373}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.41916803, y: -0.07574488, z: -0.06097219, w: 0.9026867}
+  m_LocalPosition: {x: 0.00037983432, y: 0.0058175474, z: 0.0019251042}
+  m_LocalScale: {x: 0.5030413, y: 0.50304127, z: 0.5030414}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2794021980840047046}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &982198097158838461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4481520349390778543}
+  m_Layer: 0
+  m_Name: Nillo_Capa3.R.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4481520349390778543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982198097158838461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.007904688, y: -0.026594935, z: -0.005795629, w: 0.99959826}
+  m_LocalPosition: {x: -2.2351741e-10, y: 0.0014956306, z: 2.9802322e-10}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6852966397841402277}
+  m_Father: {fileID: 4072893137831477181}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1068968934945026521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7983516867893333797}
+  m_Layer: 0
+  m_Name: Nillo_Oreja1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7983516867893333797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068968934945026521}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6140036, y: -0.040551424, z: 0.12891942, w: 0.7776471}
+  m_LocalPosition: {x: -0.001801582, y: 0.00085686677, z: 0.00025481015}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6712265427499719537}
+  m_Father: {fileID: 3563966102051931861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1155144321379681291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428668089380351968}
+  m_Layer: 0
+  m_Name: Nillo_Posicion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &428668089380351968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155144321379681291}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0.000000084293696, z: -0.00000008429368, w: 0.7071067}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7053698432648877609}
+  - {fileID: 3677835442495903462}
+  - {fileID: 7102087329385957526}
+  m_Father: {fileID: 1407822014160553346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1156764826669075845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9193133303858378380}
+  - component: {fileID: 2918883558694793041}
+  m_Layer: 0
+  m_Name: Cuerpo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9193133303858378380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156764826669075845}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5568103787940404115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &2918883558694793041
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156764826669075845}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -7093277992902245379, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+  - {fileID: -1391568830530148985, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+  - {fileID: 5240767318553012059, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 6981290006637109699, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+  m_Bones:
+  - {fileID: 428668089380351968}
+  - {fileID: 7053698432648877609}
+  - {fileID: 2855946462884361134}
+  - {fileID: 2857677800373930377}
+  - {fileID: 2020816081519796493}
+  - {fileID: 7604887094171239088}
+  - {fileID: 3563966102051931861}
+  - {fileID: 2628588171186182506}
+  - {fileID: 5810417536171900737}
+  - {fileID: 5358953952124126153}
+  - {fileID: 8769369432769868716}
+  - {fileID: 3343154480437753082}
+  - {fileID: 8123498390729049334}
+  - {fileID: 7333599167833681580}
+  - {fileID: 1127910469970671662}
+  - {fileID: 7983516867893333797}
+  - {fileID: 6712265427499719537}
+  - {fileID: 7839991809454877688}
+  - {fileID: 6901861024685106579}
+  - {fileID: 2794021980840047046}
+  - {fileID: 7897485643347270061}
+  - {fileID: 5633117987934374383}
+  - {fileID: 5466211524594191220}
+  - {fileID: 2430991252700183554}
+  - {fileID: 199141461391140076}
+  - {fileID: 2419020939624752337}
+  - {fileID: 2073936947924538318}
+  - {fileID: 8256959447434688161}
+  - {fileID: 6931005823641063625}
+  - {fileID: 2240122666694218945}
+  - {fileID: 4757750994878976975}
+  - {fileID: 674839728771763613}
+  - {fileID: 6483326642350925436}
+  - {fileID: 4026083871267901874}
+  - {fileID: 6375103733689972333}
+  - {fileID: 8099705517426382654}
+  - {fileID: 7686358313075742100}
+  - {fileID: 8140120311627039604}
+  - {fileID: 3781343798065106622}
+  - {fileID: 5261817416110663023}
+  - {fileID: 8930296503144799573}
+  - {fileID: 6020876701774982436}
+  - {fileID: 8804456429066085397}
+  - {fileID: 7483026775365594372}
+  - {fileID: 1962921881902096995}
+  - {fileID: 3546085119857068895}
+  - {fileID: 4516939976056786577}
+  - {fileID: 7384384716844336222}
+  - {fileID: 3233688743737969009}
+  - {fileID: 4891386401597142433}
+  - {fileID: 575241689267627175}
+  - {fileID: 5521919027487565558}
+  - {fileID: 8122610359935954337}
+  - {fileID: 6953095489678949577}
+  - {fileID: 6310111942901054243}
+  - {fileID: 6081390293835645388}
+  - {fileID: 290984741905511224}
+  - {fileID: 6292952745495158120}
+  - {fileID: 139197973447470873}
+  - {fileID: 4509968875658912416}
+  - {fileID: 2808701132888250162}
+  - {fileID: 2118847491819048712}
+  - {fileID: 362995414609732494}
+  - {fileID: 7004364064977828730}
+  - {fileID: 760298766203817696}
+  - {fileID: 1345334650805725176}
+  - {fileID: 1022775670927438932}
+  - {fileID: 1700937343560699699}
+  - {fileID: 432097265980346871}
+  - {fileID: 3048867671121924953}
+  - {fileID: 7298997861076965321}
+  - {fileID: 5537179347092713290}
+  - {fileID: 5417711708012715848}
+  - {fileID: 6911575905811654080}
+  - {fileID: 1910791280080468862}
+  - {fileID: 5633405120020145516}
+  - {fileID: 2474621892293529564}
+  - {fileID: 1179355291388179931}
+  - {fileID: 1962319990064592051}
+  - {fileID: 5237960439411051469}
+  - {fileID: 3748632986579132409}
+  - {fileID: 6193719681826926060}
+  - {fileID: 3677835442495903462}
+  - {fileID: 6865256167997759348}
+  - {fileID: 8939826211791351578}
+  - {fileID: 9193083609941991489}
+  - {fileID: 1697147032468687971}
+  - {fileID: 5689496694790307376}
+  - {fileID: 7227916240384252033}
+  - {fileID: 3902927909169405781}
+  - {fileID: 4136654004814348841}
+  - {fileID: 3196499265537366477}
+  - {fileID: 3299445268024960824}
+  - {fileID: 6300608682254167687}
+  - {fileID: 8204017570903960169}
+  - {fileID: 7102087329385957526}
+  - {fileID: 4999653314317592817}
+  - {fileID: 3004195311750408415}
+  - {fileID: 3855757088129933531}
+  - {fileID: 1278093163434779425}
+  - {fileID: 2404290683265811714}
+  - {fileID: 4072893137831477181}
+  - {fileID: 4481520349390778543}
+  - {fileID: 6852966397841402277}
+  - {fileID: 8302990402208346436}
+  - {fileID: 513550701078642453}
+  - {fileID: 7659789910585133404}
+  - {fileID: 489757756904802105}
+  - {fileID: 770301158881514451}
+  - {fileID: 1548137359962933667}
+  - {fileID: 1367245916381264391}
+  - {fileID: 2267501737862408743}
+  m_BlendShapeWeights:
+  - 100
+  - 0
+  - 0
+  - 0
+  - 100
+  - 100
+  - 100
+  m_RootBone: {fileID: 428668089380351968}
+  m_AABB:
+    m_Center: {x: -0.00070431945, y: 0.01827955, z: -0.002735873}
+    m_Extent: {x: 0.006572755, y: 0.019018, z: 0.0073789405}
+  m_DirtyAABB: 0
+--- !u!1 &1179325703805948182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7298997861076965321}
+  m_Layer: 0
+  m_Name: Nillo_Falda1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7298997861076965321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179325703805948182}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5407032, y: 0.3587806, z: 0.6330183, w: -0.4221428}
+  m_LocalPosition: {x: 0.0030513902, y: -0.0029632167, z: -0.00076053437}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5537179347092713290}
+  m_Father: {fileID: 3048867671121924953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1393731547966891178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962319990064592051}
+  m_Layer: 0
+  m_Name: Nillo_Falda23
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1962319990064592051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393731547966891178}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.18286443, y: -0.00046514525, z: -0.0959706, w: 0.97844267}
+  m_LocalPosition: {x: 8.381903e-11, y: 0.0026506707, z: 7.636845e-10}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1179355291388179931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1400889810557916713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7102087329385957526}
+  m_Layer: 0
+  m_Name: Nillo_Capa1.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7102087329385957526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400889810557916713}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.91929597, y: 0.015189398, z: 0.22549231, w: -0.32220715}
+  m_LocalPosition: {x: 0.00074509997, y: 0.028334916, z: -0.0014172358}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4999653314317592817}
+  m_Father: {fileID: 428668089380351968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1577305326781889253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6310111942901054243}
+  m_Layer: 0
+  m_Name: "Nillo_Me\xF1ique1.R"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6310111942901054243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577305326781889253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0021740836, y: -0.010331406, z: -0.2304, w: 0.97303873}
+  m_LocalPosition: {x: 0.00041558463, y: 0.0009114496, z: -0.000038627753}
+  m_LocalScale: {x: 1, y: 0.9999998, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6081390293835645388}
+  m_Father: {fileID: 8804456429066085397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1790823819409518693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6901861024685106579}
+  m_Layer: 0
+  m_Name: Nillo_Hombro.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6901861024685106579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790823819409518693}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5287799, y: -0.23048563, z: 0.6560371, w: 0.4867068}
+  m_LocalPosition: {x: -0.0008144176, y: 0.0022322987, z: -0.0002119705}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2794021980840047046}
+  m_Father: {fileID: 2020816081519796493}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1932400499078122165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2020816081519796493}
+  m_Layer: 0
+  m_Name: Nillo_Pecho2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2020816081519796493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932400499078122165}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.347258, y: -1.5605943e-14, z: -0.00000008279268, w: 0.93776965}
+  m_LocalPosition: {x: 1.28755104e-17, y: 0.0037489352, z: 7.45058e-10}
+  m_LocalScale: {x: 0.9980002, y: 0.9980001, z: 0.99800014}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7604887094171239088}
+  - {fileID: 6901861024685106579}
+  - {fileID: 5261817416110663023}
+  m_Father: {fileID: 2857677800373930377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2067038267196369367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2430991252700183554}
+  m_Layer: 0
+  m_Name: Nillo_Pulgar2.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2430991252700183554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067038267196369367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.11214931, y: 0.040144645, z: 0.20342556, w: 0.9718174}
+  m_LocalPosition: {x: 4.656613e-10, y: 0.00059386477, z: -3.9231962e-10}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 199141461391140076}
+  m_Father: {fileID: 5466211524594191220}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2248660432995716587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8302990402208346436}
+  m_Layer: 0
+  m_Name: Nillo_Capa4.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8302990402208346436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2248660432995716587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0008343131, y: -0.010975643, z: 0.016363855, w: 0.9998055}
+  m_LocalPosition: {x: -1.4901161e-10, y: 0.0014946335, z: 3.72529e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 513550701078642453}
+  m_Father: {fileID: 6852966397841402277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2257185921774687516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7227916240384252033}
+  m_Layer: 0
+  m_Name: Nillo_Capa3.L.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7227916240384252033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257185921774687516}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.007015823, y: 0.034286715, z: 0.006786334, w: 0.9993644}
+  m_LocalPosition: {x: 1.11758706e-10, y: 0.0014956276, z: -1.862645e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3902927909169405781}
+  m_Father: {fileID: 5689496694790307376}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2274474343677753543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4757750994878976975}
+  m_Layer: 0
+  m_Name: "Nillo_Me\xF1ique3.L"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4757750994878976975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274474343677753543}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.18142912, y: -0.064819485, z: -0.091695614, w: 0.9769718}
+  m_LocalPosition: {x: -5.0582455e-10, y: 0.000535757, z: 1.2107193e-10}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2240122666694218945}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2365502476399309532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513550701078642453}
+  m_Layer: 0
+  m_Name: Nillo_Capa4.R.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513550701078642453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365502476399309532}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.004865715, y: -0.0050514024, z: -0.0014422493, w: 0.99997437}
+  m_LocalPosition: {x: 5.2154064e-10, y: 0.0016530327, z: -4.4703483e-10}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7659789910585133404}
+  m_Father: {fileID: 8302990402208346436}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2617685792320004092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6911575905811654080}
+  m_Layer: 0
+  m_Name: Nillo_Falda11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6911575905811654080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2617685792320004092}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.43885463, y: -0.34010252, z: -0.63665175, w: 0.53517425}
+  m_LocalPosition: {x: 0.0044076396, y: -0.0018951589, z: -0.0006987106}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1910791280080468862}
+  m_Father: {fileID: 3048867671121924953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3151861536751861998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3343154480437753082}
+  m_Layer: 0
+  m_Name: Nillo_Pelo2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3343154480437753082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3151861536751861998}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.66362065, y: 0.052557405, z: -0.59426934, w: 0.45131952}
+  m_LocalPosition: {x: 0.0000000018416904, y: 0.0030625872, z: 0.000000002682209}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8123498390729049334}
+  m_Father: {fileID: 8769369432769868716}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3410189683656650316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7839991809454877688}
+  m_Layer: 0
+  m_Name: Nillo_Pendiente2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7839991809454877688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410189683656650316}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.29818353, y: 0.0011867613, z: 0.19880466, w: 0.9335748}
+  m_LocalPosition: {x: -2.4214386e-10, y: 0.00051436666, z: -2.0489097e-10}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6712265427499719537}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3491375029713991029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1367245916381264391}
+  m_Layer: 0
+  m_Name: Nillo_Pierna.L.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1367245916381264391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3491375029713991029}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.014792998, y: 0.71089894, z: -0.014959692, w: 0.70297945}
+  m_LocalPosition: {x: -0.0019868696, y: 0.0012030328, z: 0.00078124274}
+  m_LocalScale: {x: 0.99999994, y: 0.99999976, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1407822014160553346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3581300157690818910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5358953952124126153}
+  m_Layer: 0
+  m_Name: Nillo_Coleta
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5358953952124126153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3581300157690818910}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.8443083, y: -0.124023125, z: -0.21469784, w: -0.47504377}
+  m_LocalPosition: {x: -0.0010139411, y: 0.0019949034, z: -0.0024867654}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3563966102051931861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3611245857810462813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5633405120020145516}
+  m_Layer: 0
+  m_Name: Nillo_Falda13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5633405120020145516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3611245857810462813}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.06876684, y: -0.00042894337, z: -0.0019827709, w: 0.9976307}
+  m_LocalPosition: {x: 3.7252902e-11, y: 0.0025485246, z: 4.5634804e-10}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1910791280080468862}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3679031143876423512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4136654004814348841}
+  m_Layer: 0
+  m_Name: Nillo_Capa3.L.003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4136654004814348841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3679031143876423512}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.002934298, y: 0.017593253, z: 0.006116654, w: 0.9998222}
+  m_LocalPosition: {x: -2.2351741e-10, y: 0.0014946313, z: 0.0000000017508864}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3196499265537366477}
+  m_Father: {fileID: 3902927909169405781}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3708319970655863242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8204017570903960169}
+  m_Layer: 0
+  m_Name: Nillo_Capa4.L.003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8204017570903960169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3708319970655863242}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0002379229, y: 0.00048761044, z: 0.0020258834, w: 0.9999978}
+  m_LocalPosition: {x: -2.2351741e-10, y: 0.0016530423, z: 6.705522e-10}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6300608682254167687}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3721168383356835455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2808701132888250162}
+  m_Layer: 0
+  m_Name: Nillo_Muslo1.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2808701132888250162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3721168383356835455}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.39194545, y: 0.6488171, z: 0.291128, w: 0.5836605}
+  m_LocalPosition: {x: -0.002047492, y: 0.0026000626, z: -0.00092996925}
+  m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2118847491819048712}
+  m_Father: {fileID: 7053698432648877609}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3742194042393004552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8939826211791351578}
+  m_Layer: 0
+  m_Name: Nillo_Capa2.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8939826211791351578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3742194042393004552}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.13984334, y: -0.013293414, z: -0.014296546, w: 0.9899812}
+  m_LocalPosition: {x: -7.4505804e-11, y: 0.0030297667, z: -0.0000000016018747}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9193083609941991489}
+  m_Father: {fileID: 6865256167997759348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3742915567747691928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5417711708012715848}
+  m_Layer: 0
+  m_Name: Nillo_Falda3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5417711708012715848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3742915567747691928}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.023637401, y: 0.00015373994, z: 0.0526264, w: 0.99833447}
+  m_LocalPosition: {x: 1.0244548e-10, y: 0.0025638088, z: -2.0489097e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5537179347092713290}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3858771673555293491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4072893137831477181}
+  m_Layer: 0
+  m_Name: Nillo_Capa3.R.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4072893137831477181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858771673555293491}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00075011933, y: -0.03482636, z: -0.0058407728, w: 0.99937606}
+  m_LocalPosition: {x: 1.11758706e-10, y: 0.0014956264, z: 3.5390257e-10}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4481520349390778543}
+  m_Father: {fileID: 2404290683265811714}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3902687098617592178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6931005823641063625}
+  m_Layer: 0
+  m_Name: "Nillo_Me\xF1ique1.L"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6931005823641063625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3902687098617592178}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.033519972, y: 0.023593843, z: 0.13845232, w: 0.9895205}
+  m_LocalPosition: {x: -0.00033923963, y: 0.0006270954, z: -0.00010467045}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2240122666694218945}
+  m_Father: {fileID: 5633117987934374383}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3924131684912546118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 290984741905511224}
+  m_Layer: 0
+  m_Name: "Nillo_Me\xF1ique3.R"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &290984741905511224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924131684912546118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.05143668, y: 0.05801739, z: 0.06366602, w: 0.9949547}
+  m_LocalPosition: {x: 3.9115547e-10, y: 0.0005311471, z: -7.0780515e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6081390293835645388}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3939891429368256156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4237192983872734307}
+  m_Layer: 0
+  m_Name: FireAttackPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4237192983872734307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3939891429368256156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.16, z: 1.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5568103787940404115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3982512717228763262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6193719681826926060}
+  m_Layer: 0
+  m_Name: Nillo_Falda33
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6193719681826926060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3982512717228763262}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.23322658, y: 0.004411953, z: -0.14230055, w: 0.9619441}
+  m_LocalPosition: {x: 3.259629e-10, y: 0.0026468167, z: -5.2154064e-10}
+  m_LocalScale: {x: 0.99999976, y: 0.9999998, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3748632986579132409}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4116136667863288472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6865256167997759348}
+  m_Layer: 0
+  m_Name: Nillo_Capa1.L.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6865256167997759348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4116136667863288472}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.1450818, y: 0.023477592, z: 0.042027578, w: 0.9882479}
+  m_LocalPosition: {x: 1.8626451e-11, y: 0.0030571597, z: -4.8894433e-10}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8939826211791351578}
+  m_Father: {fileID: 3677835442495903462}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4128796736076109407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6081390293835645388}
+  m_Layer: 0
+  m_Name: "Nillo_Me\xF1ique2.R"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6081390293835645388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4128796736076109407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.16034494, y: 0.014150006, z: 0.14810227, w: 0.9757843}
+  m_LocalPosition: {x: 3.5390257e-10, y: 0.0003810001, z: 7.380731e-10}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 290984741905511224}
+  m_Father: {fileID: 6310111942901054243}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4211474771815850884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8804456429066085397}
+  m_Layer: 0
+  m_Name: Nillo_Mano.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8804456429066085397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4211474771815850884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.038243115, y: -0.01770881, z: -0.08309789, w: 0.9956499}
+  m_LocalPosition: {x: -1.862645e-10, y: 0.004494956, z: 9.592622e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4891386401597142433}
+  - {fileID: 8122610359935954337}
+  - {fileID: 4516939976056786577}
+  - {fileID: 6310111942901054243}
+  - {fileID: 7483026775365594372}
+  m_Father: {fileID: 6020876701774982436}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4240779636414269266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6292952745495158120}
+  m_Layer: 0
+  m_Name: Nillo_Ropa.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6292952745495158120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4240779636414269266}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.36570385, y: 0.06683261, z: 0.063648395, w: 0.9261442}
+  m_LocalPosition: {x: -0.00034637869, y: 0.005583528, z: 0.0018022822}
+  m_LocalScale: {x: 0.6555107, y: 0.65551084, z: 0.65551084}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8930296503144799573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4256049688308116081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4999653314317592817}
+  m_Layer: 0
+  m_Name: Nillo_Capa1.R.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4999653314317592817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256049688308116081}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.13063821, y: -0.025439942, z: -0.04226087, w: 0.99020225}
+  m_LocalPosition: {x: 7.45058e-10, y: 0.0030571588, z: -5.587935e-10}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3004195311750408415}
+  m_Father: {fileID: 7102087329385957526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4266322810321548396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7333599167833681580}
+  m_Layer: 0
+  m_Name: Nillo_Pelo4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7333599167833681580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4266322810321548396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.3467026, y: 0.1048007, z: 0.24500442, w: 0.89932585}
+  m_LocalPosition: {x: 8.1956386e-10, y: 0.0031443082, z: 1.862645e-10}
+  m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8123498390729049334}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4376317534337855035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6953095489678949577}
+  m_Layer: 0
+  m_Name: Nillo_Corazon2.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6953095489678949577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376317534337855035}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.09098722, y: 0.0069604805, z: -0.037855335, w: 0.99510795}
+  m_LocalPosition: {x: -8.381903e-11, y: 0.00062111893, z: 7.092603e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.99999976, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8122610359935954337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4399608085004185719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8140120311627039604}
+  m_Layer: 0
+  m_Name: Nillo_Ropa.L.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8140120311627039604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4399608085004185719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.46696976, y: -0.078904904, z: -0.05682274, w: 0.87891096}
+  m_LocalPosition: {x: 0.00004526645, y: 0.003685491, z: 0.0014607785}
+  m_LocalScale: {x: 0.5030413, y: 0.5030413, z: 0.50304145}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2794021980840047046}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4532682163598788245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 674839728771763613}
+  m_Layer: 0
+  m_Name: Nillo_Anular1.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &674839728771763613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4532682163598788245}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.04819968, y: 0.01618973, z: 0.031529956, w: 0.9982087}
+  m_LocalPosition: {x: -0.00024124935, y: 0.001088735, z: 0.00004970226}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6483326642350925436}
+  m_Father: {fileID: 5633117987934374383}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4782861287523566414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3855757088129933531}
+  m_Layer: 0
+  m_Name: Nillo_Capa2.R.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3855757088129933531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4782861287523566414}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.023997778, y: -0.05366024, z: 0.0016333575, w: 0.99826956}
+  m_LocalPosition: {x: -0, y: 0.0029966752, z: -2.2351741e-10}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1278093163434779425}
+  m_Father: {fileID: 3004195311750408415}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4811316890093363406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345334650805725176}
+  m_Layer: 0
+  m_Name: Nillo_Muslo1.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1345334650805725176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811316890093363406}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.39194533, y: -0.648817, z: -0.29112828, w: 0.58366054}
+  m_LocalPosition: {x: 0.0020474913, y: 0.0026000626, z: -0.00092997047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1022775670927438932}
+  m_Father: {fileID: 7053698432648877609}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4923891277012480596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3677835442495903462}
+  m_Layer: 0
+  m_Name: Nillo_Capa1.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3677835442495903462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4923891277012480596}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.9401989, y: 0.008169489, z: -0.042499814, w: -0.33786547}
+  m_LocalPosition: {x: -0.0007451007, y: 0.028334916, z: -0.0014172356}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6865256167997759348}
+  m_Father: {fileID: 428668089380351968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4934108971442040429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073936947924538318}
+  m_Layer: 0
+  m_Name: Nillo_Indice2.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2073936947924538318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934108971442040429}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.26318833, y: 0.009939177, z: 0.00964756, w: 0.964645}
+  m_LocalPosition: {x: -1.3038516e-10, y: 0.00048240073, z: 0.000000001230801}
+  m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8256959447434688161}
+  m_Father: {fileID: 2419020939624752337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4952663447747228234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3196499265537366477}
+  m_Layer: 0
+  m_Name: Nillo_Capa4.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3196499265537366477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4952663447747228234}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.006895061, y: 0.010355597, z: -0.014574169, w: 0.9998164}
+  m_LocalPosition: {x: -5.9604643e-10, y: 0.0014946333, z: -2.9802322e-10}
+  m_LocalScale: {x: 0.9999998, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3299445268024960824}
+  m_Father: {fileID: 4136654004814348841}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4952919911379825092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2419020939624752337}
+  m_Layer: 0
+  m_Name: Nillo_Indice1.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2419020939624752337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4952919911379825092}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.10603243, y: 0.017856106, z: -0.05538131, w: 0.9926587}
+  m_LocalPosition: {x: 0.00021468724, y: 0.0011124767, z: 0.00008131242}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2073936947924538318}
+  m_Father: {fileID: 5633117987934374383}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4976137336446724725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8123498390729049334}
+  m_Layer: 0
+  m_Name: Nillo_Pelo3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8123498390729049334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4976137336446724725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.066590816, y: -0.03670638, z: 0.24860561, w: 0.9656157}
+  m_LocalPosition: {x: 3.72529e-10, y: 0.0039396975, z: -1.4901161e-10}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7333599167833681580}
+  m_Father: {fileID: 3343154480437753082}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4986177851056065797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5633117987934374383}
+  m_Layer: 0
+  m_Name: Nillo_Mano.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5633117987934374383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986177851056065797}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.038243093, y: 0.017708713, z: 0.083097845, w: 0.9956499}
+  m_LocalPosition: {x: 2.6077032e-10, y: 0.004494957, z: -1.2572854e-10}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 674839728771763613}
+  - {fileID: 6375103733689972333}
+  - {fileID: 2419020939624752337}
+  - {fileID: 6931005823641063625}
+  - {fileID: 5466211524594191220}
+  m_Father: {fileID: 7897485643347270061}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5060732692914618827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1022775670927438932}
+  m_Layer: 0
+  m_Name: Nillo_Muslo2.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1022775670927438932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5060732692914618827}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.14612277, y: -0.03684733, z: -0.13491094, w: 0.97933114}
+  m_LocalPosition: {x: -0.0000000019744038, y: 0.0023280152, z: -2.377783e-10}
+  m_LocalScale: {x: 0.9999999, y: 1.0000006, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1700937343560699699}
+  m_Father: {fileID: 1345334650805725176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5560895249269308842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5261817416110663023}
+  m_Layer: 0
+  m_Name: Nillo_Hombro.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5261817416110663023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560895249269308842}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.53484505, y: -0.21916738, z: 0.6824613, w: -0.44738463}
+  m_LocalPosition: {x: 0.0008144176, y: 0.002232299, z: -0.00021197062}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8930296503144799573}
+  m_Father: {fileID: 2020816081519796493}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5594424220484419176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5810417536171900737}
+  m_Layer: 0
+  m_Name: Nillo_Ojos.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5810417536171900737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5594424220484419176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.57732725, y: 0.08140631, z: -0.11276299, w: 0.80458117}
+  m_LocalPosition: {x: 0.00056226796, y: 0.001191786, z: 0.00024079911}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3563966102051931861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5617559891351328908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4891386401597142433}
+  m_Layer: 0
+  m_Name: Nillo_Anular1.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4891386401597142433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617559891351328908}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.077859834, y: -0.018000167, z: -0.04671221, w: 0.99570674}
+  m_LocalPosition: {x: 0.00022339662, y: 0.0009949806, z: -0.00013739057}
+  m_LocalScale: {x: 0.99999976, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 575241689267627175}
+  m_Father: {fileID: 8804456429066085397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5630351264955389306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 489757756904802105}
+  m_Layer: 0
+  m_Name: Nillo_Capa4.R.003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &489757756904802105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630351264955389306}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.006257937, y: -0.0009894593, z: -0.00008728485, w: 0.9999799}
+  m_LocalPosition: {x: -5.9604643e-10, y: 0.0016530424, z: -5.2154064e-10}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7659789910585133404}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5704657772631125154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9193083609941991489}
+  m_Layer: 0
+  m_Name: Nillo_Capa2.L.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9193083609941991489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704657772631125154}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.017725676, y: 0.05307293, z: -0.0023865376, w: 0.9984305}
+  m_LocalPosition: {x: 3.7252902e-11, y: 0.0029966736, z: -6.426126e-10}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1697147032468687971}
+  m_Father: {fileID: 8939826211791351578}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5835117361433093030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179355291388179931}
+  m_Layer: 0
+  m_Name: Nillo_Falda22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1179355291388179931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5835117361433093030}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.06748486, y: 0.062983, z: -0.0119227925, w: 0.995659}
+  m_LocalPosition: {x: -4.25689e-11, y: 0.0053016795, z: -5.657784e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.9999998, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1962319990064592051}
+  m_Father: {fileID: 2474621892293529564}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5837586558368735736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 432097265980346871}
+  m_Layer: 0
+  m_Name: Nillo_Pie2.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &432097265980346871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5837586558368735736}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.008026704, y: -0.000000018478685, z: 0.7164745, w: 0.69756716}
+  m_LocalPosition: {x: -1.9557773e-10, y: 0.0102136955, z: 1.5075784e-10}
+  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1700937343560699699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5886009208265744904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2474621892293529564}
+  m_Layer: 0
+  m_Name: Nillo_Falda21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2474621892293529564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5886009208265744904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.39334947, y: -0.3627032, z: -0.60873544, w: 0.58580184}
+  m_LocalPosition: {x: 0.004275899, y: -0.0004633824, z: -0.000590345}
+  m_LocalScale: {x: 0.99999994, y: 0.99999976, z: 0.9999997}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1179355291388179931}
+  m_Father: {fileID: 3048867671121924953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5892401111701544861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760298766203817696}
+  m_Layer: 0
+  m_Name: Nillo_Culo.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760298766203817696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5892401111701544861}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0065335613, y: 0.024717527, z: 0.9996731, w: -0.00016154525}
+  m_LocalPosition: {x: -0.0014524452, y: 0.0019796675, z: 0.0013203549}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000017}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7053698432648877609}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6098736873388929461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1548137359962933667}
+  m_Layer: 0
+  m_Name: Nillo_Muslo2.R.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1548137359962933667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098736873388929461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7270833, y: 0.0072292523, z: -0.6864685, w: -0.0076566967}
+  m_LocalPosition: {x: 0.0019868696, y: -0.0021447465, z: 0.010841022}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1407822014160553346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6322128883468779985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1127910469970671662}
+  m_Layer: 0
+  m_Name: Nillo_Mandibula
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1127910469970671662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6322128883468779985}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.687926, y: -0.000000082124856, z: -0.00000026337696, w: 0.72578084}
+  m_LocalPosition: {x: -8.381903e-11, y: 0.00024617696, z: 0.00033520747}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3563966102051931861}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6386030193458261004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4467146304489059683}
   m_Layer: 0
   m_Name: ArrowSpawn
   m_TagString: Untagged
@@ -47,22 +2524,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2747202212110571048
+--- !u!4 &4467146304489059683
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842830603483893496}
+  m_GameObject: {fileID: 6386030193458261004}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.604, z: 1.459}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6163974538044540815}
+  m_Father: {fileID: 5568103787940404115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3917023895590569098
+--- !u!1 &6419503851647096290
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,9 +2547,1530 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 493471212597341691}
-  - component: {fileID: 6609019216848911582}
-  - component: {fileID: 7052464271199078934}
+  - component: {fileID: 1278093163434779425}
+  m_Layer: 0
+  m_Name: Nillo_Capa2.R.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1278093163434779425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6419503851647096290}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.005776679, y: -0.04885075, z: -0.0006152453, w: 0.9987892}
+  m_LocalPosition: {x: -4.4703483e-10, y: 0.0014984437, z: 3.7252902e-11}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2404290683265811714}
+  m_Father: {fileID: 3855757088129933531}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6428662106786603447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7004364064977828730}
+  m_Layer: 0
+  m_Name: Nillo_Pie2.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7004364064977828730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6428662106786603447}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.008034674, y: -0.00000716095, z: -0.7177938, w: 0.69620943}
+  m_LocalPosition: {x: 1.6763806e-10, y: 0.010213692, z: 8.498318e-11}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 362995414609732494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6445278482355393687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6375103733689972333}
+  m_Layer: 0
+  m_Name: Nillo_Corazon1.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6375103733689972333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6445278482355393687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.11679921, y: 0.0056659007, z: -0.026486652, w: 0.99278617}
+  m_LocalPosition: {x: 0.000015435227, y: 0.0015097943, z: -0.0001368003}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8099705517426382654}
+  m_Father: {fileID: 5633117987934374383}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6485745118771942336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700937343560699699}
+  m_Layer: 0
+  m_Name: Nillo_Pierna.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700937343560699699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6485745118771942336}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.05643306, y: 0.00009606198, z: -0.15555237, w: 0.9862144}
+  m_LocalPosition: {x: 3.7252902e-11, y: 0.0052206586, z: 4.6566128e-12}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 432097265980346871}
+  m_Father: {fileID: 1022775670927438932}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6486657386305569702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6712265427499719537}
+  m_Layer: 0
+  m_Name: Nillo_Pendiente1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6712265427499719537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6486657386305569702}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.79872817, y: 0.12789078, z: 0.0321664, w: 0.5870628}
+  m_LocalPosition: {x: 0.00008379131, y: -0.000049734525, z: -0.00041007836}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7839991809454877688}
+  m_Father: {fileID: 7983516867893333797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6511855800760340141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3781343798065106622}
+  m_Layer: 0
+  m_Name: Nillo_Ropa.L.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3781343798065106622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6511855800760340141}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5032432, y: -0.08120783, z: -0.053480253, w: 0.85865676}
+  m_LocalPosition: {x: -0.00024586887, y: 0.0017877222, z: 0.00096702104}
+  m_LocalScale: {x: 0.5030413, y: 0.5030414, z: 0.50304145}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2794021980840047046}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6557543283456374144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7897485643347270061}
+  m_Layer: 0
+  m_Name: Nillo_Antebrazo.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7897485643347270061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6557543283456374144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.017428756, y: -0.08666276, z: -0.1772517, w: 0.9801876}
+  m_LocalPosition: {x: 1.4901161e-10, y: 0.0064936983, z: -6.1467287e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5633117987934374383}
+  m_Father: {fileID: 2794021980840047046}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6576637715145782884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4509968875658912416}
+  m_Layer: 0
+  m_Name: Nillo_Ropa.R.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4509968875658912416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576637715145782884}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.4522565, y: 0.07259095, z: 0.056993328, w: 0.8871}
+  m_LocalPosition: {x: 0.0002793245, y: 0.001553702, z: 0.0008441984}
+  m_LocalScale: {x: 0.6555107, y: 0.6555107, z: 0.6555108}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8930296503144799573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6681161874858455283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7483026775365594372}
+  m_Layer: 0
+  m_Name: Nillo_Pulgar1.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7483026775365594372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681161874858455283}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.043439113, y: -0.029529458, z: 0.22865652, w: 0.9720891}
+  m_LocalPosition: {x: -0.00039541224, y: 0.00075606664, z: 0.00009809759}
+  m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1962921881902096995}
+  m_Father: {fileID: 8804456429066085397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6708887407004977315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4516939976056786577}
+  m_Layer: 0
+  m_Name: Nillo_Indice1.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4516939976056786577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6708887407004977315}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.016808398, y: -0.008131578, z: 0.034578588, w: 0.9992276}
+  m_LocalPosition: {x: -0.00022635567, y: 0.0010511986, z: -0.000040970943}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7384384716844336222}
+  m_Father: {fileID: 8804456429066085397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6779105395564474054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4026083871267901874}
+  m_Layer: 0
+  m_Name: Nillo_Anular3.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4026083871267901874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6779105395564474054}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.28025883, y: -0.028419524, z: 0.007915902, w: 0.95947105}
+  m_LocalPosition: {x: 1.1641532e-10, y: 0.00048913655, z: -8.9348756e-10}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6483326642350925436}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6872871547724644728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6300608682254167687}
+  m_Layer: 0
+  m_Name: Nillo_Capa4.L.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6300608682254167687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872871547724644728}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.019504372, y: 0.001427742, z: 0.0022485259, w: 0.9998062}
+  m_LocalPosition: {x: 1.11758706e-10, y: 0.0016530316, z: 2.2351741e-10}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8204017570903960169}
+  m_Father: {fileID: 3299445268024960824}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6883914362998606679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139197973447470873}
+  m_Layer: 0
+  m_Name: Nillo_Ropa.R.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &139197973447470873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6883914362998606679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.41484058, y: 0.07014888, z: 0.059973147, w: 0.90520144}
+  m_LocalPosition: {x: -0.000011810884, y: 0.0034514691, z: 0.0013379562}
+  m_LocalScale: {x: 0.65551066, y: 0.6555107, z: 0.6555108}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8930296503144799573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6886836089954112570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2267501737862408743}
+  m_Layer: 0
+  m_Name: Nillo_Muslo2.L.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2267501737862408743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6886836089954112570}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.72628874, y: -0.012721022, z: 0.6871405, w: -0.013444642}
+  m_LocalPosition: {x: -0.0019868696, y: -0.0021059895, z: 0.010866513}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000004}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1407822014160553346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6887142258252188346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5568103787940404115}
+  - component: {fileID: 2270135039057206106}
+  - component: {fileID: 3534361553347263466}
+  - component: {fileID: 5298023933273139219}
+  - component: {fileID: 3423501024364627706}
+  - component: {fileID: 8532113655293728004}
+  - component: {fileID: 3274808584805572876}
+  m_Layer: 0
+  m_Name: Nillo_Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5568103787940404115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887142258252188346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.64, y: 0, z: 0.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7172881984160689045}
+  - {fileID: 1407822014160553346}
+  - {fileID: 9193133303858378380}
+  - {fileID: 4941877078929014113}
+  - {fileID: 4069585437044948607}
+  - {fileID: 4467146304489059683}
+  - {fileID: 2122104520428600305}
+  - {fileID: 4237192983872734307}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &2270135039057206106
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887142258252188346}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 3.67
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.0001
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1.83, z: 0}
+--- !u!95 &3534361553347263466
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887142258252188346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26273c7603cb1a041ac6d92361ac6539, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5298023933273139219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887142258252188346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b2596fab1a7054a93a31c115735a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveValue: {x: 0, y: 0}
+  _playerSpeed: 6
+  _playerMovementSpeed: 9
+  _speed: 0
+  _speedChangeRate: 10
+  targetAngle: 0
+  _animationSpeed: 0
+  _sensorPosition: {fileID: 4941877078929014113}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  _playerGravity: {x: 0, y: 0, z: 0}
+  _interactionPosition: {fileID: 4069585437044948607}
+  _interactionRadius: {x: 1.63, y: 3.04, z: 1.38}
+  jumpTimeOut: 0.5
+  fallTimeOut: 0.15
+  _jumpHeight: 2
+  dashCooldown: 1.25
+  _dashSpeed: 20
+  _dashTime: 0.25
+  isAiming: 0
+  _crosshair: {fileID: 0}
+  _manaReg: 25
+  _healthReg: 25
+--- !u!114 &3423501024364627706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887142258252188346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87eb090394ba2b24282267b6520eb32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageAbility1: {fileID: 0}
+  imageAbility2: {fileID: 0}
+  imageAbility3: {fileID: 0}
+  imageAbility4: {fileID: 0}
+  cooldownAbility1: 15
+  currentCooldown1: 15
+  ability1Used: 0
+  manaWasted1: 15
+  cooldownAbility2: 10
+  currentCooldown2: 10
+  ability2Used: 0
+  manaWasted2: 25
+  waterSpeed: 11
+  boostState: 4
+  cooldownAbility3: 10
+  currentCooldown3: 10
+  chargeAbility: 0
+  ability3Used: 0
+  manaWasted3: 50
+  lifeHealed: 10
+  cooldownAbility4: 10
+  currentCooldown4: 10
+  ability4Used: 0
+  hitBoxLocalOffset: {x: 0, y: 2.19, z: 6.4}
+  hitBoxSize: {x: 5, y: 4, z: 10}
+  manaWasted4: 50
+  _fireAttackPosition: {fileID: 4237192983872734307}
+--- !u!114 &8532113655293728004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887142258252188346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a3ebc49fe90c1448742e3c03083b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMana: 100
+  maxMana: 100
+  mana: 0
+  manaBarImage: {fileID: 0}
+  _manaReg: 25
+  maxHealth: 100
+  currentHealth: 100
+  healthBarImage: {fileID: 0}
+  _healthReg: 25
+  manaText: {fileID: 0}
+  healthText: {fileID: 0}
+  manaPotions: 0
+  healthPotions: 0
+--- !u!114 &3274808584805572876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887142258252188346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d44bcbf65303c0b4298b463a6dfe75f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootTimer: 0
+  shootDelay: 0.75
+  _bulletSpawn: {fileID: 4467146304489059683}
+--- !u!1 &6912142121982247402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575241689267627175}
+  m_Layer: 0
+  m_Name: Nillo_Anular2.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575241689267627175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912142121982247402}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.09778795, y: 0.010938879, z: 0.011186839, w: 0.9950843}
+  m_LocalPosition: {x: -2.2351741e-10, y: 0.000753589, z: -3.1199304e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5521919027487565558}
+  m_Father: {fileID: 4891386401597142433}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6951289031138511712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2855946462884361134}
+  m_Layer: 0
+  m_Name: Nillo_Barriga
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2855946462884361134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6951289031138511712}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.67635894, y: 0.000000023077744, z: 0.00000018238858, w: 0.7365722}
+  m_LocalPosition: {x: 1.5309146e-17, y: 0.0021217398, z: -5.587935e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2857677800373930377}
+  m_Father: {fileID: 7053698432648877609}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6952529249756705932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5466211524594191220}
+  m_Layer: 0
+  m_Name: Nillo_Pulgar1.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5466211524594191220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952529249756705932}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.03601283, y: 0.058167756, z: -0.2627109, w: 0.96244615}
+  m_LocalPosition: {x: 0.0003478095, y: 0.0008155502, z: 0.0002841438}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2430991252700183554}
+  m_Father: {fileID: 5633117987934374383}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7012007431992889290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5689496694790307376}
+  m_Layer: 0
+  m_Name: Nillo_Capa3.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5689496694790307376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012007431992889290}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0006946727, y: 0.04221318, z: -0.0036847058, w: 0.9991016}
+  m_LocalPosition: {x: -1.11758706e-10, y: 0.0014984454, z: 1.4901161e-10}
+  m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7227916240384252033}
+  m_Father: {fileID: 1697147032468687971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7017144050245123785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4069585437044948607}
+  m_Layer: 0
+  m_Name: InteractZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4069585437044948607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017144050245123785}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.52, z: 1.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5568103787940404115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7044724320187404303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770301158881514451}
+  m_Layer: 0
+  m_Name: IK_Nillo_Pierna.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770301158881514451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7044724320187404303}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.012329977, y: -0.7109471, z: 0.012468954, w: 0.70302683}
+  m_LocalPosition: {x: 0.0019868696, y: 0.0012030328, z: 0.00078124274}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1407822014160553346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7198140462037392058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4941877078929014113}
+  m_Layer: 0
+  m_Name: GroundSensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4941877078929014113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7198140462037392058}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5568103787940404115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7256695817276797384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8099705517426382654}
+  m_Layer: 0
+  m_Name: Nillo_Corazon2.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8099705517426382654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256695817276797384}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.12216815, y: -0.006250342, z: 0.013858818, w: 0.99239296}
+  m_LocalPosition: {x: 1.7229468e-10, y: 0.0008003183, z: 2.2584572e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6375103733689972333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7360722331844824970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3546085119857068895}
+  m_Layer: 0
+  m_Name: Nillo_Pulgar3.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3546085119857068895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360722331844824970}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.01575423, y: 0.012214526, z: 0.069680244, w: 0.9973702}
+  m_LocalPosition: {x: -5.5879353e-11, y: 0.00050803204, z: -1.44355e-10}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962921881902096995}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7428708236084630636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8930296503144799573}
+  m_Layer: 0
+  m_Name: Nillo_Brazo.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8930296503144799573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7428708236084630636}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.37194875, y: -0.0053153234, z: -0.08143595, w: 0.92465895}
+  m_LocalPosition: {x: 3.7252902e-11, y: 0.0026812502, z: -0.0000000014744}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6020876701774982436}
+  - {fileID: 6292952745495158120}
+  - {fileID: 139197973447470873}
+  - {fileID: 4509968875658912416}
+  m_Father: {fileID: 5261817416110663023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7459037124273745817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7604887094171239088}
+  m_Layer: 0
+  m_Name: Nillo_Cuello
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7604887094171239088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459037124273745817}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.119894475, y: -5.6316148e-14, z: 0.000000028585056, w: 0.99278665}
+  m_LocalPosition: {x: 3.3280126e-17, y: 0.0024380535, z: -7.45058e-10}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3563966102051931861}
+  m_Father: {fileID: 2020816081519796493}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7563686135847351261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1407822014160553346}
+  m_Layer: 0
+  m_Name: Armature
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1407822014160553346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563686135847351261}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 770301158881514451}
+  - {fileID: 2267501737862408743}
+  - {fileID: 1548137359962933667}
+  - {fileID: 1367245916381264391}
+  - {fileID: 428668089380351968}
+  m_Father: {fileID: 5568103787940404115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7572235376042888653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2240122666694218945}
+  m_Layer: 0
+  m_Name: "Nillo_Me\xF1ique2.L"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2240122666694218945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572235376042888653}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.1306618, y: -0.016619503, z: -0.023436366, w: 0.9910106}
+  m_LocalPosition: {x: 7.264316e-10, y: 0.0006767656, z: -9.080395e-11}
+  m_LocalScale: {x: 1.0000001, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4757750994878976975}
+  m_Father: {fileID: 6931005823641063625}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7781953666590364381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910791280080468862}
+  m_Layer: 0
+  m_Name: Nillo_Falda12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1910791280080468862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7781953666590364381}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.14573279, y: 0.068234816, z: 0.015089672, w: 0.9868527}
+  m_LocalPosition: {x: 5.5879353e-11, y: 0.005194765, z: -2.4650945e-10}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5633405120020145516}
+  m_Father: {fileID: 6911575905811654080}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7904783639527356251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6483326642350925436}
+  m_Layer: 0
+  m_Name: Nillo_Anular2.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6483326642350925436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7904783639527356251}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.121351, y: -0.0010363513, z: -0.017260134, w: 0.99245906}
+  m_LocalPosition: {x: 6.286427e-11, y: 0.00067875464, z: -7.916242e-11}
+  m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4026083871267901874}
+  m_Father: {fileID: 674839728771763613}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7957067474021574547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2857677800373930377}
+  m_Layer: 0
+  m_Name: Nillo_Pecho1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2857677800373930377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7957067474021574547}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.27807218, y: -1.2071485e-14, z: 0.00000006629749, w: 0.9605602}
+  m_LocalPosition: {x: 4.6151943e-17, y: 0.0052429405, z: -2.4214386e-10}
+  m_LocalScale: {x: 1.0028213, y: 1.0028214, z: 1.0028213}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2020816081519796493}
+  m_Father: {fileID: 2855946462884361134}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8118709430643672523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3299445268024960824}
+  m_Layer: 0
+  m_Name: Nillo_Capa4.L.002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3299445268024960824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8118709430643672523}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.001173451, y: 0.004517114, z: 0.0033162935, w: 0.9999836}
+  m_LocalPosition: {x: -1.11758706e-10, y: 0.0016530332, z: 6.3329936e-10}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6300608682254167687}
+  m_Father: {fileID: 3196499265537366477}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8304055665936542453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7384384716844336222}
+  m_Layer: 0
+  m_Name: Nillo_Indice2.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7384384716844336222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8304055665936542453}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.1221911, y: -0.0017418283, z: 0.0050129322, w: 0.9924924}
+  m_LocalPosition: {x: -7.4505804e-11, y: 0.0005132687, z: 5.8091243e-10}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3233688743737969009}
+  m_Father: {fileID: 4516939976056786577}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8323185018888948828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8122610359935954337}
+  m_Layer: 0
+  m_Name: Nillo_Corazon1.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8122610359935954337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8323185018888948828}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.12695347, y: -0.0036160366, z: 0.04022872, w: 0.991086}
+  m_LocalPosition: {x: -0.00000072343056, y: 0.0016923996, z: -0.00014748248}
+  m_LocalScale: {x: 1, y: 1, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6953095489678949577}
+  m_Father: {fileID: 8804456429066085397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8403975889831321332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8256959447434688161}
+  m_Layer: 0
+  m_Name: Nillo_Indice3.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8256959447434688161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8403975889831321332}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.18892656, y: 0.0055739437, z: -0.01667009, w: 0.9818339}
+  m_LocalPosition: {x: -4.1909514e-11, y: 0.0005646058, z: -1.1874363e-10}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2073936947924538318}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8424184915318176751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3563966102051931861}
+  m_Layer: 0
+  m_Name: Nillo_Cabeza
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3563966102051931861
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8424184915318176751}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.081636176, y: -0.09897092, z: 0.050897058, w: 0.9904291}
+  m_LocalPosition: {x: -4.1865112e-18, y: 0.0015122071, z: -3.7252902e-11}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5358953952124126153}
+  - {fileID: 1127910469970671662}
+  - {fileID: 2628588171186182506}
+  - {fileID: 5810417536171900737}
+  - {fileID: 7983516867893333797}
+  - {fileID: 8769369432769868716}
+  m_Father: {fileID: 7604887094171239088}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8452020341464099479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 199141461391140076}
+  m_Layer: 0
+  m_Name: Nillo_Pulgar3.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &199141461391140076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8452020341464099479}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.070941195, y: -0.0014790919, z: -0.038227137, w: 0.99674666}
+  m_LocalPosition: {x: 1.4901161e-10, y: 0.0004964562, z: 1.0011717e-10}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2430991252700183554}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8683652706546783614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7659789910585133404}
+  m_Layer: 0
+  m_Name: Nillo_Capa4.R.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7659789910585133404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683652706546783614}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.013522853, y: -0.0019454883, z: -0.00032764432, w: 0.99990666}
+  m_LocalPosition: {x: -4.4703483e-10, y: 0.0016530323, z: -5.2154064e-10}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.9999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 489757756904802105}
+  m_Father: {fileID: 513550701078642453}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8697010562199003535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5237960439411051469}
+  m_Layer: 0
+  m_Name: Nillo_Falda31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5237960439411051469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8697010562199003535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.4529925, y: -0.47180113, z: -0.51804316, w: 0.5512103}
+  m_LocalPosition: {x: 0.0027711205, y: 0.0013918292, z: -0.00043249349}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3748632986579132409}
+  m_Father: {fileID: 3048867671121924953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8757230184272327561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6852966397841402277}
+  m_Layer: 0
+  m_Name: Nillo_Capa3.R.003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6852966397841402277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757230184272327561}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.0031714833, y: -0.018274318, z: -0.0045056785, w: 0.99981785}
+  m_LocalPosition: {x: 3.72529e-10, y: 0.0014946304, z: 5.2154064e-10}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8302990402208346436}
+  m_Father: {fileID: 4481520349390778543}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8864252950341518976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5537179347092713290}
+  m_Layer: 0
+  m_Name: Nillo_Falda2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5537179347092713290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864252950341518976}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.04189727, y: 0.03298912, z: 0.1338478, w: 0.98956615}
+  m_LocalPosition: {x: 2.9802322e-10, y: 0.0051511163, z: -2.2817402e-10}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5417711708012715848}
+  m_Father: {fileID: 7298997861076965321}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8864329380770168529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3048867671121924953}
+  m_Layer: 0
+  m_Name: Nillo_Culo.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3048867671121924953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864329380770168529}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0065338, y: 0.024717527, z: 0.9996731, w: 0.00016153934}
+  m_LocalPosition: {x: 0.0014524461, y: 0.0019796677, z: 0.0013203552}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000017}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7298997861076965321}
+  - {fileID: 6911575905811654080}
+  - {fileID: 2474621892293529564}
+  - {fileID: 5237960439411051469}
+  m_Father: {fileID: 7053698432648877609}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8870746182342439940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2122104520428600305}
+  - component: {fileID: 5087213641097656665}
+  - component: {fileID: 8215868636166305660}
   m_Layer: 0
   m_Name: SlashParticle
   m_TagString: Untagged
@@ -80,32 +4078,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &493471212597341691
+--- !u!4 &2122104520428600305
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3917023895590569098}
+  m_GameObject: {fileID: 8870746182342439940}
   serializedVersion: 2
   m_LocalRotation: {x: -0.074545555, y: -0.44841465, z: -0.43955368, w: 0.77469975}
   m_LocalPosition: {x: 0, y: 4.17, z: 4.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6163974538044540815}
+  m_Father: {fileID: 5568103787940404115}
   m_LocalEulerAnglesHint: {x: -30.644, y: -47.002, z: -45.552}
---- !u!2083052967 &6609019216848911582
+--- !u!2083052967 &5087213641097656665
 VisualEffect:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3917023895590569098}
+  m_GameObject: {fileID: 8870746182342439940}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: 2616bec6a854ac64ca2a44406f4fa504, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: 
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_AllowInstancing: 1
@@ -136,14 +4134,14 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
---- !u!73398921 &7052464271199078934
+--- !u!73398921 &8215868636166305660
 VFXRenderer:
   serializedVersion: 1
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3917023895590569098}
+  m_GameObject: {fileID: 8870746182342439940}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -179,7 +4177,7 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &4922107421233326544
+--- !u!1 &9041593460604986381
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,193 +4185,174 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5440756986909722233}
+  - component: {fileID: 5521919027487565558}
   m_Layer: 0
-  m_Name: InteractZone
+  m_Name: Nillo_Anular3.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5440756986909722233
+--- !u!4 &5521919027487565558
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4922107421233326544}
+  m_GameObject: {fileID: 9041593460604986381}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.52, z: 1.15}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.103932925, y: 0.033351626, z: -0.009037723, w: 0.9939839}
+  m_LocalPosition: {x: 6.519258e-11, y: 0.00055033347, z: -3.1664968e-10}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6163974538044540815}
+  m_Father: {fileID: 575241689267627175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5908845110531973220
+--- !u!1 &9046472003979083068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3748632986579132409}
+  m_Layer: 0
+  m_Name: Nillo_Falda32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3748632986579132409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9046472003979083068}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.14230119, y: 0.07561365, z: -0.06298026, w: 0.98491955}
+  m_LocalPosition: {x: 5.122274e-11, y: 0.0050943326, z: 1.4930265e-10}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6193719681826926060}
+  m_Father: {fileID: 5237960439411051469}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9183432089585305058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6020876701774982436}
+  m_Layer: 0
+  m_Name: Nillo_Antebrazo.R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6020876701774982436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9183432089585305058}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0504227, y: 0.065520026, z: 0.14829825, w: 0.9854808}
+  m_LocalPosition: {x: 1.862645e-10, y: 0.0064936974, z: -3.7252902e-11}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8804456429066085397}
+  m_Father: {fileID: 8930296503144799573}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7206194072855186558
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 5568103787940404115}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.64
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.18
+      value: 3.33
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
+      propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - target: {fileID: 919132149155446097, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       propertyPath: m_Name
-      value: Nillo_Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706110884207132511, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[0]'
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706110884207132511, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[1]'
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706110884207132511, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[2]'
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706110884207132511, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[4]'
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706110884207132511, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[5]'
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7706110884207132511, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      propertyPath: 'm_BlendShapeWeights.Array.data[6]'
-      value: 100
+      value: Ataque Kenon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: 0
-      addedObject: {fileID: 8587661759223964578}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3472241861004045659}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5440756986909722233}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2747202212110571048}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 493471212597341691}
+    m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8111737092602125318}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7826940443979764679}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 870688909106916251}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4229794191907176594}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2263045082744618887}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1748751140931021743}
-  m_SourcePrefab: {fileID: 100100000, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
---- !u!4 &6163974538044540815 stripped
+      addedObject: {fileID: 3013173517148663342}
+  m_SourcePrefab: {fileID: 100100000, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
+--- !u!4 &7172881984160689045 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-  m_PrefabInstance: {fileID: 5908845110531973220}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
+  m_PrefabInstance: {fileID: 7206194072855186558}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6827745672767397173 stripped
+--- !u!1 &7548282039066308911 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 54ca922906c4a7d44a26734b66358359, type: 3}
-  m_PrefabInstance: {fileID: 5908845110531973220}
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 21998add1ee9c3941a47c3d46607f07d, type: 3}
+  m_PrefabInstance: {fileID: 7206194072855186558}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &8111737092602125318
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6827745672767397173}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 3.67
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.0001
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.83, z: 0}
---- !u!95 &7826940443979764679
+--- !u!95 &3013173517148663342
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6827745672767397173}
+  m_GameObject: {fileID: 7548282039066308911}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 26273c7603cb1a041ac6d92361ac6539, type: 2}
+  m_Controller: {fileID: 9100000, guid: b62132269b4b8ec4c9718219f1100621, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -385,192 +4364,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &870688909106916251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6827745672767397173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b2596fab1a7054a93a31c115735a3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moveValue: {x: 0, y: 0}
-  _playerSpeed: 6
-  _speed: 0
-  _speedChangeRate: 10
-  targetAngle: 0
-  _animationSpeed: 0
-  _sensorPosition: {fileID: 3472241861004045659}
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  _playerGravity: {x: 0, y: 0, z: 0}
-  _interactionPosition: {fileID: 5440756986909722233}
-  _interactionRadius: {x: 1.63, y: 3.04, z: 1.38}
-  jumpTimeOut: 0.5
-  fallTimeOut: 0.15
-  _jumpHeight: 2
-  dashCooldown: 1.25
-  _dashSpeed: 20
-  _dashTime: 0.25
-  isAiming: 0
-  _crosshair: {fileID: 0}
-  _manaReg: 25
-  _healthReg: 25
---- !u!114 &4229794191907176594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6827745672767397173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87eb090394ba2b24282267b6520eb32c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imageAbility1: {fileID: 0}
-  imageAbility2: {fileID: 0}
-  imageAbility3: {fileID: 0}
-  imageAbility4: {fileID: 0}
-  kenonImage: {fileID: 0}
-  cooldownAbility1: 15
-  currentCooldown1: 15
-  ability1Used: 0
-  manaWasted1: 15
-  cooldownAbility2: 10
-  currentCooldown2: 10
-  ability2Used: 0
-  manaWasted2: 25
-  waterSpeed: 8
-  cooldownAbility3: 10
-  currentCooldown3: 10
-  chargeAbility: 0
-  ability3Used: 0
-  manaWasted3: 50
-  lifeHealed: 10
-  cooldownAbility4: 10
-  currentCooldown4: 10
-  ability4Used: 0
-  hitBoxLocalOffset: {x: 0, y: 2.19, z: 6.4}
-  hitBoxSize: {x: 5, y: 4, z: 10}
-  manaWasted4: 50
-  canKenonAttack: 0
-  hitBoxKenonLocalOffset: {x: 0, y: 0, z: 0}
-  hitBoxKenonSize: {x: 0, y: 0, z: 0}
-  _kenonModel: {fileID: 8963940560955013400}
-  _kenonEffect: {fileID: 6609019216848911582}
---- !u!114 &2263045082744618887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6827745672767397173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a3ebc49fe90c1448742e3c03083b0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentMana: 100
-  maxMana: 100
-  mana: 0
-  manaBarImage: {fileID: 0}
-  _manaReg: 25
-  maxHealth: 100
-  currentHealth: 100
-  healthBarImage: {fileID: 0}
-  _healthReg: 25
-  manaText: {fileID: 0}
-  healthText: {fileID: 0}
-  manaPotions: 0
-  healthPotions: 0
---- !u!114 &1748751140931021743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6827745672767397173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d44bcbf65303c0b4298b463a6dfe75f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootTimer: 0
-  shootDelay: 0.75
-  _bulletSpawn: {fileID: 2747202212110571048}
---- !u!1001 &8117520228276847689
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6163974538044540815}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.29842377
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.0260277
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_Name
-      value: Kenon
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
---- !u!4 &8587661759223964578 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-  m_PrefabInstance: {fileID: 8117520228276847689}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8963940560955013400 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f14e60ae75538374488cd02374df5a4e, type: 3}
-  m_PrefabInstance: {fileID: 8117520228276847689}
-  m_PrefabAsset: {fileID: 0}

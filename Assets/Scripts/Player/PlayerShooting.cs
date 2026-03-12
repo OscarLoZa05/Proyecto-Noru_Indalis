@@ -10,7 +10,7 @@ public class PlayerShooting : MonoBehaviour
     //Componente
     private Animator _animator;
     private Transform _mainCamera;
-    private PlayerController _pCotroller;
+    private PlayerController _playerCotroller;
 
 
     [Header("Shooting")]
@@ -25,7 +25,7 @@ public class PlayerShooting : MonoBehaviour
         _attackInput = InputSystem.actions["Attack"];
 
         _animator = GetComponent<Animator>();
-        _pCotroller = GetComponent<PlayerController>();
+        _playerCotroller = GetComponent<PlayerController>();
         _mainCamera = Camera.main.transform;
     }
     void Start()
@@ -51,7 +51,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Attack()
     {
-        if(_pCotroller.isAiming == false)
+        if(_playerCotroller.isAiming == false)
         {
             GameObject bullet = PoolManager.Instance.GetPooledObject("Bullet", _bulletSpawn.position, _bulletSpawn.rotation);
             bullet.SetActive(true);

@@ -25,13 +25,18 @@ public class AperionAI : MonoBehaviour
     [SerializeField] private float _attackTimer;
     [SerializeField] private float _attackDelay = 5;
 
+    //Attack
+    [SerializeField] private Transform _attackPosition;
+    [SerializeField] private float _attackRadius = 5f;
+    [SerializeField] private int _damage = 25;
+
     //Waiting
-    
     private Transform _player;
     void Awake()
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
         _player = GameObject.FindWithTag("Player").transform;
+
     }
     void Start()
     {
@@ -110,6 +115,7 @@ public class AperionAI : MonoBehaviour
         _attackTimer += Time.deltaTime;
         if(_attackTimer > _attackDelay)
             {
+                Attack();
                 Debug.Log("Attacking!");
                 _attackTimer = 0;
             }
@@ -128,6 +134,24 @@ public class AperionAI : MonoBehaviour
             return false;
         }  
     }
+
+    void Attack()
+    {
+        Collider[] players = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
+            foreach (Collider item in players)
+            {
+                if(item.gameObject.CompareTag("Player"))
+                {
+                    PlayerResources _playerResources = item.GetComponent<PlayerResources>();
+                    
+                    if(_playerResources != null)
+                    {
+                        _playerResources.TakeDamage(25);
+                    }
+                }
+            }
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
@@ -135,6 +159,9 @@ public class AperionAI : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _attackRange);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
     
         Gizmos.color = Color.yellow;
         foreach (Transform point in _patrolPoints)

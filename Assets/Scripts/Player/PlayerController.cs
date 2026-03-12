@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private InputAction _aimingAction;
     private InputAction _manaAction;
     private InputAction _healthAction;
-    private InputAction Prueba;
+    //private InputAction Prueba;
     
     //Movimiento
     [Header("Movement")]
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
         _dashAction = InputSystem.actions["Dash"];
         _manaAction = InputSystem.actions["PotionsMana"];
         _healthAction = InputSystem.actions["PotionsHealth"];
-        Prueba = InputSystem.actions["Hola"];
+        //Prueba = InputSystem.actions["Hola"];
 
         _aimingAction = InputSystem.actions["Aiming"];
 
@@ -119,22 +119,27 @@ public class PlayerController : MonoBehaviour
         {
             Interact();
         }
-        if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown && !isAiming)
+        if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown)
         {
+            if(isAiming)
+            {
+                Aiming();
+            }
             StartCoroutine(Dash());
         }
 
         if(_aimingAction.WasPressedThisFrame() && IsGrounded())
         {
+            Mouse();
             Aiming();
         }
 
 
 
-        if(Prueba.WasPressedThisFrame())
+        /*if(Prueba.WasPressedThisFrame())
         {
             LoseHealth();
-        }     
+        }*/
 
         Movement();
 
@@ -302,10 +307,25 @@ public class PlayerController : MonoBehaviour
             }
     }
 
-    void LoseHealth()
+    /*void LoseHealth()
     {
         _playerResource.currentHealth -= 25;
         _playerResource.UpdateHealthBar();
+    }*/
+
+    void Mouse()
+    {
+        if(Cursor.visible == true)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        
     }
 
     void OnDrawGizmos()

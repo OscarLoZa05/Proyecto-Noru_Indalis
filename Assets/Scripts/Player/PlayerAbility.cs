@@ -63,6 +63,7 @@ public class PlayerAbility : MonoBehaviour
     [SerializeField] private Vector3 hitBoxLocalOffset = new Vector3(0f, 1f, 3f);
     [SerializeField] private Vector3 hitBoxSize = new Vector3(5f, 4f, 10f); 
     public int manaWasted4 = 50;
+    [SerializeField] private Transform _fireAttackPosition;
     #endregion
 
     #region Kenon
@@ -71,7 +72,6 @@ public class PlayerAbility : MonoBehaviour
     [SerializeField] private Vector3 hitBoxKenonLocalOffset;
     [SerializeField] private Vector3 hitBoxKenonSize;
     [SerializeField] private GameObject _kenonModel;
-    [SerializeField] private VisualEffect _kenonEffect;
     #endregion
 
     #region Components
@@ -132,7 +132,6 @@ public class PlayerAbility : MonoBehaviour
         }
         if(_kenonAbility.WasPressedThisFrame())
         {
-            _kenonEffect.Play();
             StartCoroutine(Kenon());
         }
         #endregion 
@@ -240,9 +239,8 @@ public class PlayerAbility : MonoBehaviour
     void FAttack()
     {
         Debug.Log("Habilidad 3 Usada");
-
-
-
+        GameObject fireAttack = PoolManager.Instance.GetPooledObject("FireAttack", _fireAttackPosition.position, _fireAttackPosition.rotation);
+        fireAttack.SetActive(true);
     }
 
     IEnumerator FState()

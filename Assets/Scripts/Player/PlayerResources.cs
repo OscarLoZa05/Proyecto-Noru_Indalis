@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 public class PlayerResources : MonoBehaviour
 {
 
+    //Components
+    private Animator _animator;
+
     //Inputs
     private InputAction _healthPotionInput;
     private InputAction _manaPotionInput;
@@ -19,7 +22,7 @@ public class PlayerResources : MonoBehaviour
     //ManaHealth
     [Header("Health")]
     public float maxHealth = 100;
-    public float currentHealth = 100;
+    public float currentHealth;
     public Image healthBarImage;
     [SerializeField] private int _healthReg = 25;
 
@@ -32,10 +35,12 @@ public class PlayerResources : MonoBehaviour
     public int manaPotions = 0;
     public int healthPotions = 0;    
 
+    //Player
     private PlayerAbility _playerAbility;
 
     void Awake()
     {
+        _animator = GetComponent<Animator>();
         _playerAbility = GetComponent<PlayerAbility>();
 
         _healthPotionInput = InputSystem.actions["PotionsHealth"];
@@ -44,7 +49,8 @@ public class PlayerResources : MonoBehaviour
 
     void Start()
     {
-        
+        maxHealth = 100;
+        currentHealth = maxHealth;
     }
 
 
@@ -70,8 +76,8 @@ public class PlayerResources : MonoBehaviour
     }
     void Health()
     {
-        currentHealth += _manaReg;
-        manaPotions --;
+        currentHealth += _healthReg;
+        healthPotions --;
         HealthText();
         UpdateHealthBar();
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
@@ -89,7 +95,7 @@ public class PlayerResources : MonoBehaviour
     
     public void UpdateHealthBar()
     {
-        float life = currentHealth / maxHealth;
+        float life = (float)currentHealth / maxHealth;
         healthBarImage.fillAmount = life;
     }
 
@@ -97,4 +103,16 @@ public class PlayerResources : MonoBehaviour
     {
         healthText.text = "x" + healthPotions.ToString();
     } 
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        UpdateHealthBar();
+        if(currentHealth <= 0)
+        {
+            _animator.SetTrigger("IsDead");
+            Debug.Log("Muerto");
+            //Destroy(gameObject);
+        }
+    }
 }
