@@ -1163,15 +1163,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: bf8b0e22586443540a25f0a109043ac9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.79
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf8b0e22586443540a25f0a109043ac9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf8b0e22586443540a25f0a109043ac9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.57
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bf8b0e22586443540a25f0a109043ac9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1215,7 +1215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bf8b0e22586443540a25f0a109043ac9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8043045793323769384, guid: bf8b0e22586443540a25f0a109043ac9, type: 3}
       propertyPath: m_Name
@@ -1321,7 +1321,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 968457059}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1330,7 +1330,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 4.13
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -1353,7 +1353,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Height: 3.9872148
   m_Direction: 1
   m_Center: {x: 0, y: 1.9714757, z: 0}
@@ -1375,12 +1375,13 @@ MonoBehaviour:
   - {fileID: 1311835117}
   - {fileID: 311171368}
   _detectionRange: 7
-  _attackRange: 2
+  _attackRange: 2.8
   _attackTimer: 0
   _attackDelay: 5
   _attackPosition: {fileID: 2003008569}
   _attackRadius: 1.82
   _damage: 25
+  isPlayerOnRange: 1.67
 --- !u!4 &968457063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bf8b0e22586443540a25f0a109043ac9, type: 3}
