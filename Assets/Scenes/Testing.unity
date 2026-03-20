@@ -1215,7 +1215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bf8b0e22586443540a25f0a109043ac9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8043045793323769384, guid: bf8b0e22586443540a25f0a109043ac9, type: 3}
       propertyPath: m_Name
@@ -14765,82 +14765,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 770100189813562539, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025274706990064125, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: cullingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025274706990064125, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025274706990064125, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.14010862
-      objectReference: {fileID: 0}
-    - target: {fileID: 2025274706990064125, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799784506795877537, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_SortMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799784506795877537, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_SortingFudge
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799784506795877537, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_RendererPriority
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409086224017614975, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.039
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248561516676204225, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: cullingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4867569376977980313, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: _fireSlashVelocity
-      value: 3.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5577061391724836897, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5627598331399726993, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_Time
-      value: 9.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5627598331399726993, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_MinVertexDistance
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6085294105367914718, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_SortMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6085294105367914718, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_SortingFudge
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6085294105367914718, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_RendererPriority
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6088325640015038216, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766694389315045319, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8827115878756249263, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
       propertyPath: m_Name
       value: FireSlash

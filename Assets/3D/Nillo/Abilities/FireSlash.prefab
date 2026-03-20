@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3409086224017614975
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 770100189813562539}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.45899963}
+  m_LocalPosition: {x: 0, y: 0.039, z: 0.45899963}
   m_LocalScale: {x: 2.16, y: 4.5860734, z: 3.6010103}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4836,7 +4836,7 @@ ParticleSystemRenderer:
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
-  m_RendererPriority: 1
+  m_RendererPriority: 2
   m_Materials:
   - {fileID: 2100000, guid: 4ec547b2da7117f4a86d9437a4faeecb, type: 2}
   m_StaticBatchInfo:
@@ -4867,7 +4867,7 @@ ParticleSystemRenderer:
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
-  m_SortingFudge: 1
+  m_SortingFudge: 2
   m_NormalDirection: 1
   m_ShadowBias: 0
   m_RenderAlignment: 2
@@ -4908,7 +4908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9021658078315862235
 Transform:
   m_ObjectHideFlags: 0
@@ -9740,7 +9740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7176085865232111924
 Transform:
   m_ObjectHideFlags: 0
@@ -9802,7 +9802,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Time: 5
+  m_Time: 9.2
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -9859,7 +9859,7 @@ TrailRenderer:
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 0.01
   m_MaskInteraction: 0
   m_Autodestruct: 0
   m_Emitting: 1
@@ -10087,7 +10087,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.3466704, b: 0.13679248, a: 1}
+      maxColor: {r: 1, g: 0.14010862, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -14700,7 +14700,7 @@ ParticleSystemRenderer:
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
-  m_RendererPriority: 2
+  m_RendererPriority: 1
   m_Materials:
   - {fileID: 2100000, guid: 4ec547b2da7117f4a86d9437a4faeecb, type: 2}
   m_StaticBatchInfo:
@@ -14731,7 +14731,7 @@ ParticleSystemRenderer:
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
-  m_SortingFudge: 2
+  m_SortingFudge: 1
   m_NormalDirection: 1
   m_ShadowBias: 0
   m_RenderAlignment: 2
@@ -14772,7 +14772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2752028856731160101
 Transform:
   m_ObjectHideFlags: 0
@@ -19826,5 +19826,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df8dbde8e4800f43bbbceef59c2e36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireSlashVelocity: 10
+  _fireSlashVelocity: 3.2
   Hola: 3
