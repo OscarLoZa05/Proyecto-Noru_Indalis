@@ -121,10 +121,11 @@ public class AperionAI : MonoBehaviour
     {
         if(!OnRange(_attackRange))
         {
+            _enemyAgent.isStopped = false;
             currentState = EnemyState.Chasing;
             return;
         }
-
+        _enemyAgent.isStopped = true;
         _attackTimer += Time.deltaTime;
         if(_attackTimer > _attackDelay)
             {
