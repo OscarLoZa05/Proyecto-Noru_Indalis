@@ -19,6 +19,8 @@ public class WendigoAI : MonoBehaviour
 
     //Attack
     [SerializeField] private float _attackRange = 2f;
+    [SerializeField] private float _attackTimer;
+    [SerializeField] private float _attackDelay = 2;
 
     //Charging
     [SerializeField] private float _chargingTimer;
@@ -35,8 +37,8 @@ public class WendigoAI : MonoBehaviour
 
     void Start()
     {
-        currentState = EnemyState.Charging;
-        _chargingTimer = _chargingDelay;
+        currentState = EnemyState.Chasing;
+        _attackTimer = _attackDelay;
     }
 
     void Update()
@@ -61,6 +63,7 @@ public class WendigoAI : MonoBehaviour
     void Chasing()
     {
         _enemyAgent.SetDestination(_player.position);
+        _enemyAgent.isStopped = false;
         if(OnRange(_attackRange))
         {
             currentState = EnemyState.Attacking;
@@ -69,11 +72,14 @@ public class WendigoAI : MonoBehaviour
 
     void Charging()
     {
+        _enemyAgent.isStopped = true;
+
         _chargingTimer += Time.deltaTime;
 
         if(_chargingTimer >= _chargingDelay)
         {
-            currentState = EnemyState.Attacking;
+            currentState = EnemyState.Chasing;
+            _chargingTimer = 0;
         }
     }
 
@@ -81,13 +87,31 @@ public class WendigoAI : MonoBehaviour
     {
         if(OnRange(_attackRange))
         {
-            Attack();
+            _enemyAgent.isStopped = true;
+
+            _attackTimer += Time.deltaTime;
+
+            if(_attackTimer >= _attackDelay)
+            {
+                Attack();
+                _attackTimer = 0;
+                currentState = EnemyState.Charging;
+            }
+        }
+        if(!OnRange(_attackRange))
+        {
+            currentState = EnemyState.Chasing;
         }
     }
 
     void Attack()
     {
-        Debug.Log("Attack)");
+        Debug.Log("Attack");
+    }
+
+    public void TurnToCharging()
+    {
+        currentState = EnemyState.Charging;
     }
 
     public bool OnRange(float distance)
@@ -102,5 +126,11 @@ public class WendigoAI : MonoBehaviour
         {
             return false;
         }  
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _attackRange);
     }
 }
