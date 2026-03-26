@@ -26,13 +26,14 @@ public class Chest : MonoBehaviour, IInteractable
     {
         if(!isOpen)
         {
+            _chestParticles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             isOpen = true;
             _animator.SetTrigger("IsOpen");
             _playerResources.manaPotions++;
             _playerResources.healthPotions++;
             _playerResources.ManaText();
             _playerResources.HealthText();
-            Destroy(_chestParticles);
+            
         }
         return;
         

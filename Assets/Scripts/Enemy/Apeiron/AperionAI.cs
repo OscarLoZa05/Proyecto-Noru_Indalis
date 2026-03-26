@@ -30,9 +30,6 @@ public class AperionAI : MonoBehaviour
     [SerializeField] private float _attackRadius = 5f;
     [SerializeField] private int _damage = 25;
 
-    //Waiting
-    [SerializeField] private float isPlayerOnRange = 1f;
-
     private Transform _player;
     void Awake()
     {
@@ -105,16 +102,6 @@ public class AperionAI : MonoBehaviour
         {
             _enemyAgent.SetDestination(_player.position);
         }
-        /*if(OnRange(isPlayerOnRange))
-        {
-            _enemyAgent.isStopped = true;
-        }
-        else if(!OnRange(isPlayerOnRange))
-        {
-            _enemyAgent.SetDestination(_player.position);
-        }*/
-        
-
     }
 
     void Attacking()
@@ -176,9 +163,6 @@ public class AperionAI : MonoBehaviour
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
-
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireSphere(transform.position, isPlayerOnRange);
     
         Gizmos.color = Color.yellow;
         foreach (Transform point in _patrolPoints)

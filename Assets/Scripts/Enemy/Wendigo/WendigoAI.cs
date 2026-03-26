@@ -73,6 +73,7 @@ public class WendigoAI : MonoBehaviour
     void Charging()
     {
         _enemyAgent.isStopped = true;
+        _enemyAgent.ResetPath();
 
         _chargingTimer += Time.deltaTime;
 

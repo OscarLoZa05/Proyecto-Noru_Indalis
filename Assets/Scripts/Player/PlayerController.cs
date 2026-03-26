@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     [Header("Ground")]
     public Transform _sensorPosition;
     public LayerMask _groundLayer;
-    private float _sensorRadius = 0.7f;
+    [SerializeField] private float _sensorRadius = 0.1f;
 
     //Gravedad
     [Header("Gravity")]
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
 
     //Camara
-    [Header("Apuntado")]
+    [Header("Aim")]
     public bool isAiming = false;
     [SerializeField] private GameObject _crosshair;
 
@@ -87,6 +87,10 @@ public class PlayerController : MonoBehaviour
     [Header("Potions")]
     [SerializeField] private int _manaReg = 25;
     [SerializeField] private int _healthReg = 25;
+
+    //Camera
+    [Header("Camera")]
+    public CinemachineOrbitalFollow cam;
 
     void Awake()
     {
@@ -100,10 +104,9 @@ public class PlayerController : MonoBehaviour
         _dashAction = InputSystem.actions["Dash"];
         _manaAction = InputSystem.actions["PotionsMana"];
         _healthAction = InputSystem.actions["PotionsHealth"];
-        //Prueba = InputSystem.actions["Hola"];
-
         _aimingAction = InputSystem.actions["Aiming"];
 
+        CinemachineFreeLook cam = GameObject.Find("FreeLookCamera").GetComponent<CinemachineFreeLook>();
         _mainCamera = Camera.main.transform;
     }
     void Update()
