@@ -4,6 +4,7 @@ using UnityEditor.Scripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Unity.Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -90,7 +91,11 @@ public class PlayerController : MonoBehaviour
 
     //Camera
     [Header("Camera")]
-    public CinemachineOrbitalFollow cam;
+    [SerializeField] private CinemachineCamera _freeLookCam;
+
+    [SerializeField] private float _forwardZoom = 4f;
+    [SerializeField] private float _backZoom = 5.5f;
+    [SerializeField] private float _currentZoom;
 
     void Awake()
     {
@@ -106,7 +111,6 @@ public class PlayerController : MonoBehaviour
         _healthAction = InputSystem.actions["PotionsHealth"];
         _aimingAction = InputSystem.actions["Aiming"];
 
-        CinemachineFreeLook cam = GameObject.Find("FreeLookCamera").GetComponent<CinemachineFreeLook>();
         _mainCamera = Camera.main.transform;
     }
     void Update()
@@ -139,6 +143,7 @@ public class PlayerController : MonoBehaviour
 
 
 
+
         /*if(Prueba.WasPressedThisFrame())
         {
             LoseHealth();
@@ -148,6 +153,11 @@ public class PlayerController : MonoBehaviour
 
         Gravity();
     }
+
+    /*void Start()
+    {
+        _currentZoom = _forward;
+    }*/ 
 
     
     void Movement()
@@ -328,8 +338,25 @@ public class PlayerController : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-        
     }
+
+
+
+    /*void ZoomOut()
+    {
+        var orbital = _freeLookCam.GetComponent<CinemachineOrbitalFollow>();
+
+        var settings = orbital.Orbits;
+
+        settings.Center.Radius = 100f;
+
+        orbital.Orbits = settings;
+    }
+
+    void ZoomIn()
+    {
+        
+    }*/
 
     void OnDrawGizmos()
     {
