@@ -1,11 +1,18 @@
+using Unity.Profiling;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Chest : MonoBehaviour, IInteractable
 {
+    //Booleanas
     private bool isOpen = false;
+    [SerializeField] private bool _isPlayerNear = false;
 
+    //Components
     private Animator _animator;
     private PlayerResources _playerResources;
+    [SerializeField] private SphereCollider _sphereCollider;
+    
 
     [SerializeField] private ParticleSystem _chestParticles;
 
@@ -36,6 +43,25 @@ public class Chest : MonoBehaviour, IInteractable
             
         }
         return;
-        
+    }
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.CompareTag("Player"))
+        {
+            _chestParticles.Play();
+        }
+    }
+    void OnTriggerExit(Collider collider)
+    {
+        if(collider.gameObject.CompareTag("Player"))
+        {
+            _chestParticles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, _sphereCollider.radius);
     }
 }

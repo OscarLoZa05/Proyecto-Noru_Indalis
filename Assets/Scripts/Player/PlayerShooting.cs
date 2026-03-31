@@ -61,6 +61,6 @@ public class PlayerShooting : MonoBehaviour
             GameObject bullet = PoolManager.Instance.GetPooledObject("Bullet", _bulletSpawn.position, _mainCamera.rotation);
             bullet.SetActive(true);
         }
-        
     }
+
 }

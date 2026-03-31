@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class FireSlash : MonoBehaviour
@@ -6,8 +7,6 @@ public class FireSlash : MonoBehaviour
 
     [SerializeField] private float _fireSlashVelocity = 5;
 
-    [SerializeField] private int Hola = 3;
-    
     void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
@@ -15,11 +14,18 @@ public class FireSlash : MonoBehaviour
 
     void Start()
     {
-        
+        StartCoroutine(Slash());
     }
 
     void Update()
     {
         _rigidBody.linearVelocity = transform.forward * _fireSlashVelocity;
+    }
+
+    IEnumerator Slash()
+    {
+        yield return new WaitForSeconds(2);
+
+        gameObject.SetActive(false);
     }
 }

@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -4910,6 +4910,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 86fc867df6ff8ae4e89c327e8deb2782, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7781548765701993330}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 86fc867df6ff8ae4e89c327e8deb2782, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8377637826556031048}
   m_SourcePrefab: {fileID: 100100000, guid: 86fc867df6ff8ae4e89c327e8deb2782, type: 3}
 --- !u!4 &6202012362232107243 stripped
 Transform:
@@ -4955,6 +4958,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a55e80dfe15b44d8b0cd3d8369707f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPlayerNear: 0
+  _sphereCollider: {fileID: 8377637826556031048}
   _chestParticles: {fileID: 2305558605586560439}
 --- !u!65 &7781548765701993330
 BoxCollider:
@@ -4975,5 +4980,26 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.68, y: 2.15, z: 1.56}
-  m_Center: {x: 0, y: 1.06, z: 0}
+  m_Size: {x: 2.68, y: 2.2290199, z: 1.56}
+  m_Center: {x: -0, y: 1.0995098, z: 0}
+--- !u!135 &8377637826556031048
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6726734960954002001}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 20
+  m_Center: {x: -0, y: 0, z: 0}

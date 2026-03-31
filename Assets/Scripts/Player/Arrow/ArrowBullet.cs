@@ -23,4 +23,12 @@ public class ArrowBullet : MonoBehaviour
     {
         _rigidBody.linearVelocity = transform.forward * _arrowVelocity;
     }
+
+        void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.layer == 3 || collider.gameObject.layer == 6 || collider.gameObject.layer == 7)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }
