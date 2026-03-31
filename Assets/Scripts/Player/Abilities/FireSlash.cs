@@ -5,7 +5,7 @@ public class FireSlash : MonoBehaviour
 {
     private Rigidbody _rigidBody;
 
-    [SerializeField] private float _fireSlashVelocity = 5;
+    [SerializeField] private float _fireSlashVelocity = 15;
 
     void Awake()
     {

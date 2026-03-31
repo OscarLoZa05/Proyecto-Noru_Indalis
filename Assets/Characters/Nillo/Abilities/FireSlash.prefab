@@ -19826,5 +19826,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df8dbde8e4800f43bbbceef59c2e36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireSlashVelocity: 3.2
-  Hola: 3
+  _fireSlashVelocity: 15
