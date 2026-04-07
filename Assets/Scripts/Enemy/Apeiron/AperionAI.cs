@@ -30,6 +30,10 @@ public class AperionAI : MonoBehaviour
     [SerializeField] private float _attackRadius = 5f;
     [SerializeField] private int _damage = 25;
 
+    //Life
+    [SerializeField] private int _currentLife;
+    [SerializeField] private int _maxLife = 150;
+
     private Transform _player;
     void Awake()
     {
@@ -39,6 +43,7 @@ public class AperionAI : MonoBehaviour
     }
     void Start()
     {
+        _currentLife = _maxLife;
         currentState = EnemyState.Patrolling;
         _enemyAgent.SetDestination(_player.position);
         _attackTimer = _attackDelay;
@@ -62,8 +67,9 @@ public class AperionAI : MonoBehaviour
             default:
                 Patrolling();
             break;
-
         }
+
+        
     }
 
     void Patrolling()
@@ -151,6 +157,20 @@ public class AperionAI : MonoBehaviour
                     }
                 }
             }
+    }
+
+    void TakeDamage()
+    {
+        _currentLife -= 20;
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.CompareTag("Arrow"))
+        {
+            collider.gameObject.SetActive(false);
+            TakeDamage();
+        }
     }
 
     void OnDrawGizmos()

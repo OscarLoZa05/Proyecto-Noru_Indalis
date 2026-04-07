@@ -121,6 +121,8 @@ public class PlayerResources : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if(currentHealth <= 0) return;
+        
         currentHealth -= damage;
         UpdateHealthBar();
         if(currentHealth <= 0)
