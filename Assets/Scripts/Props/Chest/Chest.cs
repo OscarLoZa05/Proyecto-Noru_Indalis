@@ -20,6 +20,7 @@ public class Chest : MonoBehaviour, IInteractable
     void Awake()
     {
         _animator = GetComponent<Animator>();
+
         _playerResources = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerResources>();
     }
 
@@ -62,6 +63,6 @@ public class Chest : MonoBehaviour, IInteractable
     void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position, _sphereCollider.radius);
+        Gizmos.DrawWireSphere(transform.position, _sphereCollider.radius);  
     }
 }
