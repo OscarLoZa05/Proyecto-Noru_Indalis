@@ -94,7 +94,8 @@ public class PlayerAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(GameManager.Instance._isDead || GameManager.Instance._isPaused) return;
+        
         //fireAttackRange  = transform.rotation * rangeAttack;
 
         #region Abilities

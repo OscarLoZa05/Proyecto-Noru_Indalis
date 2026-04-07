@@ -22,18 +22,24 @@ public class PlayerResources : MonoBehaviour
     //ManaHealth
     [Header("Health")]
     public float maxHealth = 100;
-    public float currentHealth;
+    public float currentHealth = 100;
     public Image healthBarImage;
     [SerializeField] private int _healthReg = 25;
 
-    [Header("TextsPotions")]
+    [Header("Texts")]
     public Text manaText;
     public Text healthText;
+    public Text moneyText;
 
     //Potions
     [Header("Potions")]
     public int manaPotions = 0;
-    public int healthPotions = 0;    
+    public int healthPotions = 0; 
+
+    //Money
+    [Header("Money")]
+    public int money = 0;
+    public Text monetText;   
 
     //Player
     private PlayerAbility _playerAbility;
@@ -56,6 +62,8 @@ public class PlayerResources : MonoBehaviour
 
     void Update()
     {
+        if(GameManager.Instance._isDead || GameManager.Instance._isPaused) return;
+
         if(_manaPotionInput.WasPressedThisFrame() && manaPotions > 0)
         {
             Mana();
@@ -104,12 +112,20 @@ public class PlayerResources : MonoBehaviour
         healthText.text = "x" + healthPotions.ToString();
     } 
 
+    public void Money()
+    {
+        int valueRandom = Random.Range(239, 875);
+        money += valueRandom;
+        Debug.Log(valueRandom);
+    }
+
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         UpdateHealthBar();
         if(currentHealth <= 0)
         {
+            GameManager.Instance._isDead = true;
             _animator.SetTrigger("IsDead");
             Debug.Log("Muerto");
             //Destroy(gameObject);

@@ -21,6 +21,8 @@ public class WendigoAI : MonoBehaviour
     [SerializeField] private float _attackRange = 2f;
     [SerializeField] private float _attackTimer;
     [SerializeField] private float _attackDelay = 2;
+    [SerializeField] private Transform _attackPosition;
+    [SerializeField] private int _attackRadius = 5;
 
     //Charging
     [SerializeField] private float _chargingTimer;
@@ -105,10 +107,24 @@ public class WendigoAI : MonoBehaviour
         }
     }
 
-    void Attack()
+    
+        void Attack()
     {
-        Debug.Log("Attack");
+        Collider[] players = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
+            foreach (Collider item in players)
+            {
+                if(item.gameObject.CompareTag("Player"))
+                {
+                    PlayerResources _playerResources = item.GetComponent<PlayerResources>();
+                    
+                    if(_playerResources != null)
+                    {
+                        _playerResources.TakeDamage(25);
+                    }
+                }
+            }
     }
+    
 
     public void TurnToCharging()
     {
@@ -133,5 +149,8 @@ public class WendigoAI : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _attackRange);
+
+        Gizmos.color = Color.gray;
+        Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
     }
 }

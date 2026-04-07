@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     [Header("Ground")]
     public Transform _sensorPosition;
     public LayerMask _groundLayer;
-    [SerializeField] private float _sensorRadius = 0.1f;
+    [SerializeField] private float _sensorRadius = 0.5f;
 
     //Gravedad
     [Header("Gravity")]
@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
     [Header("Aim")]
     public bool isAiming = false;
     [SerializeField] private GameObject _crosshair;
+    [SerializeField] private int _aimingSpeed = 4;
 
     //Potions
     [Header("Potions")]
@@ -115,6 +116,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        if(GameManager.Instance._isDead || GameManager.Instance._isPaused) return;
         _moveValue = _moveAction.ReadValue<Vector2>();
 
         //Acciones
@@ -227,6 +229,14 @@ public class PlayerController : MonoBehaviour
         _crosshair.SetActive(isAiming);
         _animator.SetBool("IsAiming", isAiming);
         Debug.Log(isAiming);
+        if(isAiming)
+        {
+            _playerSpeed = _aimingSpeed;
+        }
+        if(!isAiming)
+        {
+            _playerSpeed = _playerMovementSpeed;
+        }
     }
 
     void Jump()
