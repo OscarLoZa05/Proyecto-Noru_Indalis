@@ -34,6 +34,10 @@ public class AperionAI : MonoBehaviour
     [SerializeField] private int _currentLife;
     [SerializeField] private int _maxLife = 150;
 
+    //Dron
+    [SerializeField] private bool _dronUsed = false;
+    [SerializeField] private int _distanceToDron = 25;
+
     private Transform _player;
     void Awake()
     {
@@ -154,6 +158,7 @@ public class AperionAI : MonoBehaviour
                     if(_playerResources != null)
                     {
                         _playerResources.TakeDamage(25);
+                        Help();
                     }
                 }
             }
@@ -162,6 +167,43 @@ public class AperionAI : MonoBehaviour
     void TakeDamage()
     {
         _currentLife -= 20;
+    }
+
+    private Transform mostNear = null;
+
+    void Help()
+    {   
+        if(_dronUsed) return;
+        
+        Collider[] drones = Physics.OverlapSphere(transform.position, _distanceToDron);
+        mostNear = null;
+            
+        foreach (Collider defensers in drones)
+        {
+            if(defensers.gameObject.CompareTag("Defensor"))
+            {      
+                if(mostNear == null)
+                {
+                    mostNear = defensers.transform;
+                }
+
+                float distance = Vector3.Distance(transform.position, defensers.transform.position);
+                if(distance < Vector3.Distance(transform.position, mostNear.position))
+                {
+                    mostNear = defensers.transform;
+                }
+            }
+        }
+
+        if(mostNear != null)
+        {
+            Debug.Log("Defensor más cercano: " + mostNear.name);
+            DronDefensorAI dronDefensorAI = mostNear.GetComponent<DronDefensorAI>();
+            dronDefensorAI.target = transform;
+            dronDefensorAI.Prepare(mostNear);
+
+            _dronUsed = true;
+        }
     }
 
     void OnTriggerEnter(Collider collider)
@@ -183,6 +225,9 @@ public class AperionAI : MonoBehaviour
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
+
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireSphere(transform.position, _distanceToDron);
     
         Gizmos.color = Color.yellow;
         foreach (Transform point in _patrolPoints)
