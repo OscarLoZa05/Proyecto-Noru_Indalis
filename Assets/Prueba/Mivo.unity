@@ -36578,7 +36578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6975376713837965656, guid: 3ab16084fc098d345a0f921075556b21, type: 3}
       propertyPath: sceneCharging
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
