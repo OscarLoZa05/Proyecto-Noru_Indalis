@@ -25477,8 +25477,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015644007}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0031664292, y: -0.9971756, z: -0.045753036, w: 0.059476607}
-  m_LocalPosition: {x: 70.55946, y: 5.1555753, z: -55.066322}
+  m_LocalRotation: {x: -0.060414717, y: 0.10111021, z: 0.0061514815, w: 0.9930201}
+  m_LocalPosition: {x: 35.4, y: 2.249939, z: 3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37435,7 +37435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6975376713837965656, guid: 3ab16084fc098d345a0f921075556b21, type: 3}
       propertyPath: sceneCharging
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -42744,7 +42744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3373284122028541590, guid: 89c30f5317ab24548a317a233858f6f0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8110809023450318820, guid: 89c30f5317ab24548a317a233858f6f0, type: 3}
       propertyPath: Target.TrackingTarget
@@ -48467,7 +48467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4674784480448575318, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6161172089636336445, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
       propertyPath: m_Pivot.x

@@ -133,4 +133,9 @@ public class PlayerResources : MonoBehaviour
             //Destroy(gameObject);
         }
     }
+
+    public void ManaShoot()
+    {
+        currentMana += 5;
+    }
 }

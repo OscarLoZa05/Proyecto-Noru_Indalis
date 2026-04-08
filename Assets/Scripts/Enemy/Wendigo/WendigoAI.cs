@@ -208,8 +208,8 @@ public class WendigoAI : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Arrow"))
         {
-            collider.gameObject.SetActive(false);
             TakeDamage(20);
+            collider.gameObject.SetActive(false);
         }
         if(collider.gameObject.CompareTag("Fire"))
         {

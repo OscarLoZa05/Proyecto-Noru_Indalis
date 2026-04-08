@@ -70,10 +70,10 @@ Material:
     - _Opacity: 1
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
-    - _RadialDistortion: 0
-    - _RadialScale: 11.64
+    - _RadialDistortion: 0.6
+    - _RadialScale: 46.76
     - _RenderQueueType: 4
-    - _Speed: 0.305
+    - _Speed: 0.175
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 1
@@ -91,9 +91,9 @@ Material:
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
-    - _TwirlDistortion: 3
-    - _TwirlScale: 2
-    - _TwirlStrenght: 16.5
+    - _TwirlDistortion: 4.2
+    - _TwirlScale: 1.8
+    - _TwirlStrenght: 18.6
     - _UseShadowThreshold: 0
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestTransparent: 4
@@ -101,7 +101,7 @@ Material:
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _PortalColor: {r: 11.137776, g: 6.4077377, b: 31.591637, a: 0}
+    - _PortalColor: {r: 41.120373, g: 31.802065, b: 155.74858, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8120605787737546987

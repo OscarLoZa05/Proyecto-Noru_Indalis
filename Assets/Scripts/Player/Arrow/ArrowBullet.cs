@@ -6,12 +6,16 @@ public class ArrowBullet : MonoBehaviour
     private Rigidbody _rigidBody;
 
     [SerializeField] private float _arrowVelocity = 5;
+    private PlayerResources playerRes;
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        PlayerResources playerRes = player.GetComponent<PlayerResources>();
     }
     void Start()
     {
@@ -31,4 +35,10 @@ public class ArrowBullet : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void ManaForPlayer()
+    {
+        playerRes.ManaShoot();
+    }
+
 }
