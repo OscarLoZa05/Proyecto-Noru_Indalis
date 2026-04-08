@@ -98,11 +98,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _backZoom = 5.5f;
     [SerializeField] private float _currentZoom;
 
+    //Sounds
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip _dashSFX;
+
     void Awake()
     {
         _controller = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
         _playerResource = GetComponent<PlayerResources>();
+        _audioSource = GetComponent<AudioSource>();
 
         _moveAction = InputSystem.actions["Move"];
         _jumpAction = InputSystem.actions["Jump"];
@@ -295,6 +300,7 @@ public class PlayerController : MonoBehaviour
     {
         isDashing = true;
         float timer = 0;
+        _audioSource.PlayOneShot(_dashSFX);
 
         while(timer < _dashTime)
         {

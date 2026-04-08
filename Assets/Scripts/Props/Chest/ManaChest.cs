@@ -12,12 +12,16 @@ public class ManaChest : MonoBehaviour, IInteractable
     private PlayerResources _playerResources; 
     [SerializeField] private ParticleSystem _chestParticles;
 
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip _open;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         _animator = GetComponent<Animator>();
 
         _playerResources = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerResources>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +34,7 @@ public class ManaChest : MonoBehaviour, IInteractable
     {
         if(!isOpen)
         {
+            _audioSource.PlayOneShot(_open);
             _chestParticles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             isOpen = true;
             _animator.SetTrigger("IsOpen");

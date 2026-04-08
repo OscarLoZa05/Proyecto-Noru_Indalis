@@ -26,6 +26,14 @@ public class PlayerAbility : MonoBehaviour
     public Image imageAbility4;
     public Image kenonImage;
     #endregion
+
+    #region Sounds
+    //Sounds
+    [Header("Sounds")]
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip _fireSFX;
+    [SerializeField] private AudioClip _fireStateSFX;
+    [SerializeField] private AudioClip _waterStateSFX;
     
     #region WaterAbility
     //WaterAbilities
@@ -36,6 +44,7 @@ public class PlayerAbility : MonoBehaviour
     private float maxDistance = 10;
     private float playerForceImpulse = 20;
     public int manaWasted1 = 15;
+    #endregion
 
     [Header("WState")]
     public float cooldownAbility2 = 10;
@@ -83,6 +92,7 @@ public class PlayerAbility : MonoBehaviour
     {
         _playerController = GetComponent<PlayerController>();
         _playerResource = GetComponent<PlayerResources>();
+        _audioSource = GetComponent<AudioSource>();
 
         _ability1 = InputSystem.actions["WaterAttack"];
         _ability2 = InputSystem.actions["WaterState"];
@@ -109,6 +119,7 @@ public class PlayerAbility : MonoBehaviour
         }
         if(_ability2.WasPressedThisFrame() && ability2Used == false && _playerResource.currentMana >= manaWasted2)
         {
+            _audioSource.PlayOneShot(_waterStateSFX);
             StartCoroutine(WState());
             ManaUsed(manaWasted2);
             ability2Used = true;
@@ -117,6 +128,7 @@ public class PlayerAbility : MonoBehaviour
         }
         if(_ability3.WasPressedThisFrame() && ability3Used == false && _playerResource.currentMana >= manaWasted3)
         {
+            _audioSource.PlayOneShot(_fireStateSFX);
             StartCoroutine(FState());
             ManaUsed(manaWasted3);
             ability3Used = true;
@@ -125,6 +137,7 @@ public class PlayerAbility : MonoBehaviour
         }
         if(_ability4.WasPressedThisFrame() && ability4Used == false && _playerResource.currentMana >= manaWasted4)
         {
+            _audioSource.PlayOneShot(_fireSFX);
             FAttack();
             ManaUsed(manaWasted4);
             ability4Used = true;
@@ -278,4 +291,5 @@ public class PlayerAbility : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, maxDistance);
     }
+
 }

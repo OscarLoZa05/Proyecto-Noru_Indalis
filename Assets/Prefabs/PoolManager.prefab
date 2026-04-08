@@ -49,3 +49,7 @@ MonoBehaviour:
     prefab: {fileID: 2856491651256409700, guid: 5d8ef6a5af5cd0444b1ab225357c29eb, type: 3}
     poolSize: 35
     pooledObjects: []
+  - parentName: FireAttack
+    prefab: {fileID: 8827115878756249263, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
+    poolSize: 2
+    pooledObjects: []

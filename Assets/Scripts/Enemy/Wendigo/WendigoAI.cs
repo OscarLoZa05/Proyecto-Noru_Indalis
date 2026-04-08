@@ -4,12 +4,16 @@ using UnityEngine.AI;
 
 public class WendigoAI : MonoBehaviour
 {
+
+    private AudioSource _audioSource;
+    [SerializeField] AudioClip _deadSFX;
     private NavMeshAgent _enemyAgent;
     public enum EnemyState
     {
         Chasing,
         Charging,
         Attacking,
+        Dead,
     }
 
     public EnemyState currentState;
@@ -31,14 +35,21 @@ public class WendigoAI : MonoBehaviour
     //Player
     private Transform _player;
 
+    //Life
+    [SerializeField] private int _currentLife;
+    [SerializeField] private int _maxLife = 500;
+    [SerializeField] private bool _isDead = false;
+
     void Awake()
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
+        _audioSource = GetComponent<AudioSource>();
         _player = GameObject.FindWithTag("Player").transform;
     }
 
     void Start()
     {
+        _currentLife = _maxLife;
         currentState = EnemyState.Chasing;
         _attackTimer = _attackDelay;
     }
@@ -56,6 +67,9 @@ public class WendigoAI : MonoBehaviour
             case EnemyState.Attacking:
                 Attacking();
             break;
+            case EnemyState.Dead:
+                StartCoroutine(Dead());
+            break;
             default:
                 Chasing();
             break;
@@ -64,6 +78,12 @@ public class WendigoAI : MonoBehaviour
 
     void Chasing()
     {
+        if(_currentLife <= 0)
+        {
+            StartCoroutine(Dead());
+            return;
+
+        }
         _enemyAgent.SetDestination(_player.position);
         _enemyAgent.isStopped = false;
         if(OnRange(_attackRange))
@@ -74,6 +94,12 @@ public class WendigoAI : MonoBehaviour
 
     void Charging()
     {
+        if(_currentLife <= 0)
+        {
+            StartCoroutine(Dead());
+            return;
+
+        }
         _enemyAgent.isStopped = true;
         _enemyAgent.ResetPath();
 
@@ -88,6 +114,12 @@ public class WendigoAI : MonoBehaviour
 
     void Attacking()
     {
+        if(_currentLife <= 0)
+        {
+            StartCoroutine(Dead());
+            return;
+
+        }
         if(OnRange(_attackRange))
         {
             _enemyAgent.isStopped = true;
@@ -124,11 +156,24 @@ public class WendigoAI : MonoBehaviour
                 }
             }
     }
+
+    IEnumerator Dead()
+    {
+        //_audioSource.PlayOneShot(_deadSFX);
+        _isDead = true;
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
+    }
     
 
     public void TurnToCharging()
     {
         currentState = EnemyState.Charging;
+    }
+
+        void TakeDamage(int damage)
+    {
+        _currentLife -= damage;
     }
 
     public bool OnRange(float distance)
@@ -143,6 +188,20 @@ public class WendigoAI : MonoBehaviour
         {
             return false;
         }  
+    }
+
+        void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.CompareTag("Arrow"))
+        {
+            collider.gameObject.SetActive(false);
+            TakeDamage(20);
+        }
+        if(collider.gameObject.CompareTag("Fire"))
+        {
+            collider.gameObject.SetActive(false);
+            TakeDamage(50);
+        }
     }
 
     void OnDrawGizmos()

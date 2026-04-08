@@ -706,6 +706,7 @@ GameObject:
   - component: {fileID: 715450768350930057}
   - component: {fileID: 5628910591951614396}
   - component: {fileID: 6263017924174180838}
+  - component: {fileID: 7237920880509204280}
   m_Layer: 0
   m_Name: Nillo_Player
   m_TagString: Player
@@ -817,6 +818,7 @@ MonoBehaviour:
   _dashTime: 0.25
   isAiming: 0
   _crosshair: {fileID: 0}
+  _aimingSpeed: 4
   _manaReg: 25
   _healthReg: 25
   _freeLookCam: {fileID: 0}
@@ -890,8 +892,11 @@ MonoBehaviour:
   _healthReg: 25
   manaText: {fileID: 0}
   healthText: {fileID: 0}
+  moneyText: {fileID: 0}
   manaPotions: 0
   healthPotions: 0
+  money: 0
+  monetText: {fileID: 0}
 --- !u!114 &6263017924174180838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,6 +912,14 @@ MonoBehaviour:
   shootTimer: 0
   shootDelay: 0.75
   _bulletSpawn: {fileID: 5949342230390641854}
+--- !u!81 &7237920880509204280
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812013013115137904}
+  m_Enabled: 1
 --- !u!1 &818299586192430684
 GameObject:
   m_ObjectHideFlags: 0

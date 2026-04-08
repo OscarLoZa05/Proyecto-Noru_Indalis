@@ -11,6 +11,9 @@ public class PlayerShooting : MonoBehaviour
     private Animator _animator;
     private Transform _mainCamera;
     private PlayerController _playerCotroller;
+    private AudioSource _audioSource;
+
+    [SerializeField] private AudioClip _shootSFX;
 
 
     [Header("Shooting")]
@@ -26,6 +29,7 @@ public class PlayerShooting : MonoBehaviour
 
         _animator = GetComponent<Animator>();
         _playerCotroller = GetComponent<PlayerController>();
+        _audioSource = GetComponent<AudioSource>();
         _mainCamera = Camera.main.transform;
     }
     void Start()
@@ -53,6 +57,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Attack()
     {
+        _audioSource.PlayOneShot(_shootSFX);
         if(_playerCotroller.isAiming == false)
         {
             GameObject bullet = PoolManager.Instance.GetPooledObject("Bullet", _bulletSpawn.position, _bulletSpawn.rotation);
