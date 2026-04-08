@@ -10,6 +10,7 @@ public class AperionAI : MonoBehaviour
         Patrolling,
         Chasing,
         Attacking,
+        Dead,
     }
 
     public EnemyState currentState;
@@ -33,6 +34,7 @@ public class AperionAI : MonoBehaviour
     //Life
     [SerializeField] private int _currentLife;
     [SerializeField] private int _maxLife = 150;
+    [SerializeField] private bool _isDead = false;
 
     //Dron
     [SerializeField] private bool _dronUsed = false;
@@ -57,6 +59,10 @@ public class AperionAI : MonoBehaviour
 
     void Update()
     {
+        if(_isDead)
+        {
+            return;
+        }
         switch(currentState)
         {
             case EnemyState.Patrolling:
@@ -68,6 +74,9 @@ public class AperionAI : MonoBehaviour
             case EnemyState.Attacking:
                 Attacking();
             break;
+            case EnemyState.Dead:
+                Dead();
+            break;
             default:
                 Patrolling();
             break;
@@ -78,6 +87,11 @@ public class AperionAI : MonoBehaviour
 
     void Patrolling()
     {
+        if(_currentLife <= 0)
+        {
+            Dead();
+            return;
+        }
         if(OnRange(_detectionRange))
         {
             currentState = EnemyState.Chasing;
@@ -98,6 +112,11 @@ public class AperionAI : MonoBehaviour
 
     void Chasing()
     {
+        if(_currentLife <= 0)
+        {
+            Dead();
+            return;
+        }
         if(!OnRange(_detectionRange))
         {
             currentState = EnemyState.Patrolling;
@@ -116,6 +135,12 @@ public class AperionAI : MonoBehaviour
 
     void Attacking()
     {
+        if(_currentLife <= 0)
+        {
+            Dead();
+            return;
+
+        }
         if(!OnRange(_attackRange))
         {
             _enemyAgent.isStopped = false;
@@ -204,6 +229,12 @@ public class AperionAI : MonoBehaviour
 
             _dronUsed = true;
         }
+    }
+
+    void Dead()
+    {
+        _isDead = true;
+        Destroy(gameObject);
     }
 
     void OnTriggerEnter(Collider collider)
