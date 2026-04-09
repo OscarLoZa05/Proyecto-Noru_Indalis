@@ -6,6 +6,8 @@ public class WendigoAI : MonoBehaviour
 {
 
     private AudioSource _audioSource;
+    [SerializeField] AudioSource _audioFoots;
+    [SerializeField] AudioClip _footSFX;
     [SerializeField] AudioClip _deadSFX;
     private NavMeshAgent _enemyAgent;
     public enum EnemyState
@@ -68,7 +70,7 @@ public class WendigoAI : MonoBehaviour
                 Attacking();
             break;
             case EnemyState.Dead:
-                StartCoroutine(Dead());
+                Dead();
             break;
             default:
                 Chasing();
@@ -80,7 +82,7 @@ public class WendigoAI : MonoBehaviour
     {
         if(_currentLife <= 0)
         {
-            StartCoroutine(Dead());
+            Dead();
             return;
 
         }
@@ -96,7 +98,7 @@ public class WendigoAI : MonoBehaviour
     {
         if(_currentLife <= 0)
         {
-            StartCoroutine(Dead());
+            Dead();
             return;
 
         }
@@ -116,23 +118,24 @@ public class WendigoAI : MonoBehaviour
     {
         if(_currentLife <= 0)
         {
-            StartCoroutine(Dead());
+            Dead();
             return;
 
         }
         if(OnRange(_attackRange))
         {
-            _enemyAgent.isStopped = true;
+            Attack();
+            /*_enemyAgent.isStopped = true;
 
             _attackTimer += Time.deltaTime;
 
             if(_attackTimer >= _attackDelay)
             {
-                Attack();
-                _attackTimer = 0;
+                
+            _attackTimer = 0;
                 currentState = EnemyState.Charging;
             }
-        }
+        }*/
         if(!OnRange(_attackRange))
         {
             currentState = EnemyState.Chasing;
@@ -140,7 +143,7 @@ public class WendigoAI : MonoBehaviour
     }
 
     
-        void Attack()
+    void Attack()
     {
         Collider[] players = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
             foreach (Collider item in players)
@@ -152,29 +155,40 @@ public class WendigoAI : MonoBehaviour
                     if(_playerResources != null)
                     {
                         _playerResources.TakeDamage(25);
+                        currentState = EnemyState.Charging;
                     }
                 }
             }
+        }
+            
     }
 
-    IEnumerator Dead()
+    public void SoundFoot()
+    {
+        _audioFoots.PlayOneShot(_footSFX);
+    }
+
+    void Dead()
     {
         //_audioSource.PlayOneShot(_deadSFX);
         _isDead = true;
-        yield return new WaitForSeconds(5);
-        Destroy(gameObject);
+        Destroy(gameObject);    
     }
     
+    
+    
 
-    public void TurnToCharging()
+    void TurnToCharging()
     {
         currentState = EnemyState.Charging;
     }
 
-        void TakeDamage(int damage)
+    void TakeDamage(int damage)
     {
         _currentLife -= damage;
     }
+
+    
 
     public bool OnRange(float distance)
     {
@@ -190,7 +204,7 @@ public class WendigoAI : MonoBehaviour
         }  
     }
 
-        void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.CompareTag("Arrow"))
         {
@@ -213,3 +227,4 @@ public class WendigoAI : MonoBehaviour
         Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
     }
 }
+

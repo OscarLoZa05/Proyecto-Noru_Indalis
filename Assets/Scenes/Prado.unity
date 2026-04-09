@@ -33853,6 +33853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 6975376713837965656, guid: 3ab16084fc098d345a0f921075556b21, type: 3}
+      propertyPath: sceneCharging
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
