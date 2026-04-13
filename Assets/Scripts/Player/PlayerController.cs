@@ -102,6 +102,11 @@ public class PlayerController : MonoBehaviour
     private AudioSource _audioSource;
     [SerializeField] private AudioClip _dashSFX;
 
+    //Camera 
+    [Header("Camara")]
+    public GameObject freeLookCamera;
+    public GameObject thirdPersonCamera;
+
     void Awake()
     {
         _controller = GetComponent<CharacterController>();
@@ -238,10 +243,14 @@ public class PlayerController : MonoBehaviour
         if(isAiming)
         {
             _playerSpeed = _aimingSpeed;
+            /*freeLookCamera.SetActive(false);
+            thirdPersonCamera.SetActive(true);*/
         }
         if(!isAiming)
         {
             _playerSpeed = _playerMovementSpeed;
+            /*freeLookCamera.SetActive(true);
+            thirdPersonCamera.SetActive(false);*/
         }
     }
 
@@ -412,6 +421,11 @@ public class PlayerController : MonoBehaviour
 
             return;
         }
+    }
+
+    void CameraAiming()
+    {
+        
     }
 
     void OnDrawGizmos()
