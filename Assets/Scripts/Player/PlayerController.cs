@@ -27,8 +27,8 @@ public class PlayerController : MonoBehaviour
     
     //Movimiento
     [Header("Movement")]
-    public float _playerSpeed = 9;
-    public float _playerMovementSpeed = 9;
+    public float _playerSpeed = 11;
+    public float _playerMovementSpeed = 11;
     private float _playerForce = 2;
     private float _pushForce = 10;
     private float _smoothTime = 0.2f;

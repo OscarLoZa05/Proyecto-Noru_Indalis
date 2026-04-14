@@ -51,7 +51,7 @@ public class PlayerAbility : MonoBehaviour
     public float currentCooldown2 = 10;
     public bool ability2Used = false;
     public int manaWasted2 = 25;
-    public int waterSpeed = 11;
+    public int waterSpeed = 15;
     public float boostState = 4;
     #endregion
 
