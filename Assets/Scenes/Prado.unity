@@ -194,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6975376713837965656, guid: 3ab16084fc098d345a0f921075556b21, type: 3}
       propertyPath: sceneCharging
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beac92450094d814a914ccfe35edacda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneCharging: 0
+  sceneCharging: 1
 --- !u!65 &1180438656
 BoxCollider:
   m_ObjectHideFlags: 0
