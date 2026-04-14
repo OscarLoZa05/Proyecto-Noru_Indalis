@@ -51,7 +51,7 @@ public class PlayerAbility : MonoBehaviour
     public float currentCooldown2 = 10;
     public bool ability2Used = false;
     public int manaWasted2 = 25;
-    public int waterSpeed = 15;
+    public int waterSpeed = 20;
     public float boostState = 4;
     #endregion
 
@@ -243,8 +243,15 @@ public class PlayerAbility : MonoBehaviour
     IEnumerator WState()
     {
         Debug.Log("Habilidad 2 Usada");
+        _playerController._speed = waterSpeed;
         _playerController._playerSpeed = waterSpeed;
-        yield return new WaitForSeconds(boostState);
+        _playerController._dashMultiplayer = 1.5f;
+        _playerController._aimingMultiplayer = 1.5f;
+        Debug.Log(_playerController._speed);
+        yield return new WaitForSeconds(_waterStateSFX.length);
+        _playerController._dashMultiplayer = 1f;
+        _playerController._aimingMultiplayer = 1f;
+        _playerController._speed = _playerController._playerMovementSpeed;
         _playerController._playerSpeed = _playerController._playerMovementSpeed;
     }
     #endregion

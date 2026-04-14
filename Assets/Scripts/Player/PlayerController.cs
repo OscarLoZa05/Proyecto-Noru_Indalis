@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Dash")]
     [SerializeField] private float _dashSpeed = 20;
+    public float _dashMultiplayer = 1;
     [SerializeField] private float _dashTime = 0.25f;
     private Vector3 _lastMoveDirection;
     private bool isDashing = false;
@@ -82,7 +83,8 @@ public class PlayerController : MonoBehaviour
     [Header("Aim")]
     public bool isAiming = false;
     [SerializeField] private GameObject _crosshair;
-    [SerializeField] private int _aimingSpeed = 4;
+    [SerializeField] private int _aimingSpeed = 2;
+    public float _aimingMultiplayer = 1;
 
     //Potions
     [Header("Potions")]
@@ -125,6 +127,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(_speed);
         if(GameManager.Instance._isDead || GameManager.Instance._isPaused) return;
         _moveValue = _moveAction.ReadValue<Vector2>();
 
@@ -227,7 +230,7 @@ public class PlayerController : MonoBehaviour
             {
                 Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
 
-                _controller.Move(moveDirection.normalized * _playerSpeed * Time.deltaTime);
+                _controller.Move(moveDirection.normalized * (_playerSpeed * _aimingMultiplayer) * Time.deltaTime);
             } 
         }
     }
@@ -312,7 +315,7 @@ public class PlayerController : MonoBehaviour
 
         while(timer < _dashTime)
         {
-            _controller.Move(_lastMoveDirection.normalized * _dashSpeed * Time.deltaTime);
+            _controller.Move(_lastMoveDirection.normalized * (_dashSpeed * _dashMultiplayer) * Time.deltaTime);
 
             timer += Time.deltaTime;
             yield return null;

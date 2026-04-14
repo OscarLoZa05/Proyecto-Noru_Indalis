@@ -21,12 +21,7 @@ public class Portal : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Player"))
         {
-            SceneCharge(sceneCharging);
+            SceneManager.Instance.SceneChange(sceneCharging);
         }
-    }
-
-    void SceneCharge(int numberScene)
-    {
-        SceneManager.LoadScene(numberScene);
     }
 }
