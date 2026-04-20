@@ -667,7 +667,7 @@ MonoBehaviour:
   manaCount: 0
   healthCount: 0
   manaText: {fileID: 862629844}
-  haelthText: {fileID: 1650195440}
+  healthText: {fileID: 1650195440}
   manaPriceMultiplied: 0
   healthPriceMultiplied: 0
   priceMana: 156
@@ -4892,6 +4892,10 @@ PrefabInstance:
       propertyPath: _freeLookCam
       value: 
       objectReference: {fileID: 1917481903}
+    - target: {fileID: 5628910591951614396, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
+      propertyPath: money
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 5628910591951614396, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
       propertyPath: manaText
       value: 

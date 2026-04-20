@@ -13,7 +13,7 @@ public class ShopAP : MonoBehaviour, IInteractable
     [SerializeField] private int manaCount = 0;
     [SerializeField] private int healthCount = 0;
     public Text manaText;
-    public Text haelthText;
+    public Text healthText;
 
     [SerializeField] private int manaPriceMultiplied;
     [SerializeField] private int healthPriceMultiplied;
@@ -80,6 +80,8 @@ public class ShopAP : MonoBehaviour, IInteractable
 
         manaCount = 0;
         healthCount = 0;
+        ManaText();
+        HealthText();
 
         return;
     }
@@ -87,13 +89,13 @@ public class ShopAP : MonoBehaviour, IInteractable
     public void PlusMana()
     {
         manaCount ++;
-        manaText.text = ":" + manaCount.ToString();
+        ManaText();
         PriceNow();
     }
     public void PlusHealth()
     {
         healthCount ++;
-        haelthText.text = ":" + healthCount.ToString();
+        HealthText();
         PriceNow();
     }
     public void MenosMana()
@@ -101,15 +103,24 @@ public class ShopAP : MonoBehaviour, IInteractable
         if(manaCount > 0)
         {
             manaCount --;
-            manaText.text = ":" + manaCount.ToString();
+            ManaText();
             PriceNow();
         } 
     }
     public void MenosHealth()
     {
         healthCount --;
-        haelthText.text = ":" + healthCount.ToString();
+        HealthText();
         PriceNow();
+    }
+
+    void ManaText()
+    {
+        manaText.text = ":" + manaCount.ToString();
+    }
+    void HealthText()
+    {
+        healthText.text = ":" + healthCount.ToString();
     }
 
     public void PriceNow()
@@ -130,6 +141,16 @@ public class ShopAP : MonoBehaviour, IInteractable
 
             _playerResources.healthPotions += healthCount;
             _playerResources.HealthText();
+
+            _playerResources.money -= totalPurchase;
+
+            Debug.Log("Prueba");
+            manaCount = 0;
+            healthCount = 0;
+            ManaText();
+            HealthText();
+            PriceNow();
+            Debug.Log("TU PUTA MADREEEEEEE");
         }
     }
 }
