@@ -62,7 +62,7 @@ public class PlayerResources : MonoBehaviour
 
     void Update()
     {
-        if(GameManager.Instance._isDead || GameManager.Instance._isPaused) return;
+        if(GameManager.Instance._isDead || GameManager.Instance._isPaused || GameManager.Instance._shopOpen) return;
 
         if(_manaPotionInput.WasPressedThisFrame() && manaPotions > 0)
         {

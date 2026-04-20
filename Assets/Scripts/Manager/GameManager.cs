@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public bool _isPaused = false;
     public bool _isDead = false;
+    public bool _shopOpen = false;
 
     void Awake()
     {
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if(_isDead || _shopOpen) return;
         if(_stopAction.WasPressedThisFrame())
         {
             Pause();

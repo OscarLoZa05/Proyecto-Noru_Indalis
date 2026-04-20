@@ -128,17 +128,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Debug.Log(_speed);
-        if(GameManager.Instance._isDead || GameManager.Instance._isPaused) return;
+        if(_interactAction.WasPressedThisFrame())
+        {
+            Interact();
+        }
+        if(GameManager.Instance._isDead || GameManager.Instance._isPaused || GameManager.Instance._shopOpen) return;
         _moveValue = _moveAction.ReadValue<Vector2>();
 
         //Acciones
         if(_jumpAction.WasPerformedThisFrame() && IsGrounded() && isAiming == false)
         {
             Jump();
-        }
-        if(_interactAction.WasPressedThisFrame())
-        {
-            Interact();
         }
         if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown)
         {

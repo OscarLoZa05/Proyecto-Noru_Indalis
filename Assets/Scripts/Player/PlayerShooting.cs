@@ -40,7 +40,7 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameManager.Instance._isDead || GameManager.Instance._isPaused) return;
+        if(GameManager.Instance._isDead || GameManager.Instance._isPaused || GameManager.Instance._shopOpen) return;
         
         if(shootTimer < shootDelay)
         {
