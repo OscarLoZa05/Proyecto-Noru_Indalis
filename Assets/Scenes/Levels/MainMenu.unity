@@ -623,7 +623,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 952846607}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 3
@@ -673,17 +673,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655864954}
   m_CullTransparentMesh: 1
---- !u!114 &952846607 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3575932162446293725, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-  m_PrefabInstance: {fileID: 1759829279}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c07e5f40f5eab74fa4e93c682bb9735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1051604086
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,7 +859,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 952846607}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 3
@@ -937,7 +926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1523141181
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1131,63 +1120,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615589608}
   m_CullTransparentMesh: 1
---- !u!1001 &1759829279
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1455092148029064198, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_Name
-      value: SceneManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 73.47204
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.570602
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -105.07825
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5431487517352074683, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 77ad5815d9c42d8478a53a3f90a73842, type: 3}
 --- !u!1 &1963295368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 952846607}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
@@ -1488,4 +1420,3 @@ SceneRoots:
   - {fileID: 577480332}
   - {fileID: 1051604090}
   - {fileID: 1561862591}
-  - {fileID: 1759829279}
