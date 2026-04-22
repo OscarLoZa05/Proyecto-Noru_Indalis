@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Levels/ChangingScene/Core.unity
+    guid: 982abd147d1521a40ad9afc99ce2a83a
+  - enabled: 1
     path: Assets/Scenes/Prueba/Mivo.unity
     guid: 23979c6bfa5ed804986d8e0dac533c2b
   - enabled: 1
-    path: Assets/Scenes/Ciudad.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
-  - enabled: 0
-    path: Assets/Scenes/Milvo.unity
-    guid: 2d1b07fd00528504a9e17d2bfb2f3c34
-  - enabled: 1
     path: Assets/Scenes/Prado.unity
     guid: 39a774171e748a8458522dc61daf99e9
+  - enabled: 1
+    path: Assets/Scenes/Ciudad.unity
+    guid: 8124e5870f4fd4c779e7a5f994e84ad1
   - enabled: 1
     path: Assets/Scenes/Levels/Testing.unity
     guid: e90f65022e95507499d16670e1c3d91a

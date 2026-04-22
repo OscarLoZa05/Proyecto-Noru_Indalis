@@ -17,11 +17,11 @@ public class Portal : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider collider)
+    /*void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.CompareTag("Player"))
         {
             SceneManager.Instance.SceneChange(sceneCharging);
         }
-    }
+    }*/
 }
