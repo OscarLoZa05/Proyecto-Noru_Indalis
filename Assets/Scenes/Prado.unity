@@ -966,6 +966,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beac92450094d814a914ccfe35edacda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portalRenderer: {fileID: 0}
+  nilloIsInside: 0
+  maxPortal: 10
+  minPortal: 0.6
+  currentPortal: 0
   sceneCharging: 1
 --- !u!65 &1180438656
 BoxCollider:
