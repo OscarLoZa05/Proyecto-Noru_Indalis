@@ -6,6 +6,8 @@ public class ShopAP : MonoBehaviour, IInteractable
     //Controler
     [Header("Controller")]
     public GameObject canvasAP;
+    public GameObject canvasPlayer;
+    public GameObject canvasKenon;
     [SerializeField] private bool _isOpenShop = false;
 
     //Shop
@@ -22,6 +24,13 @@ public class ShopAP : MonoBehaviour, IInteractable
     [SerializeField] private int priceHealth = 289;
     public Text price;
     public int totalPurchase;
+
+    //Type
+    [Header("Type")]
+    [SerializeField] private bool manaPotionActived = false;
+    [SerializeField] private GameObject manaCanva;
+    [SerializeField] private bool healthPotionActived = true;
+    [SerializeField] private GameObject healthCanva;
 
     //Componentes
     private PlayerResources _playerResources;
@@ -46,6 +55,8 @@ public class ShopAP : MonoBehaviour, IInteractable
         if(_isOpenShop == false)
         {
             //Canvas
+            canvasPlayer.SetActive(false);
+            canvasKenon.SetActive(false);
             _isOpenShop = true;
             canvasAP.SetActive(true);
 
@@ -68,6 +79,8 @@ public class ShopAP : MonoBehaviour, IInteractable
     public void CloseShop()
     {
         //Canvas
+        canvasPlayer.SetActive(true);
+        canvasKenon.SetActive(true);
         _isOpenShop = false;
         canvasAP.SetActive(false);
 
@@ -109,18 +122,21 @@ public class ShopAP : MonoBehaviour, IInteractable
     }
     public void MenosHealth()
     {
-        healthCount --;
-        HealthText();
-        PriceNow();
+        if(healthCount > 0)
+        {
+           healthCount --;
+           HealthText();
+           PriceNow(); 
+        }
     }
 
     void ManaText()
     {
-        manaText.text = ":" + manaCount.ToString();
+        manaText.text = ": " + manaCount.ToString();
     }
     void HealthText()
     {
-        healthText.text = ":" + healthCount.ToString();
+        healthText.text = ": " + healthCount.ToString();
     }
 
     public void PriceNow()
@@ -129,7 +145,7 @@ public class ShopAP : MonoBehaviour, IInteractable
         healthPriceMultiplied = priceHealth * healthCount;
         totalPurchase = manaPriceMultiplied + healthPriceMultiplied;
 
-        price.text = totalPurchase.ToString();
+        //price.text = totalPurchase.ToString();
     }
 
     public void Purchase()
@@ -147,10 +163,32 @@ public class ShopAP : MonoBehaviour, IInteractable
             Debug.Log("Prueba");
             manaCount = 0;
             healthCount = 0;
-            ManaText();
-            HealthText();
+            
             PriceNow();
             Debug.Log("TU PUTA MADREEEEEEE");
+
+            if(healthPotionActived)
+            {
+                HealthText();
+                return;
+            }
+            if(manaPotionActived)
+            {
+                ManaText();
+                return;
+            }
+
         }
+    }
+
+    public void ManaButton()
+    {
+        healthCanva.SetActive(false);
+        manaCanva.SetActive(true);
+    }
+    public void HealthButton()
+    {
+        healthCanva.SetActive(true);
+        manaCanva.SetActive(false);
     }
 }

@@ -14,7 +14,7 @@ public class PlayerAbility : MonoBehaviour
     private InputAction _ability2;
     private InputAction _ability3;
     private InputAction _ability4;
-    private InputAction _kenonAbility;
+    
     #endregion
     
     #region Canvas
@@ -24,7 +24,7 @@ public class PlayerAbility : MonoBehaviour
     public Image imageAbility2;
     public Image imageAbility3;
     public Image imageAbility4;
-    public Image kenonImage;
+    
     #endregion
 
     #region Sounds
@@ -77,7 +77,7 @@ public class PlayerAbility : MonoBehaviour
 
     #region Kenon
     [Header("Kenon")]
-    public bool canKenonAttack = false;
+    
     [SerializeField] private Vector3 hitBoxKenonLocalOffset;
     [SerializeField] private Vector3 hitBoxKenonSize;
     [SerializeField] private GameObject _kenonModel;
@@ -98,7 +98,7 @@ public class PlayerAbility : MonoBehaviour
         _ability2 = InputSystem.actions["WaterState"];
         _ability3 = InputSystem.actions["FireState"];
         _ability4 = InputSystem.actions["FireAttack"];
-        _kenonAbility = InputSystem.actions["KenonAttack"];
+        
     }
 
     // Update is called once per frame
@@ -144,10 +144,7 @@ public class PlayerAbility : MonoBehaviour
             currentCooldown4 = 0;
             imageAbility4.fillAmount = 0;
         }
-        if(_kenonAbility.WasPressedThisFrame())
-        {
-            StartCoroutine(Kenon());
-        }
+        
         #endregion 
 
         #region UI Abilities

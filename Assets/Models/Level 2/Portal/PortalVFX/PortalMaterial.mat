@@ -70,10 +70,10 @@ Material:
     - _Opacity: 1
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
-    - _RadialDistortion: 0.6
-    - _RadialScale: 46.76
+    - _RadialDistortion: 10
+    - _RadialScale: 12.2
     - _RenderQueueType: 4
-    - _Speed: 0.175
+    - _Speed: 0.295
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 1

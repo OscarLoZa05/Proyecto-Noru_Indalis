@@ -11,6 +11,7 @@ public class ManaChest : MonoBehaviour, IInteractable
     private Animator _animator;
     private PlayerResources _playerResources; 
     [SerializeField] private ParticleSystem _chestParticles;
+    [SerializeField] private GameObject canvasButton;
 
     private AudioSource _audioSource;
     [SerializeField] private AudioClip _open;
@@ -44,5 +45,20 @@ public class ManaChest : MonoBehaviour, IInteractable
             _playerResources.Money();
         }
         return;
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.CompareTag("Player"))
+        {
+            canvasButton.SetActive(true);
+        }
+    }
+    void OnTriggerExit(Collider collider)
+    {
+        if(collider.gameObject.CompareTag("Player"))
+        {
+            canvasButton.SetActive(false);
+        }
     }
 }
