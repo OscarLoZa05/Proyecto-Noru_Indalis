@@ -183,12 +183,22 @@ public class ShopAP : MonoBehaviour, IInteractable
 
     public void ManaButton()
     {
+        healthCount = 0;
+        HealthText();
+        manaPotionActived = true;
+        healthPotionActived = false;
         healthCanva.SetActive(false);
         manaCanva.SetActive(true);
+
     }
     public void HealthButton()
     {
+        manaCount = 0;
+        ManaText();
+        manaPotionActived = false;
+        healthPotionActived = true;
         healthCanva.SetActive(true);
         manaCanva.SetActive(false);
+        
     }
 }
