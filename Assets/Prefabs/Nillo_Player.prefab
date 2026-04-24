@@ -706,6 +706,7 @@ GameObject:
   - component: {fileID: 715450768350930057}
   - component: {fileID: 5628910591951614396}
   - component: {fileID: 6263017924174180838}
+  - component: {fileID: 4458361059517233383}
   - component: {fileID: 1116616701399976929}
   m_Layer: 0
   m_Name: Nillo_Player
@@ -815,10 +816,12 @@ MonoBehaviour:
   _jumpHeight: 2
   dashCooldown: 1.25
   _dashSpeed: 20
+  _dashMultiplayer: 1
   _dashTime: 0.25
   isAiming: 0
   _crosshair: {fileID: 0}
-  _aimingSpeed: 2
+  _aimingSpeed: 0
+  _aimingMultiplayer: 1
   _manaReg: 25
   _healthReg: 25
   _freeLookCam: {fileID: 0}
@@ -844,7 +847,6 @@ MonoBehaviour:
   imageAbility2: {fileID: 0}
   imageAbility3: {fileID: 0}
   imageAbility4: {fileID: 0}
-  kenonImage: {fileID: 0}
   _fireSFX: {fileID: 8300000, guid: 054a426d8c018f547a9c77757385d8cb, type: 3}
   _fireStateSFX: {fileID: 8300000, guid: 879ef54b4357920428c7d4c04e3a496a, type: 3}
   _waterStateSFX: {fileID: 8300000, guid: 879ef54b4357920428c7d4c04e3a496a, type: 3}
@@ -856,7 +858,7 @@ MonoBehaviour:
   currentCooldown2: 10
   ability2Used: 0
   manaWasted2: 25
-  waterSpeed: 15
+  waterSpeed: 20
   boostState: 4
   cooldownAbility3: 10
   currentCooldown3: 10
@@ -871,7 +873,6 @@ MonoBehaviour:
   hitBoxSize: {x: 5, y: 4, z: 10}
   manaWasted4: 50
   _fireAttackPosition: {fileID: 1102963319293110776}
-  canKenonAttack: 0
   hitBoxKenonLocalOffset: {x: 0, y: 0, z: 0}
   hitBoxKenonSize: {x: 0, y: 0, z: 0}
   _kenonModel: {fileID: 0}
@@ -901,7 +902,7 @@ MonoBehaviour:
   moneyText: {fileID: 0}
   manaPotions: 0
   healthPotions: 0
-  money: 0
+  money: 10000
   monetText: {fileID: 0}
 --- !u!114 &6263017924174180838
 MonoBehaviour:
@@ -919,6 +920,21 @@ MonoBehaviour:
   shootTimer: 0
   shootDelay: 0.75
   _bulletSpawn: {fileID: 5949342230390641854}
+--- !u!114 &4458361059517233383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812013013115137904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af3c74f0dd83ed40a669adefe43a71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kenonImage: {fileID: 0}
+  currentNoru: 0
+  maxNoru: 100
 --- !u!82 &1116616701399976929
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3425,14 +3441,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af3c74f0dd83ed40a669adefe43a71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _kenonEffectSlashR:
-  - {fileID: 1919614666773120623}
-  - {fileID: 7720185547059116779}
-  - {fileID: 7261616896230588791}
-  _kenonEffectSlashL:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  kenonImage: {fileID: 0}
+  currentNoru: 0
+  maxNoru: 100
 --- !u!1 &2417364756612980553
 GameObject:
   m_ObjectHideFlags: 0
@@ -10500,7 +10511,7 @@ Transform:
   m_GameObject: {fileID: 7938769585455293592}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.604, z: 1.459}
+  m_LocalPosition: {x: 0, y: 2.604, z: 2.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
     [Header("Aim")]
     public bool isAiming = false;
     [SerializeField] private GameObject _crosshair;
-    [SerializeField] private int _aimingSpeed = 2;
+    [SerializeField] private int _aimingSpeed = 0;
     public float _aimingMultiplayer = 1;
 
     //Potions
@@ -142,10 +142,6 @@ public class PlayerController : MonoBehaviour
         }
         if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown)
         {
-            if(isAiming)
-            {
-                Aiming();
-            }
             StartCoroutine(Dash());
         }
 
@@ -162,7 +158,6 @@ public class PlayerController : MonoBehaviour
         {
             LoseHealth();
         }*/
-
         Movement();
 
         Gravity();
