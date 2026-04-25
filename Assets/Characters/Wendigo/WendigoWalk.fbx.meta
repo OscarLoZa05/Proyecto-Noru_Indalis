@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2380925d30f0d4649a2ad1b7052351db
+guid: da226c2812659f14fb345dec1e3a28c7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -54,14 +54,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.28513512
-        functionName: SoundFoot
-        data: 
-        objectReferenceParameter: {fileID: 8300000, guid: d3c586dc40a03b54d9855e89544bf396, type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -69,7 +62,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -124,7 +117,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 2
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
