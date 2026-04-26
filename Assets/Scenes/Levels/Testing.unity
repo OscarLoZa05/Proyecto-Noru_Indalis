@@ -6061,6 +6061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wendigo
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f27542d1e4c189a4b9db77e0b26a2eb8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6684295394808222897, guid: f27542d1e4c189a4b9db77e0b26a2eb8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -8545,7 +8549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6675733367492783054, guid: b95ce8d8836a5c64489361230ba56799, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59
+      value: 69.45
       objectReference: {fileID: 0}
     - target: {fileID: 6675733367492783054, guid: b95ce8d8836a5c64489361230ba56799, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8642,7 +8646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5337831378708654790, guid: dd724aeba97006e44a9ee477ffb65ee6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5902848678436849290, guid: dd724aeba97006e44a9ee477ffb65ee6, type: 3}
       propertyPath: '_patrolPoints.Array.data[0]'
@@ -8967,6 +8971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4674784480448575318, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6161172089636336445, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9046,10 +9054,6 @@ PrefabInstance:
     - target: {fileID: 6161172089636336445, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8378184192350799180, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9198,6 +9202,10 @@ PrefabInstance:
       propertyPath: imageAbility4
       value: 
       objectReference: {fileID: 9750380}
+    - target: {fileID: 812013013115137904, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 812013013115137904, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
       propertyPath: m_Name
       value: Nillo|Player
