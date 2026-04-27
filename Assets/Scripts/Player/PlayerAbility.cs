@@ -117,7 +117,7 @@ public class PlayerAbility : MonoBehaviour
             currentCooldown1 = 0;
             imageAbility1.fillAmount = 0;
         }
-        if(_ability2.WasPressedThisFrame() && ability2Used == false && _playerResource.currentMana >= manaWasted2)
+        if(_ability2.WasPressedThisFrame() && ability2Used == false && _playerResource.currentMana >= manaWasted2 && !_playerController.isAiming)
         {
             _audioSource.PlayOneShot(_waterStateSFX);
             StartCoroutine(WState());
