@@ -86,7 +86,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
-    - _FresnelPower: 3
+    - _FresnelPower: 4
     - _MaterialID: 1
     - _MaterialTypeMask: 2
     - _OpaqueCullMode: 2
@@ -128,11 +128,11 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _BackColor: {r: 2.143547, g: 0.7085187, b: 0, a: 1}
+    - _BackColor: {r: 1.4848982, g: 0, b: 0.8927323, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _FresnelColor: {r: 0, g: 10.111832, b: 9.20451, a: 1}
-    - _FrontColor: {r: 2.5455744, g: 29.857058, b: 0, a: 1}
+    - _FresnelColor: {r: 26.189777, g: 13.446919, b: 0, a: 1}
+    - _FrontColor: {r: 29.857058, g: 0, b: 3.03781, a: 1}
     - _SphererCenter: {r: 0, g: 0, b: 0, a: 0}
     - _VertexAmount: {r: 0.1, g: 0.1, b: 0.1, a: 0}
   m_BuildTextureStacks: []

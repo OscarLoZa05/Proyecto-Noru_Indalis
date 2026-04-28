@@ -411,6 +411,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1355340490171380503, guid: 0923a043876cc4f428a5e21b81dbdf26, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38685882
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355340490171380503, guid: 0923a043876cc4f428a5e21b81dbdf26, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5238
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355340490171380503, guid: 0923a043876cc4f428a5e21b81dbdf26, type: 3}
+      propertyPath: m_Color.r
+      value: 0.582
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600235743624279821, guid: 0923a043876cc4f428a5e21b81dbdf26, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600235743624279821, guid: 0923a043876cc4f428a5e21b81dbdf26, type: 3}
+      propertyPath: m_Color.g
+      value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600235743624279821, guid: 0923a043876cc4f428a5e21b81dbdf26, type: 3}
+      propertyPath: m_Color.r
+      value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600235743624279821, guid: 0923a043876cc4f428a5e21b81dbdf26, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 566ff9d047611b440a5b971d8c042b9d, type: 3}
+    - target: {fileID: 2949747716185319586, guid: 0923a043876cc4f428a5e21b81dbdf26, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8502797384555027032, guid: 0923a043876cc4f428a5e21b81dbdf26, type: 3}
       propertyPath: m_Name
       value: --- UI ---
