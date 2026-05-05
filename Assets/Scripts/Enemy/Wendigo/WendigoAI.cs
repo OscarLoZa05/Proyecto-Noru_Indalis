@@ -6,10 +6,12 @@ public class WendigoAI : MonoBehaviour
 {
 
     private AudioSource _audioSource;
+    private NavMeshAgent _enemyAgent;
+    private Animator _animator;
     [SerializeField] AudioSource _audioFoots;
     [SerializeField] AudioClip _footSFX;
     [SerializeField] AudioClip _deadSFX;
-    private NavMeshAgent _enemyAgent;
+    
     public enum EnemyState
     {
         Chasing,
@@ -46,6 +48,8 @@ public class WendigoAI : MonoBehaviour
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
         _audioSource = GetComponent<AudioSource>();
+        _animator = GetComponent<Animator>();
+
         _player = GameObject.FindWithTag("Player").transform;
     }
 
@@ -83,9 +87,8 @@ public class WendigoAI : MonoBehaviour
         if(_currentLife <= 0)
         {
             Dead();
-            return;
-
         }
+    
         _enemyAgent.SetDestination(_player.position);
         _enemyAgent.isStopped = false;
         if(OnRange(_attackRange))
@@ -99,8 +102,6 @@ public class WendigoAI : MonoBehaviour
         if(_currentLife <= 0)
         {
             Dead();
-            return;
-
         }
         _enemyAgent.isStopped = true;
         _enemyAgent.ResetPath();
@@ -119,8 +120,6 @@ public class WendigoAI : MonoBehaviour
         if(_currentLife <= 0)
         {
             Dead();
-            return;
-
         }
         if(OnRange(_attackRange))
         {
@@ -170,9 +169,9 @@ public class WendigoAI : MonoBehaviour
 
     void Dead()
     {
-        //_audioSource.PlayOneShot(_deadSFX);
-        _isDead = true;
-        Destroy(gameObject);    
+        _animator.SetTrigger("IsDead");
+        return;
+  
     }
     
     
@@ -217,6 +216,8 @@ public class WendigoAI : MonoBehaviour
             TakeDamage(50);
         }
     }
+
+    
 
     void OnDrawGizmos()
     {

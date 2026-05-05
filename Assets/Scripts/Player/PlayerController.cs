@@ -145,11 +145,11 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if(_aimingAction.WasPressedThisFrame() && IsGrounded())
+        /*if(_aimingAction.WasPressedThisFrame() && IsGrounded())
         {
             Mouse();
             Aiming();
-        }
+        }*/
 
 
 
