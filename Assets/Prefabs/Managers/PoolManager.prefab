@@ -53,3 +53,7 @@ MonoBehaviour:
     prefab: {fileID: 8827115878756249263, guid: f01068ccb3d53384c9005a35c8ae4c57, type: 3}
     poolSize: 2
     pooledObjects: []
+  - parentName: DronBullet
+    prefab: {fileID: 2726768385005418608, guid: 00d1e8dd8a6964d49a24b99be8d40b8b, type: 3}
+    poolSize: 100
+    pooledObjects: []

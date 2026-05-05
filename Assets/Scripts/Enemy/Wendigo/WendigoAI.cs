@@ -156,7 +156,7 @@ public class WendigoAI : MonoBehaviour
                     
                     if(_playerResources != null)
                     {
-                        _playerResources.TakeDamage(25);
+                        _playerResources.TakeDamage(75);
                         currentState = EnemyState.Charging;
                     }
                 }

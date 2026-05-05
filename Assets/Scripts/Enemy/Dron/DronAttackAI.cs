@@ -5,6 +5,8 @@ using UnityEngine.AI;
 public class DronAttackAI : MonoBehaviour
 {
     private NavMeshAgent _enemyAgent;
+    [SerializeField] private Transform _bulletSpawn;
+    [SerializeField] private Transform _originPlayer;
     public enum EnemyState
     {
         Chasing,
@@ -79,6 +81,17 @@ public class DronAttackAI : MonoBehaviour
 
     void Attack()
     {
+        // 1. Calculas la dirección (Correcto)
+        Vector3 direction = (_originPlayer.position - _bulletSpawn.position).normalized;
+
+        // 2. Transformas esa dirección en una rotación real (Corregido)
+        // Esto hace que el frente de la bala (eje Z) apunte a la dirección calculada
+        Quaternion directionQ = Quaternion.LookRotation(direction);
+
+        // 3. Pides el objeto a la Pool (Correcto)
+        GameObject bullet = PoolManager.Instance.GetPooledObject("DronBullet", _bulletSpawn.position, directionQ);
+
+        bullet.SetActive(true);
         currentState = EnemyState.Chasing;
         Debug.Log("Attack");
         _attackTimer = 0;

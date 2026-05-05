@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     float _xRotation;
     [SerializeField] Transform _lookAtCamera;
     [SerializeField] float _movementSpeed = 0;
+    [SerializeField] float _rangoDeVision = 70;
     //private InputAction Prueba;
     
     //Movimiento
@@ -136,7 +137,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(_speed);
+        //Debug.Log(_speed);
         if(_interactAction.WasPressedThisFrame())
         {
             Interact();
@@ -248,7 +249,7 @@ public class PlayerController : MonoBehaviour
                 float mouseY = _lookValue.y * _cameraSensitivity * Time.deltaTime;
 
                 _xRotation -= mouseY;
-                _xRotation = Mathf.Clamp(_xRotation, -89, 89);
+                _xRotation = Mathf.Clamp(_xRotation, -_rangoDeVision, _rangoDeVision);
 
                 //_animator.SetFloat("Vertical", _moveValue.y);
                 //_animator.SetFloat("Horizontal", _moveValue.x);
