@@ -84,6 +84,7 @@ public class WendigoAI : MonoBehaviour
 
     void Chasing()
     {
+        if(_isDead) return;
         if(_currentLife <= 0)
         {
             Dead();
@@ -99,6 +100,7 @@ public class WendigoAI : MonoBehaviour
 
     void Charging()
     {
+        if(_isDead) return;
         if(_currentLife <= 0)
         {
             Dead();
@@ -117,6 +119,7 @@ public class WendigoAI : MonoBehaviour
 
     void Attacking()
     {
+        if(_isDead) return;
         if(_currentLife <= 0)
         {
             Dead();
@@ -170,6 +173,7 @@ public class WendigoAI : MonoBehaviour
     void Dead()
     {
         _animator.SetTrigger("IsDead");
+        _isDead = true;
         return;
   
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Unity.Cinemachine;
+using Unity.Mathematics;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,6 +24,12 @@ public class PlayerController : MonoBehaviour
     private InputAction _aimingAction;
     private InputAction _manaAction;
     private InputAction _healthAction;
+    private InputAction _lookAction;
+    public Vector2 _lookValue;
+    [SerializeField] private float _cameraSensitivity = 10;
+    float _xRotation;
+    [SerializeField] Transform _lookAtCamera;
+    [SerializeField] float _movementSpeed = 0;
     //private InputAction Prueba;
     
     //Movimiento
@@ -123,6 +130,8 @@ public class PlayerController : MonoBehaviour
         _healthAction = InputSystem.actions["PotionsHealth"];
         _aimingAction = InputSystem.actions["Aiming"];
 
+        _lookAction = InputSystem.actions["Look"];
+
         _mainCamera = Camera.main.transform;
     }
     void Update()
@@ -134,6 +143,7 @@ public class PlayerController : MonoBehaviour
         }
         if(GameManager.Instance._isDead || GameManager.Instance._isPaused || GameManager.Instance._shopOpen) return;
         _moveValue = _moveAction.ReadValue<Vector2>();
+        _lookValue = _lookAction.ReadValue<Vector2>();
 
         //Acciones
         if(_jumpAction.WasPerformedThisFrame() && IsGrounded() && isAiming == false)
@@ -150,6 +160,10 @@ public class PlayerController : MonoBehaviour
             Mouse();
             Aiming();
         }*/
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Aiming();
+        }
 
 
 
@@ -211,7 +225,7 @@ public class PlayerController : MonoBehaviour
         else if(isAiming == true)
         {
             
-            Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
+            /*Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
 
             _animator.SetFloat("Horizontal", _moveValue.x);
             _animator.SetFloat("Vertical", _moveValue.y);
@@ -226,7 +240,32 @@ public class PlayerController : MonoBehaviour
                 Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
 
                 _controller.Move(moveDirection.normalized * (_playerSpeed * _aimingMultiplayer) * Time.deltaTime);
-            } 
+            } */
+    
+                Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
+
+                float mouseX = _lookValue.x * _cameraSensitivity * Time.deltaTime;
+                float mouseY = _lookValue.y * _cameraSensitivity * Time.deltaTime;
+
+                _xRotation -= mouseY;
+                _xRotation = Mathf.Clamp(_xRotation, -89, 89);
+
+                //_animator.SetFloat("Vertical", _moveValue.y);
+                //_animator.SetFloat("Horizontal", _moveValue.x);
+
+                transform.Rotate(Vector3.up, mouseX);
+                _lookAtCamera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
+                //_lookAtCamera.Rotate(Vector3.right, mouseY);
+
+                if(direction != Vector3.zero)
+                {
+                    float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
+                    Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
+
+                    _controller.Move(moveDirection * _movementSpeed * Time.deltaTime);
+                }
+
+    
         }
     }
 
@@ -236,7 +275,7 @@ public class PlayerController : MonoBehaviour
         _crosshair.SetActive(isAiming);
         _animator.SetBool("IsAiming", isAiming);
         Debug.Log(isAiming);
-        CameraAim();
+        //CameraAim();
         if(isAiming)
         {
             _playerSpeed = _aimingSpeed;
