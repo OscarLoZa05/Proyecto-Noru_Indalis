@@ -111,6 +111,11 @@ public class DronAttackAI : MonoBehaviour
         }  
     }
 
+    void TakeDamage(int damage)
+    {
+        _currentLife -= damage;
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
