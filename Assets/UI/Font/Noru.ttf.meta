@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 566ff9d047611b440a5b971d8c042b9d
+guid: 6b8b3d9888e5ea84faa4f081454ffb90
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - AMORIA
+  - Proyectonoru
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

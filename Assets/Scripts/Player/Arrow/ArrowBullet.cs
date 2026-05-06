@@ -34,6 +34,10 @@ public class ArrowBullet : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        if(collider.gameObject.layer == 7)
+        {
+            ManaForPlayer();
+        }
     }
 
     public void ManaForPlayer()

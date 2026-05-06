@@ -7,6 +7,8 @@ public class DronAttackAI : MonoBehaviour
     private NavMeshAgent _enemyAgent;
     [SerializeField] private Transform _bulletSpawn;
     [SerializeField] private Transform _originPlayer;
+
+    [SerializeField] private ParticleSystem[] _explosionVFX = new ParticleSystem[4];
     public enum EnemyState
     {
         Chasing,
@@ -20,6 +22,9 @@ public class DronAttackAI : MonoBehaviour
     [SerializeField] private float _attackRange = 12.5f;
     [SerializeField] private float _attackTimer;
     [SerializeField] private float _attackDelay = 2;
+    [SerializeField] private int _currentLife;
+    [SerializeField] private int _maxLife = 20;
+    [SerializeField] private bool _isDead = false;
 
     //Player
     private Transform _player;
@@ -36,6 +41,7 @@ public class DronAttackAI : MonoBehaviour
     {
         currentState = EnemyState.Chasing;
         _attackTimer = _attackDelay;
+        _currentLife = _maxLife;
     }
 
     void Update()
@@ -57,6 +63,11 @@ public class DronAttackAI : MonoBehaviour
 
     void Chasing()
     {
+        if(_isDead) return;
+        if(_currentLife <= 0)
+        {
+            StartCoroutine(Dead());
+        }
         if(OnRange(_detectionRange))
         {
             _enemyAgent.isStopped = false;
@@ -70,6 +81,11 @@ public class DronAttackAI : MonoBehaviour
 
     void Attacking()
     {
+        if(_isDead) return;
+        if(_currentLife <= 0)
+        {
+            StartCoroutine(Dead());
+        }
         _enemyAgent.isStopped = true;
         
         _attackTimer += Time.deltaTime;
@@ -111,9 +127,31 @@ public class DronAttackAI : MonoBehaviour
         }  
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        //_currentLife -= damage;
+        _currentLife -= damage;
+    }
+
+    IEnumerator Dead()
+    {
+        _isDead = true;
+        foreach (var item in _explosionVFX)
+        {
+            item.Play();
+        }
+        yield return new WaitForSeconds(0.1f);
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.CompareTag("Arrow"))
+        {
+            Debug.Log("Me has hecho da´ñi");
+            TakeDamage(10);
+            
+            //collider.gameObject.SetActive(false);
+        }
     }
 
     void OnDrawGizmos()

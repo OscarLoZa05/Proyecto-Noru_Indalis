@@ -150,15 +150,15 @@ public class ShopAP : MonoBehaviour, IInteractable
 
     public void Purchase()
     {
-        if(_playerResources.money >= totalPurchase)
+        if(PlayerData.Instance.money >= totalPurchase)
         {
-            _playerResources.manaPotions += manaCount;
+            PlayerData.Instance.manaPotions += manaCount;
             _playerResources.ManaText();
 
-            _playerResources.healthPotions += healthCount;
+            PlayerData.Instance.healthPotions += healthCount;
             _playerResources.HealthText();
 
-            _playerResources.money -= totalPurchase;
+            PlayerData.Instance.money -= totalPurchase;
 
             Debug.Log("Prueba");
             manaCount = 0;

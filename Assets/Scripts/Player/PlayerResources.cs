@@ -13,16 +13,12 @@ public class PlayerResources : MonoBehaviour
     
     //ManaBar
     [Header("Mana")]
-    public float currentMana = 100;
-    public float maxMana = 100;
-    public float mana;
+
     public Image manaBarImage;
     [SerializeField] private int _manaReg = 25;
 
     //ManaHealth
     [Header("Health")]
-    public float maxHealth = 100;
-    public float currentHealth = 100;
     public Image healthBarImage;
     [SerializeField] private int _healthReg = 25;
 
@@ -30,15 +26,8 @@ public class PlayerResources : MonoBehaviour
     public Text manaText;
     public Text healthText;
     public Text moneyText;
-
-    //Potions
-    [Header("Potions")]
-    public int manaPotions = 0;
-    public int healthPotions = 0; 
-
     //Money
     [Header("Money")]
-    public int money = 0;
     public Text monetText;   
 
     //Player
@@ -55,8 +44,8 @@ public class PlayerResources : MonoBehaviour
 
     void Start()
     {
-        maxHealth = 100;
-        currentHealth = maxHealth;
+        PlayerData.Instance.maxHealth = 100;
+        PlayerData.Instance.currentHealth = PlayerData.Instance.maxHealth;
     }
 
 
@@ -64,11 +53,11 @@ public class PlayerResources : MonoBehaviour
     {
         if(GameManager.Instance._isDead || GameManager.Instance._isPaused || GameManager.Instance._shopOpen) return;
 
-        if(_manaPotionInput.WasPressedThisFrame() && manaPotions > 0)
+        if(_manaPotionInput.WasPressedThisFrame() && PlayerData.Instance.manaPotions > 0)
         {
             Mana();
         }
-        if(_healthPotionInput.WasPressedThisFrame() && healthPotions > 0)
+        if(_healthPotionInput.WasPressedThisFrame() && PlayerData.Instance.healthPotions > 0)
         {
             Health();
         }
@@ -76,56 +65,56 @@ public class PlayerResources : MonoBehaviour
 
     void Mana()
     {
-        currentMana += _manaReg;
-        manaPotions --;
+        PlayerData.Instance.currentMana += _manaReg;
+        PlayerData.Instance.manaPotions --;
         ManaText();
         UpdateManaBar();
-        currentMana = Mathf.Clamp(currentMana, 0, maxMana);
+        PlayerData.Instance.currentMana = Mathf.Clamp(PlayerData.Instance.currentMana, 0, PlayerData.Instance.maxMana);
     }
     void Health()
     {
-        currentHealth += _healthReg;
-        healthPotions --;
+        PlayerData.Instance.currentHealth += _healthReg;
+        PlayerData.Instance.healthPotions --;
         HealthText();
         UpdateHealthBar();
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        PlayerData.Instance.currentHealth = Mathf.Clamp(PlayerData.Instance.currentHealth, 0, PlayerData.Instance.maxHealth);
     }
 
     public void UpdateManaBar()
     {
-        float mana = currentMana / maxMana;
+        float mana = PlayerData.Instance.currentMana / PlayerData.Instance.maxMana;
         manaBarImage.fillAmount = mana;
     }
     public void ManaText()
     {
-        manaText.text = "x" + manaPotions.ToString();
+        manaText.text = "x" + PlayerData.Instance.manaPotions.ToString();
     } 
     
     public void UpdateHealthBar()
     {
-        float life = (float)currentHealth / maxHealth;
+        float life = (float)PlayerData.Instance.currentHealth / PlayerData.Instance.maxHealth;
         healthBarImage.fillAmount = life;
     }
 
     public void HealthText()
     {
-        healthText.text = "x" + healthPotions.ToString();
+        healthText.text = "x" + PlayerData.Instance.healthPotions.ToString();
     } 
 
     public void Money()
     {
         int valueRandom = Random.Range(239, 875);
-        money += valueRandom;
+        PlayerData.Instance.money += valueRandom;
         Debug.Log(valueRandom);
     }
 
     public void TakeDamage(float damage)
     {
-        if(currentHealth <= 0) return;
+        if(PlayerData.Instance.currentHealth <= 0) return;
         
-        currentHealth -= damage;
+        PlayerData.Instance.currentHealth -= damage;
         UpdateHealthBar();
-        if(currentHealth <= 0)
+        if(PlayerData.Instance.currentHealth <= 0)
         {
             GameManager.Instance._isDead = true;
             _animator.SetTrigger("IsDead");
@@ -136,6 +125,6 @@ public class PlayerResources : MonoBehaviour
 
     public void ManaShoot()
     {
-        currentMana += 5;
+        PlayerData.Instance.currentMana += 5;
     }
 }

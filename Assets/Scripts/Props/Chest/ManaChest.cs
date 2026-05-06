@@ -39,7 +39,7 @@ public class ManaChest : MonoBehaviour, IInteractable
             _chestParticles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             isOpen = true;
             _animator.SetTrigger("IsOpen");
-            _playerResources.manaPotions++;
+            PlayerData.Instance.manaPotions++;
             _playerResources.ManaText();
 
             _playerResources.Money();

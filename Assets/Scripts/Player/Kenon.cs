@@ -8,6 +8,7 @@ public class Kenon : MonoBehaviour
 {
     private InputAction _kenonAbility;
     public Image kenonImage;
+    public GameObject kenonAbiltyVideo;
     //public bool canKenonAttack = false;
 
     [Header("Barra")]
@@ -29,12 +30,21 @@ public class Kenon : MonoBehaviour
         if(_kenonAbility.WasPressedThisFrame() && currentNoru == maxNoru)
         {
             StartCoroutine(Habilidad());
+
+            //StartCoroutine(Habilidad());
         }
     }
 
     public IEnumerator Habilidad()
     {
-        yield return null;
+        currentNoru = 0;
+        UpdateKenonBar();
+        Time.timeScale = 0;
+        kenonAbiltyVideo.SetActive(true);
+        yield return new WaitForSecondsRealtime(5.4f);
+        Debug.LogWarning("CHAVBL ESTO FALLA");
+        kenonAbiltyVideo.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void ChargingNoru(int quantity)

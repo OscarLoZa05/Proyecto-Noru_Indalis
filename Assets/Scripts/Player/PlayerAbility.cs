@@ -109,7 +109,7 @@ public class PlayerAbility : MonoBehaviour
         //fireAttackRange  = transform.rotation * rangeAttack;
 
         #region Abilities
-        if(_ability1.WasPressedThisFrame() && ability1Used == false && _playerResource.currentMana >= manaWasted1)
+        if(_ability1.WasPressedThisFrame() && ability1Used == false && PlayerData.Instance.currentMana >= manaWasted1)
         {
             WAttack();
             ManaUsed(manaWasted1);
@@ -117,7 +117,7 @@ public class PlayerAbility : MonoBehaviour
             currentCooldown1 = 0;
             imageAbility1.fillAmount = 0;
         }
-        if(_ability2.WasPressedThisFrame() && ability2Used == false && _playerResource.currentMana >= manaWasted2 && !_playerController.isAiming)
+        if(_ability2.WasPressedThisFrame() && ability2Used == false && PlayerData.Instance.currentMana >= manaWasted2 && !_playerController.isAiming)
         {
             _audioSource.PlayOneShot(_waterStateSFX);
             StartCoroutine(WState());
@@ -126,7 +126,7 @@ public class PlayerAbility : MonoBehaviour
             currentCooldown2 = 0;
             imageAbility2.fillAmount = 0;
         }
-        if(_ability3.WasPressedThisFrame() && ability3Used == false && _playerResource.currentMana >= manaWasted3)
+        if(_ability3.WasPressedThisFrame() && ability3Used == false && PlayerData.Instance.currentMana >= manaWasted3)
         {
             _audioSource.PlayOneShot(_fireStateSFX);
             StartCoroutine(FState());
@@ -135,7 +135,7 @@ public class PlayerAbility : MonoBehaviour
             currentCooldown3 = 0;
             imageAbility3.fillAmount = 0;
         }
-        if(_ability4.WasPressedThisFrame() && ability4Used == false && _playerResource.currentMana >= manaWasted4)
+        if(_ability4.WasPressedThisFrame() && ability4Used == false && PlayerData.Instance.currentMana >= manaWasted4)
         {
             _audioSource.PlayOneShot(_fireSFX);
             FAttack();
@@ -267,8 +267,8 @@ public class PlayerAbility : MonoBehaviour
 
         for (chargeAbility = 0; chargeAbility <= 3; chargeAbility++)
         {
-            _playerResource.currentHealth += lifeHealed;
-            _playerResource.currentHealth = Mathf.Clamp(_playerResource.currentHealth, 0, _playerResource.maxHealth);
+            PlayerData.Instance.currentHealth += lifeHealed;
+            PlayerData.Instance.currentHealth = Mathf.Clamp(PlayerData.Instance.currentHealth, 0, PlayerData.Instance.maxHealth);
             _playerResource.UpdateHealthBar();
             yield return new WaitForSeconds(2);
         }
@@ -286,7 +286,7 @@ public class PlayerAbility : MonoBehaviour
 
     void ManaUsed(int ManaWasted)
     {
-        _playerResource.currentMana -= ManaWasted;
+        PlayerData.Instance.currentMana -= ManaWasted;
         _playerResource.UpdateManaBar();
     }
     

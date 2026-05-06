@@ -111,10 +111,12 @@ public class PlayerController : MonoBehaviour
     private AudioSource _audioSource;
     [SerializeField] private AudioClip _dashSFX;
 
-    //Camera 
-    [Header("Camara")]
-    public GameObject freeLookCamera;
-    public GameObject thirdPersonCamera;
+    [Header("Referencias de Cámaras")]
+    // En Cinemachine 3.x, ambos pueden referenciarse como CinemachineCamera
+    // pero usamos los tipos específicos si quieres acceder a sus ajustes.
+    [SerializeField] private CinemachineCamera freeLookCam; 
+    [SerializeField] private CinemachineCamera thirdPersonCam;
+    private bool esFreeLookActiva = true;
 
     void Awake()
     {
@@ -134,6 +136,13 @@ public class PlayerController : MonoBehaviour
         _lookAction = InputSystem.actions["Look"];
 
         _mainCamera = Camera.main.transform;
+    }
+
+    void Start()
+    {
+        // Inicialización: FreeLook manda al principio
+        freeLookCam.Priority = 20;
+        thirdPersonCam.Priority = 10;
     }
     void Update()
     {
@@ -161,9 +170,11 @@ public class PlayerController : MonoBehaviour
             Mouse();
             Aiming();
         }*/
-        if (Input.GetKeyDown(KeyCode.C))
+        if (_aimingAction.WasPressedThisFrame())
         {
-            Aiming();
+            Mouse();
+            //Aiming();
+            ToggleCameras();
         }
 
 
@@ -394,12 +405,12 @@ public class PlayerController : MonoBehaviour
         if(Cursor.visible == true)
         {
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
             Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            //Cursor.lockState = CursorLockMode.None;
         }
     }
 
@@ -460,9 +471,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void CameraAiming()
+     public void ToggleCameras()
     {
-        
+        esFreeLookActiva = !esFreeLookActiva;
+        Aiming();
+
+        if (esFreeLookActiva)
+        {
+            freeLookCam.Priority = 20;
+            thirdPersonCam.Priority = 10;
+        }
+        else
+        {
+            // --- SOLUCIÓN AL GIRO LOCO ---
+            // Sincronizamos la posición y rotación "en bruto" de la cámara de salida 
+            // a la de entrada ANTES de que el Brain haga el cambio.
+            thirdPersonCam.ForceCameraPosition(
+                freeLookCam.State.RawPosition, 
+                freeLookCam.State.RawOrientation
+            );
+
+            thirdPersonCam.Priority = 20;
+            freeLookCam.Priority = 10;
+        }
     }
 
     void OnDrawGizmos()
