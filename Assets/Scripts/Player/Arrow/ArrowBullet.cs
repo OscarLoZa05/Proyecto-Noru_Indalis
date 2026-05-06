@@ -14,8 +14,8 @@ public class ArrowBullet : MonoBehaviour
     {
         _rigidBody = GetComponent<Rigidbody>();
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        PlayerResources playerRes = player.GetComponent<PlayerResources>();
+        GameObject player = GameObject.FindWithTag("Player");
+        playerRes = player.GetComponent<PlayerResources>();
     }
     void Start()
     {

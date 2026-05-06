@@ -27,7 +27,7 @@ public class Level2Manager : MonoBehaviour
         GameManager.Instance.isChangingScene = true;
         SceneController.Instance
             .NewTransition()
-            .Load(SceneDataBase.Slots.Mivo, SceneDataBase.Scenes.Mivo)
+            .Load(SceneDataBase.Slots.Level2, SceneDataBase.Scenes.Level2)
             .WithOverlay()
             .Perform();   
     }

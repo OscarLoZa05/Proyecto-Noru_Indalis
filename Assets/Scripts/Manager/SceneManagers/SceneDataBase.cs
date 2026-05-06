@@ -8,6 +8,7 @@ public static class SceneDataBase
         public const string Prado = "Prado";
         public const string Ciudad = "Ciudad";
         public const string Interior = "Interior";
+        public const string Level2 = "Level2";
     }
     public class Scenes
     {
@@ -15,5 +16,6 @@ public static class SceneDataBase
         public const string Prado = "Prado";
         public const string Ciudad = "Ciudad";
         public const string Interior = "Interior";
+        public const string Level2 = "Level2";
     }
 }

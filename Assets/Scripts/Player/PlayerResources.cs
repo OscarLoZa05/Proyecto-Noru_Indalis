@@ -126,5 +126,6 @@ public class PlayerResources : MonoBehaviour
     public void ManaShoot()
     {
         PlayerData.Instance.currentMana += 5;
+        UpdateManaBar();
     }
 }

@@ -8,7 +8,7 @@ public class CoreManager : MonoBehaviour
         //Load everything like AudioManagers, Save System...
         SceneController.Instance
             .NewTransition()
-            .Load(SceneDataBase.Slots.Mivo, SceneDataBase.Scenes.Mivo)
+            .Load(SceneDataBase.Slots.Level2, SceneDataBase.Scenes.Level2)
             .WithOverlay()
             .Perform();
     }
