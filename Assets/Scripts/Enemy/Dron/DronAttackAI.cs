@@ -113,7 +113,7 @@ public class DronAttackAI : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        _currentLife -= damage;
+        //_currentLife -= damage;
     }
 
     void OnDrawGizmos()
