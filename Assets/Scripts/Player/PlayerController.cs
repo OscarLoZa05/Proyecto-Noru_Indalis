@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
             Mouse();
             Aiming();
         }*/
-        if (_aimingAction.WasPressedThisFrame())
+        if (_aimingAction.WasPressedThisFrame() && IsGrounded())
         {
             Mouse();
             //Aiming();
