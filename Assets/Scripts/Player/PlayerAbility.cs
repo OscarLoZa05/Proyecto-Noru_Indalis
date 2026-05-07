@@ -239,18 +239,35 @@ public class PlayerAbility : MonoBehaviour
 
     IEnumerator WState()
     {
-        Debug.Log("Habilidad 2 Usada");
+        Debug.Log("Habilidad 2: Estado de Agua Activado");
+
+        // 1. Guardamos la velocidad original para no perderla
+        float originalSpeed = _playerController._playerMovementSpeed;
+
+        // 2. Aplicamos los nuevos valores
         _playerController._speed = waterSpeed;
         _playerController._playerSpeed = waterSpeed;
         _playerController._dashMultiplayer = 1.5f;
         _playerController._aimingMultiplayer = 1.5f;
-        Debug.Log(_playerController._speed);
+
+        // 3. Reproducimos sonido (si tienes el AudioSource configurado)
+        if (_audioSource != null && _waterStateSFX != null)
+        {
+            _audioSource.PlayOneShot(_waterStateSFX);
+        }
+
+        // 4. Esperamos lo que dure el clip de audio
         yield return new WaitForSeconds(_waterStateSFX.length);
+
+        // 5. Restauramos los valores originales al terminar
         _playerController._dashMultiplayer = 1f;
         _playerController._aimingMultiplayer = 1f;
-        _playerController._speed = _playerController._playerMovementSpeed;
-        _playerController._playerSpeed = _playerController._playerMovementSpeed;
+        _playerController._speed = originalSpeed;
+        _playerController._playerSpeed = originalSpeed;
+
+        Debug.Log("Habilidad 2: Estado de Agua Terminado");
     }
+    
     #endregion
 
     #region Fire

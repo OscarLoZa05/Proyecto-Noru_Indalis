@@ -99,14 +99,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int _manaReg = 25;
     [SerializeField] private int _healthReg = 25;
 
-    //Camera
-    [Header("Camera")]
-    [SerializeField] private CinemachineCamera _freeLookCam;
-
-    [SerializeField] private float _forwardZoom = 4f;
-    [SerializeField] private float _backZoom = 5.5f;
-    [SerializeField] private float _currentZoom;
-
     //Sounds
     private AudioSource _audioSource;
     [SerializeField] private AudioClip _dashSFX;
@@ -411,63 +403,6 @@ public class PlayerController : MonoBehaviour
         {
             Cursor.visible = true;
             //Cursor.lockState = CursorLockMode.None;
-        }
-    }
-
-    void CameraAim()
-    {
-        var orbital = _freeLookCam.GetComponent<CinemachineOrbitalFollow>();
-        var rotationComposer = _freeLookCam.GetComponent<CinemachineRotationComposer>();
-
-        var settings = orbital.Orbits;
-
-        if(isAiming)
-        {
-            //TargetOffset
-            orbital.TargetOffset = new Vector3(0.39f, 0.84f, -0.17f);
-
-            //Height
-            settings.Top.Height = 2.76f;
-            settings.Center.Height = 2.27f;
-            settings.Bottom.Height = 1.22f;
-
-            //Radius
-            settings.Top.Radius = 1.34f;
-            settings.Center.Radius = 1.65f;
-            settings.Bottom.Radius = 1.34f;
-
-            //TargetOffsetRotation
-            rotationComposer.TargetOffset = new Vector3(0.39f, 2.2f, 0.31f);
-
-            orbital.Orbits = settings;
-
-            Debug.Log("Hola");
-
-            return;
-        }
-        else
-        {
-            //TargetOffset
-            orbital.TargetOffset = new Vector3(0.2f, 0f, 0f);
-
-            //Height
-            settings.Top.Height = 5f;
-            settings.Center.Height = 2.25f;
-            settings.Bottom.Height = 0.1f;
-
-            //Radius
-            settings.Top.Radius = 2f;
-            settings.Center.Radius = 5.5f;
-            settings.Bottom.Radius = 2.5f;
-
-            //TargetOffsetRotation
-            rotationComposer.TargetOffset = new Vector3(0f, 0f, 0f);
-
-            orbital.Orbits = settings;
-
-            Debug.Log("Holi");
-
-            return;
         }
     }
 

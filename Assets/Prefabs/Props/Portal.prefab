@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6875587749414143385}
   - component: {fileID: 8326259156148847648}
-  - component: {fileID: 472874337726453425}
   m_Layer: 0
   m_Name: SceneChanger
   m_TagString: Untagged
@@ -54,18 +53,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.998698, y: 11.989983, z: 4.03911}
   m_Center: {x: 0, y: 1.6443224, z: -0.05735874}
---- !u!114 &472874337726453425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8405641540889121780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8198cc0e73bc33e44afaaf31b4539817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4886113498181513073
 PrefabInstance:
   m_ObjectHideFlags: 0
