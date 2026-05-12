@@ -1749,17 +1749,6 @@ Light:
   m_LightUnit: 4
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!114 &113018135 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9196585618850804600, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
-  m_PrefabInstance: {fileID: 2046123858}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &122635995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5224,6 +5213,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 994545c33c7b5764989f76709e6bc853, type: 3}
   m_PrefabInstance: {fileID: 400933744}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &402498803 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1314361604257674698, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
+  m_PrefabInstance: {fileID: 2046123858}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &405758762
 GameObject:
   m_ObjectHideFlags: 0
@@ -8831,7 +8831,7 @@ PrefabInstance:
     - target: {fileID: 5628910591951614396, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
       propertyPath: healthBarImage
       value: 
-      objectReference: {fileID: 113018135}
+      objectReference: {fileID: 402498803}
     - target: {fileID: 6263017924174180838, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
       propertyPath: _shootSFX
       value: 
@@ -13438,7 +13438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1035902611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26888,9 +26888,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1314361604257674698, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4674784480448575318, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
       propertyPath: m_Name
       value: CanvasUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778462506281060854, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6161172089636336445, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
       propertyPath: m_Pivot.x
@@ -26971,6 +26979,10 @@ PrefabInstance:
     - target: {fileID: 6161172089636336445, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040154252392626403, guid: e384bde0eda6cbe4fa4b9a8a7d3dddd9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

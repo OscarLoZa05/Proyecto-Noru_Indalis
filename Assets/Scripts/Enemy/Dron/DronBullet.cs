@@ -17,11 +17,16 @@ public class DronBullet : MonoBehaviour
     // Opcional: Desactivar si choca con algo
     void OnTriggerEnter(Collider collider)
     {
-        gameObject.SetActive(false);
+        
         if(collider.gameObject.CompareTag("Player"))
         {
+            gameObject.SetActive(false);
             PlayerResources _pr = collider.gameObject.GetComponent<PlayerResources>();
             _pr.TakeDamage(10);
+        }
+        if(collider.gameObject.layer == 3)
+        {
+            gameObject.SetActive(false);  
         }
     }
 }
