@@ -70,7 +70,7 @@ Material:
     - _Opacity: 1
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
-    - _RadialDistortion: 10
+    - _RadialDistortion: 1.39
     - _RadialScale: 12.2
     - _RenderQueueType: 4
     - _Speed: 0.295
