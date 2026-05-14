@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
 
-public class AperionAI : MonoBehaviour
+public class AperionAI : MonoBehaviour, IEnemy
 {
     private NavMeshAgent _enemyAgent;
     public enum EnemyState
@@ -189,9 +189,9 @@ public class AperionAI : MonoBehaviour
             }
     }
 
-    void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        _currentLife -= 20;
+        _currentLife -= damage;
     }
 
     private Transform mostNear = null;
@@ -242,7 +242,7 @@ public class AperionAI : MonoBehaviour
         if(collider.gameObject.CompareTag("Arrow"))
         {
             collider.gameObject.SetActive(false);
-            TakeDamage();
+            TakeDamage(20);
         }
     }
 

@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     private InputAction _healthAction;
     private InputAction _lookAction;
     public Vector2 _lookValue;
-    [SerializeField] private float _cameraSensitivity = 10;
     float _xRotation;
     [SerializeField] Transform _lookAtCamera;
     [SerializeField] float _movementSpeed = 0;
@@ -248,8 +247,8 @@ public class PlayerController : MonoBehaviour
     
                 Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
 
-                float mouseX = _lookValue.x * _cameraSensitivity * Time.deltaTime;
-                float mouseY = _lookValue.y * _cameraSensitivity * Time.deltaTime;
+                float mouseX = _lookValue.x * PlayerData.Instance.cameraSensitivity * Time.deltaTime;
+                float mouseY = _lookValue.y * PlayerData.Instance.cameraSensitivity * Time.deltaTime;
 
                 _xRotation -= mouseY;
                 _xRotation = Mathf.Clamp(_xRotation, -_rangoDeVision, _rangoDeVision);

@@ -8814,6 +8814,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 869747904}
     - target: {fileID: 4458361059517233383, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
+      propertyPath: attackZone.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458361059517233383, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
+      propertyPath: attackZone.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458361059517233383, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
+      propertyPath: attackZone.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458361059517233383, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
       propertyPath: kenonAbiltyVideo
       value: 
       objectReference: {fileID: 869747903}
@@ -9349,6 +9361,7 @@ MonoBehaviour:
   manaPotions: 0
   healthPotions: 0
   money: 0
+  cameraSensitivity: 10
 --- !u!4 &730443625
 Transform:
   m_ObjectHideFlags: 0

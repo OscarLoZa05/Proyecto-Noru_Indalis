@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,9 +14,8 @@ public class GameManager : MonoBehaviour
     public bool _shopOpen = false;
     public bool isChangingScene = false;
 
-    //Canvas
-    [SerializeField] private GameObject canvasPause;
-
+    [SerializeField] private GameObject _optionCanvas;
+    [SerializeField] private Slider _sliderSensibility;
     void Awake()
     {
         if(Instance != this && Instance != null)
@@ -53,13 +53,26 @@ public class GameManager : MonoBehaviour
         {
             _isPaused = !_isPaused;
             Time.timeScale = 0;
-            canvasPause.SetActive(true);
+            //canvasPause.SetActive(true);
         }
         else
         {
             _isPaused = !_isPaused;
             Time.timeScale = 1;
-            canvasPause.SetActive(false);
+            //canvasPause.SetActive(false);
         }
+    }
+    public void OptionsButton()
+    {
+        _optionCanvas.SetActive(true);
+    }
+    public void UpdateSensiblity()
+    {
+        PlayerData.Instance.cameraSensitivity = _sliderSensibility.value;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

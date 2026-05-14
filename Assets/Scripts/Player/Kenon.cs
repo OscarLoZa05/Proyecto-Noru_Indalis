@@ -10,10 +10,8 @@ public class Kenon : MonoBehaviour
     public Image kenonImage;
     public GameObject kenonAbiltyVideo;
     //public bool canKenonAttack = false;
-
-    [Header("Barra")]
-    public int currentNoru = 0;
-    public int maxNoru = 100;
+    [Header("Kenon")]
+    public Vector3 attackZone = new Vector3 (25,25,25);
 
     void Awake()
     {
@@ -22,22 +20,43 @@ public class Kenon : MonoBehaviour
 
     void Start()
     {
-        currentNoru = maxNoru;
+        PlayerData.Instance.currentNoru = PlayerData.Instance.maxNoru;
     }
 
     void Update()
     {
-        if(_kenonAbility.WasPressedThisFrame() && currentNoru == maxNoru)
+        if(_kenonAbility.WasPressedThisFrame() && PlayerData.Instance.currentNoru == PlayerData.Instance.maxNoru)
         {
+            
             StartCoroutine(Habilidad());
 
             //StartCoroutine(Habilidad());
         }
     }
 
+    public void AtaqueKenon()
+    {
+        Collider[] enemies = Physics.OverlapBox(transform.position, attackZone);
+            foreach (Collider enemy in enemies)
+            {
+                if(enemy.transform.gameObject.layer == 7)
+                {
+                    IEnemy enemigos = enemy.GetComponent<IEnemy>();
+                    if(enemigos != null)
+                    {
+                        
+                        Debug.Log(enemy.transform.name);
+                        enemigos.TakeDamage(75); 
+                    }
+                }
+            }
+    }
+    
+
     public IEnumerator Habilidad()
     {
-        currentNoru = 0;
+        AtaqueKenon();
+        PlayerData.Instance.currentNoru = 0;
         UpdateKenonBar();
         Time.timeScale = 0;
         kenonAbiltyVideo.SetActive(true);
@@ -49,13 +68,18 @@ public class Kenon : MonoBehaviour
 
     public void ChargingNoru(int quantity)
     {
-        currentNoru += quantity;
+        PlayerData.Instance.currentNoru += quantity;
         UpdateKenonBar();
     }
 
     void UpdateKenonBar()
     {
-        float noruBar = currentNoru / maxNoru;
+        float noruBar = PlayerData.Instance.currentNoru / PlayerData.Instance.maxNoru;
         kenonImage.fillAmount = noruBar;
+    }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireCube(transform.position, attackZone);
     }
 }

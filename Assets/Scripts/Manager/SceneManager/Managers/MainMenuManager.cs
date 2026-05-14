@@ -9,6 +9,7 @@ public class MainMenuManager : MonoBehaviour
     private Animator _animator;
     private Camera _mainCamera;
     private CameraAnimator _cameraAnimator;
+    [SerializeField] private GameObject canvasOption;
 
 
     void Awake()
@@ -36,5 +37,18 @@ public class MainMenuManager : MonoBehaviour
     public void AnimatorCamera()
     {
         _cameraAnimator.AnimatorCamera(); 
+    }
+    public void Options()
+    {
+        canvasOption.SetActive(true);
+    }
+    public void CloseOptions()
+    {
+        canvasOption.SetActive(false);
+        //PlayerData.Instance.cameraSensitivity = GameManager.Instance.sliderSensibility.value;
+    }
+    public void QuitGame()
+    {
+        GameManager.Instance.QuitGame();
     }
 }
