@@ -41,12 +41,12 @@ public class Kenon : MonoBehaviour
             {
                 if(enemy.transform.gameObject.layer == 7)
                 {
-                    IEnemy enemigos = enemy.GetComponent<IEnemy>();
-                    if(enemigos != null)
+                    IEnemy enemy1 = enemy.GetComponent<IEnemy>();
+                    if(enemy1 != null)
                     {
                         
-                        Debug.Log(enemy.transform.name);
-                        enemigos.TakeDamage(75); 
+                        //Debug.Log(enemy.transform.name);
+                        enemy1.TakeDamage(75); 
                     }
                 }
             }
@@ -55,7 +55,7 @@ public class Kenon : MonoBehaviour
 
     public IEnumerator Habilidad()
     {
-        AtaqueKenon();
+        
         PlayerData.Instance.currentNoru = 0;
         UpdateKenonBar();
         Time.timeScale = 0;
@@ -64,6 +64,8 @@ public class Kenon : MonoBehaviour
         Debug.LogWarning("CHAVBL ESTO FALLA");
         kenonAbiltyVideo.SetActive(false);
         Time.timeScale = 1;
+        AtaqueKenon();
+        Debug.Log("TUPUTAMDARE");
     }
 
     public void ChargingNoru(int quantity)
