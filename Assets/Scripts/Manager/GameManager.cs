@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     public bool _shopOpen = false;
     public bool isChangingScene = false;
 
-    [SerializeField] private GameObject _optionCanvas;
-    [SerializeField] private Slider _sliderSensibility;
+    //[SerializeField] private GameObject _optionCanvas;
+    //public Slider _sliderSensibility;
     void Awake()
     {
         if(Instance != this && Instance != null)
@@ -45,30 +45,33 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
+        //float _sliderValue = _sliderSensibility.value;
+        //Debug.Log(_sliderValue);
+        //PlayerData.Instance.cameraSensitivity = _sliderSensibility.value;
     }
 
     public void Pause()
     {
         if(_isPaused == false)
         {
+            AudioListener.pause = true;
             _isPaused = !_isPaused;
             Time.timeScale = 0;
             //canvasPause.SetActive(true);
         }
         else
         {
+            AudioListener.pause = false;
             _isPaused = !_isPaused;
             Time.timeScale = 1;
             //canvasPause.SetActive(false);
         }
     }
-    public void OptionsButton()
-    {
-        _optionCanvas.SetActive(true);
-    }
     public void UpdateSensiblity()
     {
-        PlayerData.Instance.cameraSensitivity = _sliderSensibility.value;
+        
+        PlayerData.Instance.cameraSensitivity = 5;
+        
     }
 
     public void QuitGame()

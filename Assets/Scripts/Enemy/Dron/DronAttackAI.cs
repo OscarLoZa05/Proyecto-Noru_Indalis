@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
 
-public class DronAttackAI : MonoBehaviour
+public class DronAttackAI : MonoBehaviour, IEnemy
 {
     private NavMeshAgent _enemyAgent;
     [SerializeField] private Transform _bulletSpawn;

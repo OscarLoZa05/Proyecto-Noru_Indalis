@@ -6400,18 +6400,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2075027894}
     - target: {fileID: 4458361059517233383, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
-      propertyPath: attackZone.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4458361059517233383, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
-      propertyPath: attackZone.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4458361059517233383, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
-      propertyPath: attackZone.z
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4458361059517233383, guid: 8d860fec13d419345a66bbe02836a49c, type: 3}
       propertyPath: kenonAbiltyVideo
       value: 
       objectReference: {fileID: 1762263437}

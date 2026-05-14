@@ -366,7 +366,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveValue: {x: 0, y: 0}
   _lookValue: {x: 0, y: 0}
-  _cameraSensitivity: 5
   _lookAtCamera: {fileID: 269796763813142543}
   _movementSpeed: 0
   _rangoDeVision: 65
@@ -495,8 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kenonImage: {fileID: 0}
   kenonAbiltyVideo: {fileID: 0}
-  currentNoru: 0
-  maxNoru: 100
+  attackZone: {x: 100, y: 100, z: 100}
 --- !u!82 &1116616701399976929
 AudioSource:
   m_ObjectHideFlags: 0

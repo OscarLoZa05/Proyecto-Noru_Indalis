@@ -12,6 +12,7 @@ public class Kenon : MonoBehaviour
     //public bool canKenonAttack = false;
     [Header("Kenon")]
     public Vector3 attackZone = new Vector3 (25,25,25);
+    public bool haveKenon = false;
 
     void Awake()
     {
@@ -25,7 +26,7 @@ public class Kenon : MonoBehaviour
 
     void Update()
     {
-        if(_kenonAbility.WasPressedThisFrame() && PlayerData.Instance.currentNoru == PlayerData.Instance.maxNoru)
+        if(_kenonAbility.WasPressedThisFrame() && PlayerData.Instance.currentNoru == PlayerData.Instance.maxNoru && haveKenon)
         {
             
             StartCoroutine(Habilidad());

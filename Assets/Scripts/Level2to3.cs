@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Level2To3 : MonoBehaviour
 {
+    public bool canPass = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +17,7 @@ public class Level2To3 : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.CompareTag("Player"))
+        if(collider.gameObject.CompareTag("Player") && canPass)
         {
             NextLevel();  
         }
