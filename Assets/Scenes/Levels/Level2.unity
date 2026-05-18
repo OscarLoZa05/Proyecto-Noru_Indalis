@@ -2223,42 +2223,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreeLookCamera
       objectReference: {fileID: 0}
-    - target: {fileID: 3758822766585106722, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
-      propertyPath: TargetOffset.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3758822766585106722, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
-      propertyPath: Composition.ScreenPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3758822766585106722, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
-      propertyPath: Composition.ScreenPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3758822766585106722, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
-      propertyPath: Composition.HardLimits.Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5649502120667012140, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6967749344016041498, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
-      propertyPath: m_Range
-      value: 3.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6967749344016041498, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
-      propertyPath: m_Lightmapping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7248696358835033085, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
-      propertyPath: useVolumetric
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7248696358835033085, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
-      propertyPath: m_VolumetricDimmer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8110809023450318820, guid: 6044260e764139b45b3118a2b1f02605, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -7458,18 +7422,6 @@ PrefabInstance:
     - target: {fileID: 1331251835278017589, guid: 141e14e096e169d49af48b4dfd0b3f5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2235984524757781293, guid: 141e14e096e169d49af48b4dfd0b3f5e, type: 3}
-      propertyPath: CameraSide
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2235984524757781293, guid: 141e14e096e169d49af48b4dfd0b3f5e, type: 3}
-      propertyPath: ShoulderOffset.x
-      value: 0.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 2235984524757781293, guid: 141e14e096e169d49af48b4dfd0b3f5e, type: 3}
-      propertyPath: ShoulderOffset.y
-      value: 2.61
       objectReference: {fileID: 0}
     - target: {fileID: 3345370480584668197, guid: 141e14e096e169d49af48b4dfd0b3f5e, type: 3}
       propertyPath: Target.TrackingTarget

@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 60939534, guid: 5167e799ebf2895438f8e36618778b2c, type: 3}
+  m_Sprite: {fileID: -745891664, guid: 22e06a9c94286bc478c155ad7fd73de0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88,6 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b074d4ac09b014ea448f8d36a162da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialCanva: {fileID: 0}
 --- !u!1 &1329307589600244378
 GameObject:
   m_ObjectHideFlags: 0
@@ -5336,6 +5337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed77b2fade6a1447ad119196e90d84d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOpen: 0
   _chestParticles: {fileID: 6650306982946574030}
   _open: {fileID: 8300000, guid: c5c90d66ce18e0d4ca4eed6c2d488dbf, type: 3}
 --- !u!82 &-534184862897567362
