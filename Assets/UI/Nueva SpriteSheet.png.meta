@@ -1,0 +1,1084 @@
+fileFormatVersion: 2
+guid: 22e06a9c94286bc478c155ad7fd73de0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2065
+        width: 410
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20084d2f02fdd64b93d78e106041b6f
+      internalID: -610279556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 2138
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba6318b0ac19ef469a9fe16974ddaf0
+      internalID: 790853596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 2000
+        width: 198
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345831cb6e231bc4ebd829277ad88da9
+      internalID: -745891664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 1317
+        width: 821
+        height: 821
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacc8037384f5f842b0c63c3a2745ac4
+      internalID: -1108034631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1972
+        width: 410
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bd60b11e2cfc543b211786addb4873
+      internalID: -562573122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1988
+        width: 396
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c4d3c4d1521044f810e2dc7bda5a23
+      internalID: 1743001440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 1838
+        width: 444
+        height: 297
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67dc4360540cf3343aa29b44ea4bda1b
+      internalID: -1537482750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 2017
+        width: 332
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61920759fa82a24a9d75fe9ea04a4a8
+      internalID: -313792949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 3025
+        y: 2007
+        width: 424
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3455d5d712f0a243958f0c0ffc205e0
+      internalID: -1153132555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1904
+        width: 208
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155d34d04c0c13a4389bd586322b1bda
+      internalID: 1751140077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1904
+        width: 208
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59a3e3de85b07240afab62333e77cf0
+      internalID: -1068511889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1883
+        width: 88
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a7e9fd0cd0b3849889ecb750eeb91b
+      internalID: -647760965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 1827
+        width: 188
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87885294ffb255a46928810aef963395
+      internalID: 1563326647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1510
+        width: 43
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ee64a6f891a6749a48207a8de0d029
+      internalID: -1469633229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1508
+        width: 43
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d351c0a98d2bcb147bbc5bb37b55a21e
+      internalID: -1429385595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1780
+        width: 72
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff94da7743b6ccb468fdd33113493bba
+      internalID: 802150728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 1728
+        width: 122
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03ace43b90e0fc4e83f13382a7c5e89
+      internalID: -515194336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1732
+        width: 133
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04c4c718cb7f144b9d8791d94f99e82
+      internalID: -423450470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 1709
+        width: 150
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12acbc85192560c449795d4e69d7f1fa
+      internalID: -1058838610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1704
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19eeff8432800645919362d46358402
+      internalID: -214313491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1602
+        width: 118
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de10147203f10547bbd3f80a9588b06
+      internalID: -1653478053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1604
+        width: 127
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bee900583b61f747a34ef79d78334d9
+      internalID: 1688982706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 2153
+        y: 1546
+        width: 332
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c61aafbb517044fb26a432dce32133
+      internalID: 1924974999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 1555
+        width: 332
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2fdd38bbb4fee4695082741b67a135
+      internalID: 401204189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1381
+        width: 124
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6d1f927af61744fb7113109d886801
+      internalID: -2007549095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 1390
+        width: 101
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b58a67cdee37d438ee5875e1d799c2
+      internalID: -2055107155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1388
+        width: 102
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a76c53a76cfdb45a869b822941b7ca
+      internalID: 1040492621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1377
+        width: 257
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9cb4845336af941a5e77ae2a488a36
+      internalID: -2079365635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 1396
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bc960b0774ac34e8cbef951980d223
+      internalID: 55359059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1298
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e83e5071e1ea74891acccc681b9ce2
+      internalID: 1664053571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1298
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b0100209db8d64f93b5b579fb3d52d
+      internalID: 736049981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1295
+        width: 76
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55d67b518195b74a837dfa5b1be459a
+      internalID: 1242031356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1270
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399a2a325db6131448bb7a2ee2577edb
+      internalID: 1699398920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 1270
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8127f6918e42302439003e73acd263ac
+      internalID: -1681175443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 1233
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0f827d93fdb154394e8f156a7d0be0
+      internalID: 478768220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1235
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3400f5c70919574da3606df198918c7
+      internalID: 1047821540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1218
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0eeb1efe34ee0498f41a989c875b0c
+      internalID: 801240822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1098
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f16f504d3fde6448a4d372fe28912e7
+      internalID: 1657185641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1103
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b130b855d3380cb41b60d0d50d5f719f
+      internalID: 1490371615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 556
+        width: 971
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffd744a8d7e37f4a99d2fdecb6ae331
+      internalID: -443826514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 52
+        width: 799
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804725f45ef0df84fa65a467c88944ca
+      internalID: 1762881730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nueva SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 52
+        width: 1847
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dacee3974610b45b5c1d3342387f71
+      internalID: 1624142405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 70845d4bf8dbf2245af608591279817a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Nueva SpriteSheet_0: -610279556
+      Nueva SpriteSheet_1: 790853596
+      Nueva SpriteSheet_10: -1068511889
+      Nueva SpriteSheet_11: -647760965
+      Nueva SpriteSheet_12: 1563326647
+      Nueva SpriteSheet_13: -1469633229
+      Nueva SpriteSheet_14: -1429385595
+      Nueva SpriteSheet_15: 802150728
+      Nueva SpriteSheet_16: -515194336
+      Nueva SpriteSheet_17: -423450470
+      Nueva SpriteSheet_18: -1058838610
+      Nueva SpriteSheet_19: -214313491
+      Nueva SpriteSheet_2: -745891664
+      Nueva SpriteSheet_20: -1653478053
+      Nueva SpriteSheet_21: 1688982706
+      Nueva SpriteSheet_22: 1924974999
+      Nueva SpriteSheet_23: 401204189
+      Nueva SpriteSheet_24: -1389121573
+      Nueva SpriteSheet_25: -2007549095
+      Nueva SpriteSheet_26: -2055107155
+      Nueva SpriteSheet_27: 1040492621
+      Nueva SpriteSheet_28: -2079365635
+      Nueva SpriteSheet_29: 55359059
+      Nueva SpriteSheet_3: -1108034631
+      Nueva SpriteSheet_30: 1664053571
+      Nueva SpriteSheet_31: 736049981
+      Nueva SpriteSheet_32: 1242031356
+      Nueva SpriteSheet_33: 1699398920
+      Nueva SpriteSheet_34: -1681175443
+      Nueva SpriteSheet_35: 478768220
+      Nueva SpriteSheet_36: 1047821540
+      Nueva SpriteSheet_37: 801240822
+      Nueva SpriteSheet_38: 1657185641
+      Nueva SpriteSheet_39: 1490371615
+      Nueva SpriteSheet_4: -562573122
+      Nueva SpriteSheet_40: -443826514
+      Nueva SpriteSheet_41: 1762881730
+      Nueva SpriteSheet_42: 1624142405
+      Nueva SpriteSheet_5: 1743001440
+      Nueva SpriteSheet_6: -1537482750
+      Nueva SpriteSheet_7: -313792949
+      Nueva SpriteSheet_8: -1153132555
+      Nueva SpriteSheet_9: 1751140077
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,11 +8,16 @@ public class CanvasChest : MonoBehaviour
     private Transform camTransform;
     public Material materialCanva;
     private Image _image;
+    private HealthChest _healthChest;
+    private ManaChest _manaChest;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         _player = GameObject.FindWithTag("Player").transform;
         _image = GetComponent<Image>();
+        _healthChest = GetComponentInParent<HealthChest>();
+        _manaChest = GetComponentInParent<ManaChest>();
+        
     }
 
     void Start()
@@ -37,6 +42,15 @@ public class CanvasChest : MonoBehaviour
         Color tempColor = _image.color;
         tempColor.a = distanceByTheWay;
         _image.color = tempColor;
+
+        if(_manaChest != null && _manaChest.isOpen)
+        {
+            Destroy(gameObject);
+        }
+        if(_healthChest != null && _healthChest.isOpen)
+        {
+            Destroy(gameObject);
+        }
 
     }
 

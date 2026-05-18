@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 public class ManaChest : MonoBehaviour, IInteractable
 {
     //Booleanas
-    private bool isOpen = false;
+    public bool isOpen = false;
 
     //Components
     private Animator _animator;

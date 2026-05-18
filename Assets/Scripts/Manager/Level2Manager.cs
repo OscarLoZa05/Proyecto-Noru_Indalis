@@ -9,6 +9,7 @@ public class Level2Manager : MonoBehaviour
     public GameObject WendigoFinal;
     public Kenon _kenon;
     public Level2To3 _level2to3;
+    public GameObject kenonCanvas;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,6 +30,7 @@ public class Level2Manager : MonoBehaviour
         if (Tutorial())
         {
             _kenon.haveKenon = true;
+            kenonCanvas.SetActive(true);
             //Debug.Log("¡Los 3 enemigos han muerto!");
             eventoLanzado = true;
         }
