@@ -3112,6 +3112,7 @@ MonoBehaviour:
   _isDead: 0
   _dronUsed: 0
   _distanceToDron: 50
+  VFXGraph: {fileID: 0}
 --- !u!4 &967882027
 Transform:
   m_ObjectHideFlags: 0
@@ -3660,6 +3661,7 @@ MonoBehaviour:
   _isDead: 0
   _dronUsed: 0
   _distanceToDron: 25
+  VFXGraph: {fileID: 0}
 --- !u!4 &1291489064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45d691a5b319f1245a781a2f2bcbc27e, type: 3}

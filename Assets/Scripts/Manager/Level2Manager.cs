@@ -9,8 +9,10 @@ public class Level2Manager : MonoBehaviour
     public GameObject WendigoFinal;
     public Kenon _kenon;
     public Level2To3 _level2to3;
-    public GameObject kenonCanvas;
-    
+    public CanvasGroup kenonCanvas;
+    public float multiplaied;
+    public float alphaCount = 0;  
+    public bool combatTutorial = false;  
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -26,18 +28,40 @@ public class Level2Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*if(Tutorial())
+        {
+            FadeInKenon();
+            return;
+        }
         if (eventoLanzado) return;
         if (Tutorial())
         {
+            
             GameManager.Instance.haveKenon = true;
-            kenonCanvas.SetActive(true);
             //Debug.Log("¡Los 3 enemigos han muerto!");
             eventoLanzado = true;
         }
         if(WendigoFinal = null)
         {
             _level2to3.canPass = true;
+        }*/
+        if(combatTutorial && alphaCount < 1)
+        {
+            FadeInKenon();
+            Debug.Log("FadeInKenon");
         }
+
+        if(TutorialCombate() && !GameManager.Instance.haveKenon)
+        {
+            GameManager.Instance.haveKenon = true;
+            combatTutorial = true;
+        }
+    }
+
+    void FadeInKenon()
+    {
+        alphaCount += Time.deltaTime * multiplaied;
+        kenonCanvas.alpha = alphaCount;
     }
 
     void OnTriggerEnter(Collider collider)
@@ -57,7 +81,7 @@ public class Level2Manager : MonoBehaviour
             .WithOverlay()
             .Perform();   
     }
-    bool Tutorial()
+    bool TutorialCombate()
     {
         foreach (GameObject enemigo in misEnemigos)
         {

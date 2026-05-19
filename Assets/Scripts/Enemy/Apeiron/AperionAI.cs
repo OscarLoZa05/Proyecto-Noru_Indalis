@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
+using System.Collections;
 
 public class AperionAI : MonoBehaviour, IEnemy
 {
@@ -38,6 +40,9 @@ public class AperionAI : MonoBehaviour, IEnemy
     //Dron
     [SerializeField] private bool _dronUsed = false;
     [SerializeField] private int _distanceToDron = 25;
+
+    //VFX
+    public VisualEffect VFXGraph;
 
 
 
@@ -252,9 +257,21 @@ public class AperionAI : MonoBehaviour, IEnemy
 
     void Dead()
     {
+        StartCoroutine(Destruccion());
+        if(VFXGraph != null)
+        {
+            VFXGraph.Play();
+        }
+
         _isDead = true;
         _animator.SetTrigger("IsDead");
         _enemyAgent.isStopped = true;
+    }
+
+    IEnumerator Destruccion()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 
     void OnTriggerEnter(Collider collider)
