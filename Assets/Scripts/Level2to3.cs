@@ -29,7 +29,7 @@ public class Level2To3 : MonoBehaviour
         SceneController.Instance
             .NewTransition()
             .Unload(SceneDataBase.Slots.Level2)
-            .Load(SceneDataBase.Slots.Level4, SceneDataBase.Scenes.Level4)
+            .Load(SceneDataBase.Slots.Level3, SceneDataBase.Scenes.Level3)
             .WithOverlay()
             .Perform();   
     }
