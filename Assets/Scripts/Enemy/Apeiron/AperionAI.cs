@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.AI;
 
 public class AperionAI : MonoBehaviour, IEnemy
@@ -32,7 +31,7 @@ public class AperionAI : MonoBehaviour, IEnemy
     [SerializeField] private int _damage = 25;
 
     //Life
-    [SerializeField] private int _currentLife;
+    [SerializeField] public int _currentLife;
     [SerializeField] private int _maxLife = 150;
     [SerializeField] private bool _isDead = false;
 
@@ -40,17 +39,22 @@ public class AperionAI : MonoBehaviour, IEnemy
     [SerializeField] private bool _dronUsed = false;
     [SerializeField] private int _distanceToDron = 25;
 
+
+
     private Transform _player;
+    private Animator _animator;
     void Awake()
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
         _player = GameObject.FindWithTag("Player").transform;
+        _animator = GetComponent<Animator>();
 
     }
     void Start()
     {
         _currentLife = _maxLife;
         currentState = EnemyState.Patrolling;
+        _enemyAgent.speed = 4;
         _enemyAgent.SetDestination(_player.position);
         _attackTimer = _attackDelay;
         PatrollingPoints();
@@ -95,6 +99,10 @@ public class AperionAI : MonoBehaviour, IEnemy
         if(OnRange(_detectionRange))
         {
             currentState = EnemyState.Chasing;
+            _enemyAgent.speed = 9;
+            _animator.SetBool("IsRunning", true);
+            _animator.SetBool("IsCharging", false);
+            _enemyAgent.speed = 9;
         }
         if(!OnRange(_detectionRange))
         {
@@ -120,6 +128,8 @@ public class AperionAI : MonoBehaviour, IEnemy
         if(!OnRange(_detectionRange))
         {
             currentState = EnemyState.Patrolling;
+            _enemyAgent.speed = 4;
+            _animator.SetBool("IsRunning", false);
             return;
         }
         if(OnRange(_attackRange))
@@ -145,13 +155,19 @@ public class AperionAI : MonoBehaviour, IEnemy
         {
             _enemyAgent.isStopped = false;
             currentState = EnemyState.Chasing;
+            _animator.SetBool("IsRunning", true);
+            _animator.SetBool("IsCharging", false);
+            _enemyAgent.speed = 9;
             return;
         }
+        _animator.SetBool("IsRunning", false);
+        _animator.SetBool("IsCharging", true);
         _enemyAgent.isStopped = true;
         _attackTimer += Time.deltaTime;
         if(_attackTimer > _attackDelay)
             {
-                Attack();
+                _animator.SetTrigger("IsAttacking");
+                //Attack();
                 Debug.Log("Attacking!");
                 _attackTimer = 0;
             }
@@ -171,8 +187,10 @@ public class AperionAI : MonoBehaviour, IEnemy
         }  
     }
 
-    void Attack()
+    public void Attack()
     {
+        _attackTimer = 0;
+        _detectionRange = 20;
         Collider[] players = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
             foreach (Collider item in players)
             {
@@ -191,6 +209,7 @@ public class AperionAI : MonoBehaviour, IEnemy
 
     public void TakeDamage(int damage)
     {
+        _detectionRange = 100;
         _currentLife -= damage;
     }
 
@@ -234,7 +253,8 @@ public class AperionAI : MonoBehaviour, IEnemy
     void Dead()
     {
         _isDead = true;
-        Destroy(gameObject);
+        _animator.SetTrigger("IsDead");
+        _enemyAgent.isStopped = true;
     }
 
     void OnTriggerEnter(Collider collider)
@@ -242,9 +262,15 @@ public class AperionAI : MonoBehaviour, IEnemy
         if(collider.gameObject.CompareTag("Arrow"))
         {
             collider.gameObject.SetActive(false);
-            TakeDamage(20);
+            TakeDamage(20);   
+        }
+        if(collider.gameObject.CompareTag("Fire"))
+        {
+            TakeDamage(100);
         }
     }
+
+
 
     void OnDrawGizmos()
     {

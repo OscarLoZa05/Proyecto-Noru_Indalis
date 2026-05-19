@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public bool _isDead = false;
     public bool _shopOpen = false;
     public bool isChangingScene = false;
+    public bool haveKenon = false;
 
     //[SerializeField] private GameObject _optionCanvas;
     //public Slider _sliderSensibility;

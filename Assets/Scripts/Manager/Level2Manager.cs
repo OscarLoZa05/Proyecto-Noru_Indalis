@@ -29,7 +29,7 @@ public class Level2Manager : MonoBehaviour
         if (eventoLanzado) return;
         if (Tutorial())
         {
-            _kenon.haveKenon = true;
+            GameManager.Instance.haveKenon = true;
             kenonCanvas.SetActive(true);
             //Debug.Log("¡Los 3 enemigos han muerto!");
             eventoLanzado = true;

@@ -11,8 +11,9 @@ public class Kenon : MonoBehaviour
     public GameObject kenonAbiltyVideo;
     //public bool canKenonAttack = false;
     [Header("Kenon")]
-    public Vector3 attackZone = new Vector3 (25,25,25);
-    public bool haveKenon = false;
+    public float kenonRadius = 10;
+    public Transform attackPosition;
+    
 
     void Awake()
     {
@@ -26,7 +27,7 @@ public class Kenon : MonoBehaviour
 
     void Update()
     {
-        if(_kenonAbility.WasPressedThisFrame() && PlayerData.Instance.currentNoru == PlayerData.Instance.maxNoru && haveKenon)
+        if(_kenonAbility.WasPressedThisFrame() && PlayerData.Instance.currentNoru == PlayerData.Instance.maxNoru && GameManager.Instance.haveKenon)
         {
             
             StartCoroutine(Habilidad());
@@ -37,7 +38,7 @@ public class Kenon : MonoBehaviour
 
     public void AtaqueKenon()
     {
-        Collider[] enemies = Physics.OverlapBox(transform.position, attackZone);
+        Collider[] enemies = Physics.OverlapSphere(attackPosition.position, kenonRadius);
             foreach (Collider enemy in enemies)
             {
                 if(enemy.transform.gameObject.layer == 7)
@@ -83,6 +84,6 @@ public class Kenon : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.black;
-        Gizmos.DrawWireCube(transform.position, attackZone);
+        Gizmos.DrawWireSphere(attackPosition.position, kenonRadius);
     }
 }
