@@ -165,9 +165,10 @@ public class AperionAI : MonoBehaviour, IEnemy
             _enemyAgent.speed = 9;
             return;
         }
+        _enemyAgent.isStopped = true;
         _animator.SetBool("IsRunning", false);
         _animator.SetBool("IsCharging", true);
-        _enemyAgent.isStopped = true;
+        
         _attackTimer += Time.deltaTime;
         if(_attackTimer > _attackDelay)
             {
@@ -196,6 +197,7 @@ public class AperionAI : MonoBehaviour, IEnemy
     {
         _attackTimer = 0;
         _detectionRange = 20;
+        _enemyAgent.isStopped = false;
         Collider[] players = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
             foreach (Collider item in players)
             {
@@ -270,7 +272,7 @@ public class AperionAI : MonoBehaviour, IEnemy
 
     IEnumerator Destruccion()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(10);
         Destroy(gameObject);
     }
 

@@ -62,7 +62,7 @@ public class Kenon : MonoBehaviour
         UpdateKenonBar();
         Time.timeScale = 0;
         kenonAbiltyVideo.SetActive(true);
-        yield return new WaitForSecondsRealtime(5.4f);
+        yield return new WaitForSecondsRealtime(11.417f);
         Debug.LogWarning("CHAVBL ESTO FALLA");
         kenonAbiltyVideo.SetActive(false);
         Time.timeScale = 1;

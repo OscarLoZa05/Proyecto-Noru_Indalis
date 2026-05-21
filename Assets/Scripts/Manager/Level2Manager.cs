@@ -10,7 +10,7 @@ public class Level2Manager : MonoBehaviour
     public Kenon _kenon;
     public Level2To3 _level2to3;
     public CanvasGroup kenonCanvas;
-    public float multiplaied;
+    public float multiplaied = 2;
     public float alphaCount = 0;  
     public bool combatTutorial = false;  
 

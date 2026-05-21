@@ -48,7 +48,7 @@ public class WendigoAI : MonoBehaviour
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
         _audioSource = GetComponent<AudioSource>();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
 
         _player = GameObject.FindWithTag("Player").transform;
     }
@@ -57,6 +57,7 @@ public class WendigoAI : MonoBehaviour
     {
         _currentLife = _maxLife;
         currentState = EnemyState.Chasing;
+        _animator.SetBool("IsWalking", true);
         _attackTimer = _attackDelay;
     }
 
@@ -94,6 +95,7 @@ public class WendigoAI : MonoBehaviour
         _enemyAgent.isStopped = false;
         if(OnRange(_attackRange))
         {
+            
             currentState = EnemyState.Attacking;
         }
     }
@@ -126,6 +128,7 @@ public class WendigoAI : MonoBehaviour
         }
         if(OnRange(_attackRange))
         {
+            
             Attack();
             /*_enemyAgent.isStopped = true;
 
@@ -143,6 +146,8 @@ public class WendigoAI : MonoBehaviour
             currentState = EnemyState.Chasing;
         }
     }
+    }
+
 
     
     void Attack()
@@ -161,7 +166,7 @@ public class WendigoAI : MonoBehaviour
                     }
                 }
             }
-        }
+        
             
     }
 
@@ -193,7 +198,7 @@ public class WendigoAI : MonoBehaviour
 
     
 
-    public bool OnRange(float distance)
+    bool OnRange(float distance)
     {
         float distanceToPlayer = Vector3.Distance(transform.position, _player.position);
         
