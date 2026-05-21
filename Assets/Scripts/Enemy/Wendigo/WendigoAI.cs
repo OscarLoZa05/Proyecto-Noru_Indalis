@@ -95,7 +95,6 @@ public class WendigoAI : MonoBehaviour
         _enemyAgent.isStopped = false;
         if(OnRange(_attackRange))
         {
-            
             currentState = EnemyState.Attacking;
         }
     }
@@ -129,28 +128,32 @@ public class WendigoAI : MonoBehaviour
         if(OnRange(_attackRange))
         {
             
-            Attack();
-            /*_enemyAgent.isStopped = true;
+            _enemyAgent.isStopped = true;
 
             _attackTimer += Time.deltaTime;
 
             if(_attackTimer >= _attackDelay)
-            {
-                
-            _attackTimer = 0;
+            {  
+                Attack1();  
+                _animator.SetTrigger("IsAttacking");
+                _attackTimer = 0;
                 currentState = EnemyState.Charging;
+                _animator.SetBool("IsCooldawn", true);
+                _animator.SetBool("IsWalking", false);
             }
-        }*/
+        }
         if(!OnRange(_attackRange))
         {
+            _animator.SetBool("IsCooldawn", false);
+            _animator.SetBool("IsWalking", true);
             currentState = EnemyState.Chasing;
         }
     }
-    }
+    
 
 
     
-    void Attack()
+    public void Attack1()
     {
         Collider[] players = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
             foreach (Collider item in players)

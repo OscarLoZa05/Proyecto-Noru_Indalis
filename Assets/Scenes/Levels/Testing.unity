@@ -3072,6 +3072,8 @@ GameObject:
   - component: {fileID: 1043197173}
   - component: {fileID: 1043197172}
   - component: {fileID: 1043197171}
+  - component: {fileID: 1043197175}
+  - component: {fileID: 1043197174}
   m_Layer: 0
   m_Name: Wendigo
   m_TagString: Untagged
@@ -3096,7 +3098,7 @@ MonoBehaviour:
   _deadSFX: {fileID: 0}
   currentState: 0
   _detectionRange: 7
-  _attackRange: 2
+  _attackRange: 4.26
   _attackTimer: 0
   _attackDelay: 2
   _attackPosition: {fileID: 1043197173}
@@ -3137,13 +3139,61 @@ Transform:
   m_GameObject: {fileID: 1043197170}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.203249, y: -0.6425705, z: -108.81682}
+  m_LocalPosition: {x: 160, y: -0.6425705, z: 130}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1727061554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1043197174
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043197170}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1043197175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043197170}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.088385, y: 5.866039, z: 2.1370544}
+  m_Center: {x: 0, y: 2.4330194, z: 0.5685272}
 --- !u!1 &1184778314
 GameObject:
   m_ObjectHideFlags: 0
@@ -5953,6 +6003,10 @@ PrefabInstance:
     - target: {fileID: 13308981761260017, guid: 44b814d0f13445144906708627920628, type: 3}
       propertyPath: m_Name
       value: DronAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 13308981761260017, guid: 44b814d0f13445144906708627920628, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1719719732678264499, guid: 44b814d0f13445144906708627920628, type: 3}
       propertyPath: m_LocalPosition.x
