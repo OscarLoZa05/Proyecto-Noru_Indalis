@@ -411,7 +411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -648, y: 371}
+  m_AnchoredPosition: {x: -648, y: 379.9}
   m_SizeDelta: {x: 284.6, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5554165600478730789
@@ -843,7 +843,6 @@ GameObject:
   - component: {fileID: 805885139113332151}
   - component: {fileID: 8378184192350799180}
   - component: {fileID: 6062479482770083774}
-  - component: {fileID: 1017465721277755930}
   m_Layer: 5
   m_Name: CanvasUI
   m_TagString: Untagged
@@ -953,18 +952,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1017465721277755930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4674784480448575318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca020c8fcf692ce40b1af6a010727741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4778462506281060854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1189,7 @@ GameObject:
   - component: {fileID: 794937895777100582}
   - component: {fileID: 7077533709837249990}
   m_Layer: 5
-  m_Name: Mana
+  m_Name: ManaVar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

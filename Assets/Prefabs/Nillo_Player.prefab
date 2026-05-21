@@ -497,7 +497,6 @@ MonoBehaviour:
   kenonAbiltyVideo: {fileID: 0}
   kenonRadius: 19
   attackPosition: {fileID: 4467761579800963692}
-  haveKenon: 0
 --- !u!82 &1116616701399976929
 AudioSource:
   m_ObjectHideFlags: 0

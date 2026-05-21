@@ -18,18 +18,7 @@ public class Level4Manager : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Player"))
         {
-            NextLevel();  
+            //NextLevel();  
         }
-    }
-
-    void NextLevel()
-    {
-        GameManager.Instance.isChangingScene = true;
-        SceneController.Instance
-            .NewTransition()
-            .Unload(SceneDataBase.Slots.Prado)
-            .Load(SceneDataBase.Slots.Ciudad, SceneDataBase.Scenes.Ciudad)
-            .WithOverlay()
-            .Perform();   
     }
 }

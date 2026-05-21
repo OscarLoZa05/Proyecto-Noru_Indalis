@@ -44,8 +44,8 @@ VisualEffect:
   m_GameObject: {fileID: 295231990909566445}
   m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: a6da4dabb152fa1429b8c859a3c96e8f, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
+  m_InitialEventName: 
+  m_InitialEventNameOverriden: 1
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
   m_AllowInstancing: 1
@@ -60,14 +60,17 @@ VisualEffect:
       - m_Value: {x: 0.000009334669, y: 180, z: -7.0167104e-15}
         m_Name: Transform_angles
         m_Overridden: 1
-      - m_Value: {x: -0.007626827, y: -11.259723, z: 6.3859873}
+      - m_Value: {x: -0.007722846, y: -11.259723, z: 6.3859982}
         m_Name: Transform_position
         m_Overridden: 1
       - m_Value: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
         m_Name: Transform_scale
         m_Overridden: 1
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 195.0448, y: 104.919266, z: 766.99585, w: 0}
+        m_Name: Color
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
@@ -185,7 +188,7 @@ Transform:
   m_GameObject: {fileID: 1202056039952630315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.16, z: 3.68}
+  m_LocalPosition: {x: 0, y: 2.47, z: 2.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -229,15 +232,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 132.9
+      value: 790.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6425705
+      value: 223.83818
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 113.44
+      value: -187.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -245,15 +248,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -668,7 +671,7 @@ MonoBehaviour:
   _attackTimer: 0
   _attackDelay: 5
   _attackPosition: {fileID: 2451066382104831931}
-  _attackRadius: 4.92
+  _attackRadius: 2.62
   _damage: 25
   _currentLife: 0
   _maxLife: 150
@@ -685,7 +688,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 735590855951414675}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.85
+  m_Radius: 1.37
   m_Speed: 3.5
   m_Acceleration: 40
   avoidancePriority: 50
@@ -694,7 +697,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 4.75
+  m_Height: 5.13
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -717,8 +720,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.03
-  m_Height: 6.41
+  m_Radius: 1.64
+  m_Height: 7.96
   m_Direction: 1
   m_Center: {x: 0, y: 2.16, z: 0}
 --- !u!1 &5020951427805768279 stripped

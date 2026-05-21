@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerResources : MonoBehaviour
 {
 
+    public ActualizaciondeCanvas _actualizacionesdeCanvas;
     //Components
     private Animator _animator;
 
@@ -40,6 +41,8 @@ public class PlayerResources : MonoBehaviour
 
         _healthPotionInput = InputSystem.actions["PotionsHealth"];
         _manaPotionInput = InputSystem.actions["PotionsMana"];
+
+        //ActualizaciondeCanvas _actualizacionesdeCanvas = GameObject.Find("Actualizacion").GetComponent<ActualizaciondeCanvas>();
     }
 
     void Start()
@@ -68,7 +71,7 @@ public class PlayerResources : MonoBehaviour
         PlayerData.Instance.currentMana += _manaReg;
         PlayerData.Instance.manaPotions --;
         ManaText();
-        UpdateManaBar();
+        _actualizacionesdeCanvas.UpdateManaBar();
         PlayerData.Instance.currentMana = Mathf.Clamp(PlayerData.Instance.currentMana, 0, PlayerData.Instance.maxMana);
     }
     void Health()
@@ -76,25 +79,17 @@ public class PlayerResources : MonoBehaviour
         PlayerData.Instance.currentHealth += _healthReg;
         PlayerData.Instance.healthPotions --;
         HealthText();
-        UpdateHealthBar();
+        _actualizacionesdeCanvas.UpdateHealthBar();
         PlayerData.Instance.currentHealth = Mathf.Clamp(PlayerData.Instance.currentHealth, 0, PlayerData.Instance.maxHealth);
     }
 
-    public void UpdateManaBar()
-    {
-        float mana = PlayerData.Instance.currentMana / PlayerData.Instance.maxMana;
-        manaBarImage.fillAmount = mana;
-    }
+
     public void ManaText()
     {
         manaText.text = "x" + PlayerData.Instance.manaPotions.ToString();
     } 
     
-    public void UpdateHealthBar()
-    {
-        float life = (float)PlayerData.Instance.currentHealth / PlayerData.Instance.maxHealth;
-        healthBarImage.fillAmount = life;
-    }
+
 
     public void HealthText()
     {
@@ -113,7 +108,7 @@ public class PlayerResources : MonoBehaviour
         if(PlayerData.Instance.currentHealth <= 0) return;
         
         PlayerData.Instance.currentHealth -= damage;
-        UpdateHealthBar();
+        _actualizacionesdeCanvas.UpdateHealthBar();
         if(PlayerData.Instance.currentHealth <= 0)
         {
             GameManager.Instance._isDead = true;
@@ -126,6 +121,6 @@ public class PlayerResources : MonoBehaviour
     public void ManaShoot()
     {
         PlayerData.Instance.currentMana += 5;
-        UpdateManaBar();
+        _actualizacionesdeCanvas.UpdateManaBar();
     }
 }

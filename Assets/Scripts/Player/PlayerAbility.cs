@@ -8,6 +8,8 @@ using UnityEngine.VFX;
 public class PlayerAbility : MonoBehaviour
 {
 
+    public ActualizaciondeCanvas _actualizacionesdeCanvas;
+
     #region Inputs
     //Inputs
     private InputAction _ability1;
@@ -99,6 +101,7 @@ public class PlayerAbility : MonoBehaviour
         _ability3 = InputSystem.actions["FireState"];
         _ability4 = InputSystem.actions["FireAttack"];
         
+        //ActualizaciondeCanvas _actualizacionesdeCanvas = GameObject.Find("Actualizacion").GetComponent<ActualizaciondeCanvas>();
     }
 
     // Update is called once per frame
@@ -286,7 +289,7 @@ public class PlayerAbility : MonoBehaviour
         {
             PlayerData.Instance.currentHealth += lifeHealed;
             PlayerData.Instance.currentHealth = Mathf.Clamp(PlayerData.Instance.currentHealth, 0, PlayerData.Instance.maxHealth);
-            _playerResource.UpdateHealthBar();
+            _actualizacionesdeCanvas.UpdateHealthBar();
             yield return new WaitForSeconds(2);
         }
     }
@@ -304,7 +307,7 @@ public class PlayerAbility : MonoBehaviour
     void ManaUsed(int ManaWasted)
     {
         PlayerData.Instance.currentMana -= ManaWasted;
-        _playerResource.UpdateManaBar();
+        _actualizacionesdeCanvas.UpdateManaBar();
     }
     
     void OnDrawGizmos()
