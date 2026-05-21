@@ -44,6 +44,8 @@ public class WendigoAI : MonoBehaviour
     [SerializeField] private int _maxLife = 500;
     [SerializeField] private bool _isDead = false;
 
+    private AttackWendigo _attackWendigo;
+
     void Awake()
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
@@ -51,6 +53,8 @@ public class WendigoAI : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
 
         _player = GameObject.FindWithTag("Player").transform;
+
+        _attackWendigo = GetComponentInChildren<AttackWendigo>();
     }
 
     void Start()
@@ -107,6 +111,7 @@ public class WendigoAI : MonoBehaviour
             Dead();
         }
         _enemyAgent.isStopped = true;
+        _enemyAgent.speed = 0;
         _enemyAgent.ResetPath();
 
         _chargingTimer += Time.deltaTime;
@@ -114,6 +119,7 @@ public class WendigoAI : MonoBehaviour
         if(_chargingTimer >= _chargingDelay)
         {
             currentState = EnemyState.Chasing;
+            _enemyAgent.speed = 3.5f;
             _chargingTimer = 0;
         }
     }
@@ -133,8 +139,7 @@ public class WendigoAI : MonoBehaviour
             _attackTimer += Time.deltaTime;
 
             if(_attackTimer >= _attackDelay)
-            {  
-                Attack1();  
+            {   
                 _animator.SetTrigger("IsAttacking");
                 _attackTimer = 0;
                 currentState = EnemyState.Charging;
@@ -149,29 +154,6 @@ public class WendigoAI : MonoBehaviour
             currentState = EnemyState.Chasing;
         }
     }
-    
-
-
-    
-    public void Attack1()
-    {
-        Collider[] players = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
-            foreach (Collider item in players)
-            {
-                if(item.gameObject.CompareTag("Player"))
-                {
-                    PlayerResources _playerResources = item.GetComponent<PlayerResources>();
-                    
-                    if(_playerResources != null)
-                    {
-                        _playerResources.TakeDamage(75);
-                        currentState = EnemyState.Charging;
-                    }
-                }
-            }
-        
-            
-    }
 
     public void SoundFoot()
     {
@@ -180,6 +162,7 @@ public class WendigoAI : MonoBehaviour
 
     void Dead()
     {
+        PlayerData.Instance.currentNoru += 40;
         _animator.SetTrigger("IsDead");
         _isDead = true;
         return;

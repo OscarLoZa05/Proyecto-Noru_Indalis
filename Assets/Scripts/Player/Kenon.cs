@@ -6,8 +6,9 @@ using System.Collections;
 
 public class Kenon : MonoBehaviour
 {
+    public ActualizaciondeCanvas _actualizacionesdeCanvas;
     private InputAction _kenonAbility;
-    public Image kenonImage;
+    //public Image kenonImage;
     public GameObject kenonAbiltyVideo;
     //public bool canKenonAttack = false;
     [Header("Kenon")]
@@ -22,7 +23,6 @@ public class Kenon : MonoBehaviour
 
     void Start()
     {
-        PlayerData.Instance.currentNoru = PlayerData.Instance.maxNoru;
     }
 
     void Update()
@@ -48,7 +48,7 @@ public class Kenon : MonoBehaviour
                     {
                         
                         //Debug.Log(enemy.transform.name);
-                        enemy1.TakeDamage(75); 
+                        enemy1.TakeDamage(100); 
                     }
                 }
             }
@@ -59,7 +59,7 @@ public class Kenon : MonoBehaviour
     {
         
         PlayerData.Instance.currentNoru = 0;
-        UpdateKenonBar();
+        _actualizacionesdeCanvas.UpdateKenonBar();
         Time.timeScale = 0;
         kenonAbiltyVideo.SetActive(true);
         yield return new WaitForSecondsRealtime(11.417f);
@@ -73,14 +73,10 @@ public class Kenon : MonoBehaviour
     public void ChargingNoru(int quantity)
     {
         PlayerData.Instance.currentNoru += quantity;
-        UpdateKenonBar();
+        _actualizacionesdeCanvas.UpdateKenonBar();
     }
 
-    void UpdateKenonBar()
-    {
-        float noruBar = PlayerData.Instance.currentNoru / PlayerData.Instance.maxNoru;
-        kenonImage.fillAmount = noruBar;
-    }
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.black;

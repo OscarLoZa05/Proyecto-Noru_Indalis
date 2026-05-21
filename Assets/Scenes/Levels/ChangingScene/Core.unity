@@ -168,22 +168,11 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   maxNoru: 100
-  currentNoru: 0
+  currentNoru: 100
   manaPotions: 0
   healthPotions: 0
   money: 0
   cameraSensitivity: 10
---- !u!114 &305059133 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 235089999535039211, guid: 15c63356db77ae24b836dce02c940ca4, type: 3}
-  m_PrefabInstance: {fileID: 2419688578257146104}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &406423278
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +431,7 @@ MonoBehaviour:
   _isDead: 0
   _shopOpen: 0
   isChangingScene: 0
-  _sliderSensibility: {fileID: 305059133}
+  haveKenon: 0
 --- !u!1 &1098767283
 GameObject:
   m_ObjectHideFlags: 0

@@ -259,6 +259,7 @@ public class AperionAI : MonoBehaviour, IEnemy
 
     void Dead()
     {
+        PlayerData.Instance.currentNoru += 15;
         StartCoroutine(Destruccion());
         if(VFXGraph != null)
         {

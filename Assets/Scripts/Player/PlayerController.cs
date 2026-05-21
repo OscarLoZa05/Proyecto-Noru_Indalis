@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-        if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown)
+        if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown && !isAiming)
         {
             StartCoroutine(Dash());
         }

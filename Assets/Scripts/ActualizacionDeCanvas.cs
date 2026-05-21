@@ -6,6 +6,7 @@ public class ActualizaciondeCanvas : MonoBehaviour
 
     public Image healthBarImage;
     public Image manaBarImage;
+    public Image kenonImage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,5 +32,10 @@ public class ActualizaciondeCanvas : MonoBehaviour
         Debug.Log("Update");
         float mana = PlayerData.Instance.currentMana / PlayerData.Instance.maxMana;
         manaBarImage.fillAmount = mana;
+    }
+    public void UpdateKenonBar()
+    {
+        float noruBar = PlayerData.Instance.currentNoru / PlayerData.Instance.maxNoru;
+        kenonImage.fillAmount = noruBar;
     }
 }

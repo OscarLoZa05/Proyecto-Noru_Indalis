@@ -47,8 +47,6 @@ public class PlayerResources : MonoBehaviour
 
     void Start()
     {
-        PlayerData.Instance.maxHealth = 100;
-        PlayerData.Instance.currentHealth = PlayerData.Instance.maxHealth;
     }
 
 
@@ -105,6 +103,7 @@ public class PlayerResources : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Debug.Log("Has recibido Daño");
         if(PlayerData.Instance.currentHealth <= 0) return;
         
         PlayerData.Instance.currentHealth -= damage;
