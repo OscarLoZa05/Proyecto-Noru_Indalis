@@ -4,7 +4,7 @@ public static class SceneDataBase
 {
     public class Slots
     {
-        public const string Mivo = "Mivo";
+        public const string Onboard = "Onboard";
         public const string MainMenu = "MainMenu";
         public const string Level2 = "Level2";
         public const string Level3 = "Level3";
@@ -12,7 +12,7 @@ public static class SceneDataBase
     }
     public class Scenes
     {
-        public const string Mivo = "Mivo";
+        public const string Onboard = "Onboard";
         public const string MainMenu = "MainMenu";
         public const string Level2 = "Level2";
         public const string Level3 = "Level3";

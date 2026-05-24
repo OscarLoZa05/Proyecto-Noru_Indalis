@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     //[SerializeField] private GameObject _optionCanvas;
     //public Slider _sliderSensibility;
+    [Header("Pause")]
+    public GameObject PauseCanvas { get; private set; }
     void Awake()
     {
         if(Instance != this && Instance != null)
@@ -58,14 +60,14 @@ public class GameManager : MonoBehaviour
             AudioListener.pause = true;
             _isPaused = !_isPaused;
             Time.timeScale = 0;
-            //canvasPause.SetActive(true);
+            PauseCanvas.SetActive(true);
         }
         else
         {
             AudioListener.pause = false;
             _isPaused = !_isPaused;
             Time.timeScale = 1;
-            //canvasPause.SetActive(false);
+            PauseCanvas.SetActive(false);
         }
     }
     public void UpdateSensiblity()
@@ -73,6 +75,10 @@ public class GameManager : MonoBehaviour
         
         PlayerData.Instance.cameraSensitivity = 5;
         
+    }
+    public void RegisterPauseCanvas(GameObject canvas)
+    {
+        PauseCanvas = canvas;
     }
 
     public void QuitGame()

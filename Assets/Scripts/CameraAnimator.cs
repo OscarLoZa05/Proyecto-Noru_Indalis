@@ -43,7 +43,7 @@ public class CameraAnimator : MonoBehaviour
         SceneController.Instance
             .NewTransition()
             .Unload(SceneDataBase.Slots.MainMenu)
-            .Load(SceneDataBase.Slots.Level2, SceneDataBase.Scenes.Level2)
+            .Load(SceneDataBase.Slots.Onboard, SceneDataBase.Scenes.Onboard)
             .WithOverlay()
             .Perform(); 
     }
