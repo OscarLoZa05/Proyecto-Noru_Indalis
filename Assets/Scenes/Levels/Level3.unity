@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442984771912472, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
+      propertyPath: _actualizacionesdeCanvas
+      value: 
+      objectReference: {fileID: 118669702}
     - target: {fileID: 6726734960954002001, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
       propertyPath: m_Name
       value: ManaChest (10)
@@ -2205,6 +2209,8 @@ MonoBehaviour:
   healthBarImage: {fileID: 941938647}
   manaBarImage: {fileID: 941938646}
   kenonImage: {fileID: 803108132}
+  manaText: {fileID: 941938640}
+  lifeText: {fileID: 941938641}
 --- !u!4 &118669703
 Transform:
   m_ObjectHideFlags: 0
@@ -3869,6 +3875,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442984771912472, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
+      propertyPath: _actualizacionesdeCanvas
+      value: 
+      objectReference: {fileID: 118669702}
     - target: {fileID: 6726734960954002001, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
       propertyPath: m_Name
       value: ManaChest (11)
@@ -7766,6 +7776,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442984771912472, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
+      propertyPath: _actualizacionesdeCanvas
+      value: 
+      objectReference: {fileID: 118669702}
     - target: {fileID: 6726734960954002001, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
       propertyPath: m_Name
       value: ManaChest (6)
@@ -24343,6 +24357,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.081
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442984771912472, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
+      propertyPath: _actualizacionesdeCanvas
+      value: 
+      objectReference: {fileID: 118669702}
     - target: {fileID: 6726734960954002001, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
       propertyPath: m_Name
       value: ManaChest (7)
@@ -25940,6 +25958,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442984771912472, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
+      propertyPath: _actualizacionesdeCanvas
+      value: 
+      objectReference: {fileID: 118669702}
     - target: {fileID: 6726734960954002001, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
       propertyPath: m_Name
       value: ManaChest (2)
@@ -35053,6 +35075,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442984771912472, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
+      propertyPath: _actualizacionesdeCanvas
+      value: 
+      objectReference: {fileID: 118669702}
     - target: {fileID: 6726734960954002001, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
       propertyPath: m_Name
       value: ManaChest (5)
@@ -41649,6 +41675,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442984771912472, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
+      propertyPath: _actualizacionesdeCanvas
+      value: 
+      objectReference: {fileID: 118669702}
     - target: {fileID: 6726734960954002001, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
       propertyPath: m_Name
       value: ManaChest (9)
@@ -41737,6 +41767,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.37
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442984771912472, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
+      propertyPath: _actualizacionesdeCanvas
+      value: 
+      objectReference: {fileID: 118669702}
     - target: {fileID: 6726734960954002001, guid: e3da1cf21c9558d4cac0897e4f523e9f, type: 3}
       propertyPath: m_Name
       value: ManaChest (8)

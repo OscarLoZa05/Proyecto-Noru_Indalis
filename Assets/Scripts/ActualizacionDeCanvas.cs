@@ -7,12 +7,16 @@ public class ActualizaciondeCanvas : MonoBehaviour
     public Image healthBarImage;
     public Image manaBarImage;
     public Image kenonImage;
+    public Text manaText;
+    public Text lifeText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         UpdateHealthBar();
         UpdateManaBar();
+        ManaText();
+        HealthText();
     }
 
     // Update is called once per frame
@@ -38,4 +42,12 @@ public class ActualizaciondeCanvas : MonoBehaviour
         float noruBar = PlayerData.Instance.currentNoru / PlayerData.Instance.maxNoru;
         kenonImage.fillAmount = noruBar;
     }
+    public void ManaText()
+    {
+        manaText.text = "x" + PlayerData.Instance.manaPotions.ToString();
+    }
+    public void HealthText()
+    {
+        lifeText.text = "x" + PlayerData.Instance.healthPotions.ToString();
+    } 
 }

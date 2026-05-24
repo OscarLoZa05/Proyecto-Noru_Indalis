@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ShopAP : MonoBehaviour, IInteractable
 {
+    public ActualizaciondeCanvas _actualizacionesdeCanvas;
 
     //Controler
     [Header("Controller")]
@@ -153,10 +154,10 @@ public class ShopAP : MonoBehaviour, IInteractable
         if(PlayerData.Instance.money >= totalPurchase)
         {
             PlayerData.Instance.manaPotions += manaCount;
-            _playerResources.ManaText();
+            _actualizacionesdeCanvas.ManaText();
 
             PlayerData.Instance.healthPotions += healthCount;
-            _playerResources.HealthText();
+            _actualizacionesdeCanvas.HealthText();
 
             PlayerData.Instance.money -= totalPurchase;
 

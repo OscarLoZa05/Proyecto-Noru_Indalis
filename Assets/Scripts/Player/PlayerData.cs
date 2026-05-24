@@ -8,18 +8,23 @@ public class PlayerData : MonoBehaviour
     [Header("Mana")]
     public float currentMana = 100;
     public float maxMana = 100;
+
     [Header("Health")]
     public float maxHealth = 100;
     public float currentHealth = 100;
+
     [Header("Kenon")]
     public int maxNoru = 100;
     public int currentNoru = 0;
+
     [Header("Potions")]
     public int manaPotions = 0;
     public int healthPotions = 0; 
+
     [Header("Money")]
     public int money = 0;
     [Header("Sensiblity")]
+    
     public float cameraSensitivity = 10;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created

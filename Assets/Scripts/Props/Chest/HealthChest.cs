@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 
 public class HealthChest : MonoBehaviour, IInteractable
 {
+    public ActualizaciondeCanvas _actualizacionesdeCanvas;
     //Booleanas
     public bool isOpen = false;
 
@@ -34,12 +35,13 @@ public class HealthChest : MonoBehaviour, IInteractable
     {
         if(!isOpen)
         {
+            
             _audioSource.PlayOneShot(_open);
             _chestParticles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             isOpen = true;
             _animator.SetTrigger("IsOpen");
            PlayerData.Instance.healthPotions++;
-            _playerResources.HealthText();
+            _actualizacionesdeCanvas.HealthText();
 
             _playerResources.Money();
         }

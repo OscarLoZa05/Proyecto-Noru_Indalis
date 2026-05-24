@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 
 public class ManaChest : MonoBehaviour, IInteractable
 {
+    public ActualizaciondeCanvas _actualizacionesdeCanvas;
     //Booleanas
     public bool isOpen = false;
 
@@ -40,7 +41,7 @@ public class ManaChest : MonoBehaviour, IInteractable
             isOpen = true;
             _animator.SetTrigger("IsOpen");
             PlayerData.Instance.manaPotions++;
-            _playerResources.ManaText();
+            _actualizacionesdeCanvas.ManaText();
 
             _playerResources.Money();
         }

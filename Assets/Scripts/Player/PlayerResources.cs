@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 public class PlayerResources : MonoBehaviour
 {
 
@@ -33,6 +34,7 @@ public class PlayerResources : MonoBehaviour
 
     //Player
     private PlayerAbility _playerAbility;
+    [SerializeField] private string animationID = "life";
 
     void Awake()
     {
@@ -68,31 +70,22 @@ public class PlayerResources : MonoBehaviour
     {
         PlayerData.Instance.currentMana += _manaReg;
         PlayerData.Instance.manaPotions --;
-        ManaText();
+        _actualizacionesdeCanvas.ManaText();
         _actualizacionesdeCanvas.UpdateManaBar();
         PlayerData.Instance.currentMana = Mathf.Clamp(PlayerData.Instance.currentMana, 0, PlayerData.Instance.maxMana);
     }
     void Health()
     {
+        DOTween.Play(animationID);
         PlayerData.Instance.currentHealth += _healthReg;
         PlayerData.Instance.healthPotions --;
-        HealthText();
+        _actualizacionesdeCanvas.HealthText();
         _actualizacionesdeCanvas.UpdateHealthBar();
         PlayerData.Instance.currentHealth = Mathf.Clamp(PlayerData.Instance.currentHealth, 0, PlayerData.Instance.maxHealth);
     }
 
 
-    public void ManaText()
-    {
-        manaText.text = "x" + PlayerData.Instance.manaPotions.ToString();
-    } 
     
-
-
-    public void HealthText()
-    {
-        healthText.text = "x" + PlayerData.Instance.healthPotions.ToString();
-    } 
 
     public void Money()
     {
