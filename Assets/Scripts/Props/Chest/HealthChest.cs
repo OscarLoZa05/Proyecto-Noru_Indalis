@@ -40,7 +40,7 @@ public class HealthChest : MonoBehaviour, IInteractable
             _chestParticles.Stop(true, ParticleSystemStopBehavior.StopEmitting);
             isOpen = true;
             _animator.SetTrigger("IsOpen");
-           PlayerData.Instance.healthPotions++;
+            PlayerData.Instance.healthPotions++;
             _actualizacionesdeCanvas.HealthText();
 
             _playerResources.Money();

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using DG.Tweening;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class MainMenuManager : MonoBehaviour
     }
     public void QuitGame()
     {
+        DOTween.Restart("newgame");
         GameManager.Instance.QuitGame();
     }
 }

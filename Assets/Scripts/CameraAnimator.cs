@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class CameraAnimator : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class CameraAnimator : MonoBehaviour
     }
     public void AnimatorCamera()
     {
+        DOTween.Restart("newgame");
         _animator.SetTrigger("Click");
     }
     public void Alpha()
@@ -40,6 +42,7 @@ public class CameraAnimator : MonoBehaviour
     }
     public void ChangeLevel()
     {
+        DOTween.Restart("newgame");
         SceneController.Instance
             .NewTransition()
             .Unload(SceneDataBase.Slots.MainMenu)
