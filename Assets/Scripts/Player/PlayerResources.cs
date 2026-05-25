@@ -68,6 +68,7 @@ public class PlayerResources : MonoBehaviour
 
     void Mana()
     {
+        DOTween.Restart("mana");
         PlayerData.Instance.currentMana += _manaReg;
         PlayerData.Instance.manaPotions --;
         _actualizacionesdeCanvas.ManaText();
@@ -76,7 +77,7 @@ public class PlayerResources : MonoBehaviour
     }
     void Health()
     {
-        DOTween.Play(animationID);
+        DOTween.Restart("life");
         PlayerData.Instance.currentHealth += _healthReg;
         PlayerData.Instance.healthPotions --;
         _actualizacionesdeCanvas.HealthText();
