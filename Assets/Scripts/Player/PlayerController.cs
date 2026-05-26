@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
     [Header("Aim")]
     public bool isAiming = false;
     [SerializeField] private GameObject _crosshair;
-    [SerializeField] private int _aimingSpeed = 0;
+    [SerializeField] private int _aimingSpeed = 3;
     public float _aimingMultiplayer = 1;
 
     //Potions
@@ -134,6 +134,11 @@ public class PlayerController : MonoBehaviour
         // Inicialización: FreeLook manda al principio
         freeLookCam.Priority = 20;
         thirdPersonCam.Priority = 10;
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.RegisterPlayerSounds(_audioSource);
+        }
     }
     void Update()
     {
@@ -227,48 +232,35 @@ public class PlayerController : MonoBehaviour
         }
         else if(isAiming == true)
         {
-            
-            /*Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
+            Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
 
-            _animator.SetFloat("Horizontal", _moveValue.x);
-            _animator.SetFloat("Vertical", _moveValue.y);
+            float mouseX = _lookValue.x * PlayerData.Instance.cameraSensitivity * Time.deltaTime;
+            float mouseY = _lookValue.y * PlayerData.Instance.cameraSensitivity * Time.deltaTime;
 
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
-            float smoothAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, _mainCamera.eulerAngles.y, ref _turnSmoothVelocity, _smoothTime);
+            _xRotation -= mouseY;
+            _xRotation = Mathf.Clamp(_xRotation, -_rangoDeVision, _rangoDeVision);
 
-            transform.rotation = Quaternion.Euler(0, smoothAngle, 0);
+            // Rotación del personaje y de la cámara de apuntado
+            transform.Rotate(Vector3.up, mouseX);
+            _lookAtCamera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
 
-            if (direction != Vector3.zero)
+            // --- CORRECCIÓN AQUÍ ---
+            // 1. Usamos '_playerSpeed' (que en tu método Aiming() ya se cambia a '_aimingSpeed', o sea, 3) 
+            //    en lugar de '_movementSpeed' que valía 0.
+            // 2. Sumamos la gravedad al movimiento final para evitar atascos con el suelo.
+
+            if(direction != Vector3.zero)
             {
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
                 Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
 
-                _controller.Move(moveDirection.normalized * (_playerSpeed * _aimingMultiplayer) * Time.deltaTime);
-            } */
-    
-                Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
-
-                float mouseX = _lookValue.x * PlayerData.Instance.cameraSensitivity * Time.deltaTime;
-                float mouseY = _lookValue.y * PlayerData.Instance.cameraSensitivity * Time.deltaTime;
-
-                _xRotation -= mouseY;
-                _xRotation = Mathf.Clamp(_xRotation, -_rangoDeVision, _rangoDeVision);
-
-                //_animator.SetFloat("Vertical", _moveValue.y);
-                //_animator.SetFloat("Horizontal", _moveValue.x);
-
-                transform.Rotate(Vector3.up, mouseX);
-                _lookAtCamera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
-                //_lookAtCamera.Rotate(Vector3.right, mouseY);
-
-                if(direction != Vector3.zero)
-                {
-                    float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
-                    Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
-
-                    _controller.Move(moveDirection * _movementSpeed * Time.deltaTime);
-                }
-
-    
+                _controller.Move(moveDirection.normalized * _playerSpeed * Time.deltaTime + _playerGravity * Time.deltaTime);
+            }
+            else
+            {
+                // Si no te mueves, igual aplicamos gravedad para que el CharacterController no flote
+                _controller.Move(_playerGravity * Time.deltaTime);
+            }
         }
     }
 

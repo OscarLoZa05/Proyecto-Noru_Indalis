@@ -15,10 +15,14 @@ public class GameManager : MonoBehaviour
     public bool isChangingScene = false;
     public bool haveKenon = false;
 
-    //[SerializeField] private GameObject _optionCanvas;
-    //public Slider _sliderSensibility;
     [Header("Pause")]
     public GameObject PauseCanvas { get; private set; }
+
+    // Cambiados a públicos estándar para que los otros scripts puedan asignarlos sin problemas
+    [Header("Audio Registers")]
+    public AudioSource _BGM;
+    public AudioSource _playerSounds;
+
     void Awake()
     {
         if(Instance != this && Instance != null)
@@ -34,12 +38,6 @@ public class GameManager : MonoBehaviour
 
         _stopAction = InputSystem.actions["Stop"];
     }
-    
-    void Start()
-    {
-        
-    }
-
 
     void Update()
     {
@@ -48,37 +46,54 @@ public class GameManager : MonoBehaviour
         {
             Pause();
         }
-        //float _sliderValue = _sliderSensibility.value;
-        //Debug.Log(_sliderValue);
-        //PlayerData.Instance.cameraSensitivity = _sliderSensibility.value;
     }
 
     public void Pause()
     {
         if(_isPaused == false)
         {
-            AudioListener.pause = true;
-            _isPaused = !_isPaused;
+            _isPaused = true;
             Time.timeScale = 0;
-            PauseCanvas.SetActive(true);
+            
+            if(PauseCanvas != null) PauseCanvas.SetActive(true);
+            
+            // Pausamos los audios si están asignados
+            if(_BGM != null && _BGM.isPlaying) _BGM.Pause();
+            if(_playerSounds != null && _playerSounds.isPlaying) _playerSounds.Pause();
         }
         else
         {
-            AudioListener.pause = false;
-            _isPaused = !_isPaused;
+            _isPaused = false;
             Time.timeScale = 1;
-            PauseCanvas.SetActive(false);
+            
+            if(PauseCanvas != null) PauseCanvas.SetActive(false);
+            
+            // Reanudamos los audios
+            if(_BGM != null) _BGM.UnPause();
+            if(_playerSounds != null) _playerSounds.UnPause();
         }
     }
-    public void UpdateSensiblity()
-    {
-        
-        PlayerData.Instance.cameraSensitivity = 5;
-        
-    }
+
+    // --- MÉTODOS DE REGISTRO ---
+
     public void RegisterPauseCanvas(GameObject canvas)
     {
         PauseCanvas = canvas;
+    }
+
+    public void RegisterBGM(AudioSource bgmSource)
+    {
+        _BGM = bgmSource;
+    }
+
+    public void RegisterPlayerSounds(AudioSource playerSource)
+    {
+        _playerSounds = playerSource;
+    }
+
+    public void UpdateSensiblity()
+    {
+        PlayerData.Instance.cameraSensitivity = 5;
     }
 
     public void QuitGame()
