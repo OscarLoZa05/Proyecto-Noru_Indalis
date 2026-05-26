@@ -5,158 +5,162 @@ using System.Collections;
 
 public class AperionAI : MonoBehaviour, IEnemy
 {
-    private NavMeshAgent _enemyAgent;
-    public enum EnemyState
-    {
-        Patrolling,
-        Chasing,
-        Attacking,
-        Dead,
+    public enum EnemyState 
+    { 
+        Patrolling, 
+        Chasing, 
+        Attacking, 
+        Dead 
     }
-
+    
+    [Header("State Machine")]
     public EnemyState currentState;
 
-    //Chasing
+    private NavMeshAgent _enemyAgent;
+    private Transform _player;
+    private Animator _animator;
+
+    [Header("Patrol Settings")]
     [SerializeField] private Transform[] _patrolPoints;
-
-    //OnRange
+    
+    [Header("Ranges")]
     [SerializeField] private float _detectionRange = 7f;
-
-    //Attacking
     [SerializeField] private float _attackRange = 2f;
-    [SerializeField] private float _attackTimer;
-    [SerializeField] private float _attackDelay = 5;
 
-    //Attack
+    [Header("Attack Settings")]
+    [SerializeField] private float _attackDelay = 5f;
     [SerializeField] private Transform _attackPosition;
     [SerializeField] private float _attackRadius = 5f;
     [SerializeField] private int _damage = 25;
+    private float _attackTimer;
+    private bool _isAttackingAnimation = false; // Controla si la animación está en curso
 
-    //Life
-    [SerializeField] public int _currentLife;
+    [Header("Life Settings")]
+    public int _currentLife;
     [SerializeField] private int _maxLife = 150;
-    [SerializeField] private bool _isDead = false;
+    private bool _isDead = false;
 
-    //Dron
+    [Header("Drone Settings")]
     [SerializeField] private bool _dronUsed = false;
     [SerializeField] private int _distanceToDron = 25;
 
-    //VFX
+    [Header("VFX")]
     public VisualEffect VFXGraph;
 
-
-
-    private Transform _player;
-    private Animator _animator;
     void Awake()
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
-        _player = GameObject.FindWithTag("Player").transform;
         _animator = GetComponent<Animator>();
-
+        
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null) _player = playerObj.transform;
     }
+
     void Start()
     {
         _currentLife = _maxLife;
         currentState = EnemyState.Patrolling;
         _enemyAgent.speed = 4;
-        _enemyAgent.SetDestination(_player.position);
         _attackTimer = _attackDelay;
-        PatrollingPoints();
-    }
 
+        if (_patrolPoints != null && _patrolPoints.Length > 0)
+        {
+            PatrollingPoints();
+        }
+    }
 
     void Update()
     {
-        if(_isDead)
+        if (_isDead) return;
+
+        if (_currentLife <= 0)
         {
+            ChangeState(EnemyState.Dead);
             return;
         }
-        switch(currentState)
+
+        // Si está en medio de la animación de golpe, forzamos velocidad 0 absoluta y cortamos el Update
+        if (_isAttackingAnimation)
+        {
+            _enemyAgent.isStopped = true;
+            _enemyAgent.velocity = Vector3.zero;
+            return; 
+        }
+
+        float distanceToPlayer = (_player != null) ? Vector3.Distance(transform.position, _player.position) : float.MaxValue;
+
+        switch (currentState)
         {
             case EnemyState.Patrolling:
-                Patrolling();
-            break;
+                Patrolling(distanceToPlayer);
+                break;
             case EnemyState.Chasing:
-                Chasing();
-            break;
+                Chasing(distanceToPlayer);
+                break;
             case EnemyState.Attacking:
-                Attacking();
-            break;
+                Attacking(distanceToPlayer);
+                break;
             case EnemyState.Dead:
                 Dead();
-            break;
-            default:
-                Patrolling();
-            break;
+                break;
         }
-
-        
     }
 
-    void Patrolling()
+    private void ChangeState(EnemyState newState)
     {
-        if(_currentLife <= 0)
+        currentState = newState;
+        if (newState == EnemyState.Dead)
         {
             Dead();
-            return;
         }
-        if(OnRange(_detectionRange))
+    }
+
+    void Patrolling(float distanceToPlayer)
+    {
+        if (distanceToPlayer <= _detectionRange)
         {
             currentState = EnemyState.Chasing;
             _enemyAgent.speed = 9;
             _animator.SetBool("IsRunning", true);
             _animator.SetBool("IsCharging", false);
-            _enemyAgent.speed = 9;
+            return;
         }
-        if(!OnRange(_detectionRange))
+
+        if (!_enemyAgent.pathPending && _enemyAgent.remainingDistance < 0.5f)
         {
-           if(_enemyAgent.remainingDistance < 0.5)
-            {
-                PatrollingPoints();
-            }
+            PatrollingPoints();
         }
     }
 
     void PatrollingPoints()
     {
+        if (_patrolPoints == null || _patrolPoints.Length == 0) return;
         _enemyAgent.SetDestination(_patrolPoints[Random.Range(0, _patrolPoints.Length)].position);
     }
 
-    void Chasing()
+    void Chasing(float distanceToPlayer)
     {
-        if(_currentLife <= 0)
-        {
-            Dead();
-            return;
-        }
-        if(!OnRange(_detectionRange))
+        if (distanceToPlayer > _detectionRange)
         {
             currentState = EnemyState.Patrolling;
             _enemyAgent.speed = 4;
             _animator.SetBool("IsRunning", false);
             return;
         }
-        if(OnRange(_attackRange))
+
+        if (distanceToPlayer <= _attackRange)
         {
             currentState = EnemyState.Attacking;
             return;
         }
-        if(OnRange(_detectionRange))
-        {
-            _enemyAgent.SetDestination(_player.position);
-        }
+
+        if (_player != null) _enemyAgent.SetDestination(_player.position);
     }
 
-    void Attacking()
+    void Attacking(float distanceToPlayer)
     {
-        if(_currentLife <= 0)
-        {
-            Dead();
-            return;
-
-        }
-        if(!OnRange(_attackRange))
+        // Si no está atacando físicamente y el jugador se escapó, volvemos a perseguir
+        if (distanceToPlayer > _attackRange)
         {
             _enemyAgent.isStopped = false;
             currentState = EnemyState.Chasing;
@@ -165,110 +169,118 @@ public class AperionAI : MonoBehaviour, IEnemy
             _enemyAgent.speed = 9;
             return;
         }
+
         _enemyAgent.isStopped = true;
+        _enemyAgent.velocity = Vector3.zero; // Freno inmediato de la inercia previa
         _animator.SetBool("IsRunning", false);
         _animator.SetBool("IsCharging", true);
         
         _attackTimer += Time.deltaTime;
-        if(_attackTimer > _attackDelay)
-            {
-                _animator.SetTrigger("IsAttacking");
-                //Attack();
-                Debug.Log("Attacking!");
-                _attackTimer = 0;
-            }
-    }
-
-    public bool OnRange(float distance)
-    {
-        float distanceToPlayer = Vector3.Distance(transform.position, _player.position);
-        
-        if(distanceToPlayer <= distance)
+        if (_attackTimer >= _attackDelay)
         {
-         return true;    
+            _animator.SetTrigger("IsAttacking");
+            _attackTimer = 0; 
         }
-        else
-        {
-            return false;
-        }  
     }
 
+    // =================================================================
+    // EVENTOS DE ANIMACIÓN (Configúralos en la línea de tiempo del clip)
+    // =================================================================
+
+    // 1. Pon este evento en el FRAME 0 (Inicio de la animación de golpe)
+    public void StartAttackAnimation()
+    {
+        _isAttackingAnimation = true;
+        _enemyAgent.isStopped = true;
+        _enemyAgent.velocity = Vector3.zero;
+    }
+
+    // 2. Este es tu evento actual (Frame del impacto visual)
     public void Attack()
     {
-        _attackTimer = 0;
+        if (_isDead) return;
+
         _detectionRange = 20;
-        _enemyAgent.isStopped = false;
+        if (_attackPosition == null) return;
+
         Collider[] players = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
-            foreach (Collider item in players)
+        foreach (Collider item in players)
+        {
+            if (item.gameObject.CompareTag("Player"))
             {
-                if(item.gameObject.CompareTag("Player"))
+                PlayerResources playerResources = item.GetComponent<PlayerResources>();
+                if (playerResources != null)
                 {
-                    PlayerResources _playerResources = item.GetComponent<PlayerResources>();
-                    
-                    if(_playerResources != null)
-                    {
-                        _playerResources.TakeDamage(25);
-                        Help();
-                    }
+                    playerResources.TakeDamage(_damage);
+                    Help();
                 }
             }
+        }
     }
+
+    // 3. Pon este evento en el ÚLTIMO FRAME (Fin de la animación de golpe)
+    public void EndAttackAnimation()
+    {
+        _isAttackingAnimation = false;
+        _enemyAgent.isStopped = false;
+    }
+
+    // =================================================================
 
     public void TakeDamage(int damage)
     {
+        if (_isDead) return;
         _detectionRange = 100;
         _currentLife -= damage;
     }
 
-    private Transform mostNear = null;
-
     void Help()
     {   
-        if(_dronUsed) return;
+        if (_dronUsed) return;
         
         Collider[] drones = Physics.OverlapSphere(transform.position, _distanceToDron);
-        mostNear = null;
+        Transform mostNear = null;
+        float minDistance = float.MaxValue;
             
-        foreach (Collider defensers in drones)
+        foreach (Collider defenser in drones)
         {
-            if(defensers.gameObject.CompareTag("Defensor"))
+            if (defenser.gameObject.CompareTag("Defensor"))
             {      
-                if(mostNear == null)
+                float distance = Vector3.Distance(transform.position, defenser.transform.position);
+                if (distance < minDistance)
                 {
-                    mostNear = defensers.transform;
-                }
-
-                float distance = Vector3.Distance(transform.position, defensers.transform.position);
-                if(distance < Vector3.Distance(transform.position, mostNear.position))
-                {
-                    mostNear = defensers.transform;
+                    minDistance = distance;
+                    mostNear = defenser.transform;
                 }
             }
         }
 
-        if(mostNear != null)
+        if (mostNear != null)
         {
-            Debug.Log("Defensor más cercano: " + mostNear.name);
             DronDefensorAI dronDefensorAI = mostNear.GetComponent<DronDefensorAI>();
-            dronDefensorAI.target = transform;
-            dronDefensorAI.Prepare(mostNear);
-
-            _dronUsed = true;
+            if (dronDefensorAI != null)
+            {
+                dronDefensorAI.target = transform;
+                dronDefensorAI.Prepare(mostNear);
+                _dronUsed = true;
+            }
         }
     }
 
     void Dead()
     {
-        PlayerData.Instance.currentNoru += 15;
-        StartCoroutine(Destruccion());
-        if(VFXGraph != null)
-        {
-            VFXGraph.Play();
-        }
-
+        if (_isDead) return;
         _isDead = true;
+
+        if (PlayerData.Instance != null) PlayerData.Instance.currentNoru += 15;
+        if (VFXGraph != null) VFXGraph.Play();
+
         _animator.SetTrigger("IsDead");
+        
         _enemyAgent.isStopped = true;
+        _enemyAgent.enabled = false; 
+
+        StartCoroutine(Destruccion());
     }
 
     IEnumerator Destruccion()
@@ -279,18 +291,16 @@ public class AperionAI : MonoBehaviour, IEnemy
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.CompareTag("Arrow"))
+        if (collider.gameObject.CompareTag("Arrow"))
         {
             collider.gameObject.SetActive(false);
             TakeDamage(20);   
         }
-        if(collider.gameObject.CompareTag("Fire"))
+        if (collider.gameObject.CompareTag("Fire"))
         {
             TakeDamage(100);
         }
     }
-
-
 
     void OnDrawGizmos()
     {
@@ -300,16 +310,22 @@ public class AperionAI : MonoBehaviour, IEnemy
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _attackRange);
 
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
+        if (_attackPosition != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
+        }
 
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, _distanceToDron);
     
-        Gizmos.color = Color.yellow;
-        foreach (Transform point in _patrolPoints)
+        if (_patrolPoints != null)
         {
-            Gizmos.DrawWireSphere(point.position, 5f);
+            Gizmos.color = Color.yellow;
+            foreach (Transform point in _patrolPoints)
+            {
+                if (point != null) Gizmos.DrawWireSphere(point.position, 1f);
+            }
         }
     }
 }

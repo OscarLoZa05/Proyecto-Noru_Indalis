@@ -55,6 +55,7 @@ public class Level2Manager : MonoBehaviour
         {
             GameManager.Instance.haveKenon = true;
             combatTutorial = true;
+            PlayerData.Instance.currentNoru = 100;
         }
     }
 

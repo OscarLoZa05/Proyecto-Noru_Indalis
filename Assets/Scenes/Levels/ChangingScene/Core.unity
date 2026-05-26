@@ -168,7 +168,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   maxNoru: 100
-  currentNoru: 100
+  currentNoru: 0
   manaPotions: 0
   healthPotions: 0
   money: 0
@@ -357,6 +357,8 @@ MonoBehaviour:
   _shopOpen: 0
   isChangingScene: 0
   haveKenon: 0
+  _BGM: {fileID: 0}
+  _playerSounds: {fileID: 0}
 --- !u!1 &1098767283
 GameObject:
   m_ObjectHideFlags: 0

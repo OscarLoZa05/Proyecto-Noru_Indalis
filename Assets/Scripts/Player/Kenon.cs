@@ -27,7 +27,7 @@ public class Kenon : MonoBehaviour
 
     void Update()
     {
-        if(_kenonAbility.WasPressedThisFrame() && PlayerData.Instance.currentNoru == PlayerData.Instance.maxNoru && GameManager.Instance.haveKenon)
+        if(_kenonAbility.WasPressedThisFrame() && PlayerData.Instance.currentNoru >= PlayerData.Instance.maxNoru && GameManager.Instance.haveKenon)
         {
             
             StartCoroutine(Habilidad());
