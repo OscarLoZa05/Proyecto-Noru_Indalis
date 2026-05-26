@@ -4,6 +4,9 @@ public class AttackWendigo : MonoBehaviour
 {
     private WendigoAI _parentAI;
 
+    private AudioSource _wendigoAuidoSource;
+    public AudioClip _attack;
+
     [Header("Attack Area")]
     [SerializeField] private Transform _attackPosition;
     [SerializeField] private float _attackRadius = 5f;
@@ -11,6 +14,7 @@ public class AttackWendigo : MonoBehaviour
 
     void Awake()
     {
+        _wendigoAuidoSource = GetComponentInParent<AudioSource>();
         _parentAI = GetComponentInParent<WendigoAI>();
     }
 
@@ -23,6 +27,7 @@ public class AttackWendigo : MonoBehaviour
     // Pon este evento en el FRAME EXACTO del impacto visual
     public void Attack()
     {
+        _wendigoAuidoSource.PlayOneShot(_attack);
         if (_attackPosition == null) return;
 
         Collider[] hitColliders = Physics.OverlapSphere(_attackPosition.position, _attackRadius);

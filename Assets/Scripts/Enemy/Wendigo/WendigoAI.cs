@@ -13,7 +13,6 @@ public class WendigoAI : MonoBehaviour
     private AudioSource _audioSource;
 
     [Header("Audio Settings")]
-    [SerializeField] private AudioSource _audioFoots;
     [SerializeField] private AudioClip _footSFX;
     [SerializeField] private AudioClip _deadSFX;
     
@@ -207,7 +206,7 @@ public class WendigoAI : MonoBehaviour
 
     public void SoundFoot()
     {
-        if (_audioFoots != null && _footSFX != null) _audioFoots.PlayOneShot(_footSFX);
+        if (_audioSource != null && _footSFX != null) _audioSource.PlayOneShot(_footSFX);
     }
 
     public void RecibirDanio(int damage)

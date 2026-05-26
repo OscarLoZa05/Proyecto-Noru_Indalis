@@ -28,23 +28,6 @@ public class Level2Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(Tutorial())
-        {
-            FadeInKenon();
-            return;
-        }
-        if (eventoLanzado) return;
-        if (Tutorial())
-        {
-            
-            GameManager.Instance.haveKenon = true;
-            //Debug.Log("¡Los 3 enemigos han muerto!");
-            eventoLanzado = true;
-        }
-        if(WendigoFinal = null)
-        {
-            _level2to3.canPass = true;
-        }*/
         if(combatTutorial && alphaCount < 1)
         {
             FadeInKenon();
