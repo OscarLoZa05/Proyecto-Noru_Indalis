@@ -66,6 +66,7 @@ public class PlayerAbility : MonoBehaviour
     public bool ability3Used = false;
     public int manaWasted3 = 50;
     public int lifeHealed = 10;
+    public ParticleSystem _fireAshes;
 
     [Header("FAttack")]
     public float cooldownAbility4 = 10;
@@ -132,6 +133,7 @@ public class PlayerAbility : MonoBehaviour
         if(_ability3.WasPressedThisFrame() && ability3Used == false && PlayerData.Instance.currentMana >= manaWasted3)
         {
             _audioSource.PlayOneShot(_fireStateSFX);
+            _fireAshes.Play(true);
             StartCoroutine(FState());
             ManaUsed(manaWasted3);
             ability3Used = true;
@@ -244,29 +246,31 @@ public class PlayerAbility : MonoBehaviour
     {
         Debug.Log("Habilidad 2: Estado de Agua Activado");
 
-        // 1. Guardamos la velocidad original para no perderla
-        float originalSpeed = _playerController._playerMovementSpeed;
+        // 1. LE DECIMOS AL CONTROLLER QUE ACTIVE LA VELOCIDAD DE LA HABILIDAD
+        _playerController.SetHabilidadVelocidad(true);
 
-        // 2. Aplicamos los nuevos valores
-        _playerController._speed = waterSpeed;
-        _playerController._playerSpeed = waterSpeed;
+        // 2. Modificamos los multiplicadores que ya tenías
         _playerController._dashMultiplayer = 1.5f;
         _playerController._aimingMultiplayer = 1.5f;
 
-        // 3. Reproducimos sonido (si tienes el AudioSource configurado)
+        // 3. Reproducimos sonido
         if (_audioSource != null && _waterStateSFX != null)
         {
             _audioSource.PlayOneShot(_waterStateSFX);
         }
 
-        // 4. Esperamos lo que dure el clip de audio
+        // 4. Esperamos lo que dure el efecto (duración del clip de audio)
         yield return new WaitForSeconds(_waterStateSFX.length);
 
-        // 5. Restauramos los valores originales al terminar
+        // 5. LE DECIMOS AL CONTROLLER QUE APAGUE LA HABILIDAD
+        _playerController.SetHabilidadVelocidad(false);
+
+        // 6. Restauramos los multiplicadores normales
         _playerController._dashMultiplayer = 1f;
         _playerController._aimingMultiplayer = 1f;
-        _playerController._speed = originalSpeed;
-        _playerController._playerSpeed = originalSpeed;
+
+        // NOTA: Eliminamos las líneas antiguas que forzaban '_playerMovementSpeed' y '_speed'
+        // a valores fijos, permitiendo que el PlayerController maneje todo de forma limpia.
 
         Debug.Log("Habilidad 2: Estado de Agua Terminado");
     }
@@ -292,6 +296,7 @@ public class PlayerAbility : MonoBehaviour
             _actualizacionesdeCanvas.UpdateHealthBar();
             yield return new WaitForSeconds(2);
         }
+        _fireAshes.Stop(true);
     }
     #endregion
 

@@ -50,7 +50,7 @@ public class MainMenuManager : MonoBehaviour
     }
     public void QuitGame()
     {
-        DOTween.Restart("newgame");
+        DOTween.Restart("quit");
         GameManager.Instance.QuitGame();
     }
 }

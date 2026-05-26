@@ -8,6 +8,27 @@ using Unity.Mathematics;
 
 public class PlayerController : MonoBehaviour
 {
+    private float VelocidadCalculada
+    {
+        get
+        {
+            // 1. Elegimos la velocidad base según si está apuntando (3) o no (11)
+            float v = isAiming ? _aimingSpeed : _playerMovementSpeed;
+
+            // 2. Si la habilidad de agua está activa, multiplicamos esa base
+            if (_isSpeedAbilityActive)
+            {
+                v *= _speedAbilityMultiplier;
+            }
+
+            return v;
+        }
+    }
+    // --- CONTROL DE LA HABILIDAD DE VELOCIDAD ---
+    [Header("Habilidad de Velocidad")]
+    [SerializeField] private float _speedAbilityMultiplier = 1.8f; // Multiplica la velocidad (1.8 significa +80% de velocidad)
+    private bool _isSpeedAbilityActive = false;
+
 
     //Componentes
     private CharacterController _controller;
@@ -172,6 +193,7 @@ public class PlayerController : MonoBehaviour
             //Aiming();
             ToggleCameras();
         }
+        
 
 
 
@@ -194,6 +216,7 @@ public class PlayerController : MonoBehaviour
     void Movement()
     {
         if(isDashing) return;
+        _playerSpeed = VelocidadCalculada;
         
         if(isAiming == false)
         {
@@ -375,6 +398,12 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
+    }
+
+    // --- MÉTODO PARA ACTIVAR DESDE OTROS SCRIPTS ---
+    public void SetHabilidadVelocidad(bool activa)
+    {
+        _isSpeedAbilityActive = activa;
     }
 
     /*void LoseHealth()
