@@ -503,6 +503,7 @@ MonoBehaviour:
   kenonAbiltyVideo: {fileID: 0}
   kenonRadius: 19
   attackPosition: {fileID: 4467761579800963692}
+  _kenonAudio: {fileID: 0}
 --- !u!82 &1116616701399976929
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5073,8 +5074,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.3
-      minScalar: 0.5
+      scalar: 0.5
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:

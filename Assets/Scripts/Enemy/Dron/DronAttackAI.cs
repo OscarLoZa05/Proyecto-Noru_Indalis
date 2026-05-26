@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 
 public class DronAttackAI : MonoBehaviour, IEnemy
 {
@@ -30,6 +31,7 @@ public class DronAttackAI : MonoBehaviour, IEnemy
     private Transform _player;
 
     public EnemyState currentState;
+    public VisualEffect miEfectoVisual;
     
     void Awake()
     {
@@ -97,6 +99,7 @@ public class DronAttackAI : MonoBehaviour, IEnemy
 
     void Attack()
     {
+        miEfectoVisual.Play();
         // 1. Calculas la dirección (Correcto)
         Vector3 direction = (_originPlayer.position - _bulletSpawn.position).normalized;
 

@@ -47,10 +47,18 @@ public class AperionAI : MonoBehaviour, IEnemy
     [Header("VFX")]
     public VisualEffect VFXGraph;
 
+    private AudioSource _aU;
+    public AudioClip damages;
+    public AudioClip death;
+    public AudioClip walk;
+    public AudioClip run;
+    public AudioClip attack;
+
     void Awake()
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
+        _aU = GetComponent<AudioSource>();
         
         GameObject playerObj = GameObject.FindWithTag("Player");
         if (playerObj != null) _player = playerObj.transform;
@@ -199,6 +207,7 @@ public class AperionAI : MonoBehaviour, IEnemy
     public void Attack()
     {
         if (_isDead) return;
+        _aU.PlayOneShot(attack);
 
         _detectionRange = 20;
         if (_attackPosition == null) return;
@@ -230,6 +239,7 @@ public class AperionAI : MonoBehaviour, IEnemy
     public void TakeDamage(int damage)
     {
         if (_isDead) return;
+        _aU.PlayOneShot(damages);
         _detectionRange = 100;
         _currentLife -= damage;
     }

@@ -88,6 +88,7 @@ public class Level2Manager : MonoBehaviour
     }
     private IEnumerator SecuenciaVideoCoroutine()
     {
+        AudioListener.pause = true;
         
         // ----------------------------------------
         // 1. REPRODUCIR EL PRIMER VIDEO
@@ -137,6 +138,7 @@ public class Level2Manager : MonoBehaviour
         // canvasObjeto.SetActive(false);
         Wendigo(); 
         camaraActivada = true;
+        AudioListener.pause = false;
         
     }
 

@@ -188,7 +188,7 @@ Transform:
   m_GameObject: {fileID: 1202056039952630315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.47, z: 2.4}
+  m_LocalPosition: {x: 0, y: 2.47, z: 5.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -818,6 +818,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8879528566716807029, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9008803478592468433, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -851,6 +855,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4787348731643646631}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1026929631121610473}
     - targetCorrespondingSourceObject: {fileID: -4370111678170979691, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2392072393269289658}
@@ -910,18 +917,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _detectionRange: 19.16
-  _attackRange: 5.6
-  _attackTimer: 0
+  _attackRange: 4.63
   _attackDelay: 5
   _attackPosition: {fileID: 2451066382104831931}
   _attackRadius: 2.62
   _damage: 25
   _currentLife: 0
   _maxLife: 150
-  _isDead: 0
   _dronUsed: 0
   _distanceToDron: 25
   VFXGraph: {fileID: 6166877780006611040}
+  damages: {fileID: 0}
+  death: {fileID: 0}
+  walk: {fileID: 0}
+  run: {fileID: 0}
+  attack: {fileID: 8300000, guid: 4809168dce060df46872c05403ffbb0f, type: 3}
 --- !u!195 &323833294547564372
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -967,6 +977,103 @@ CapsuleCollider:
   m_Height: 7.96
   m_Direction: 1
   m_Center: {x: 0, y: 2.16, z: 0}
+--- !u!82 &1026929631121610473
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735590855951414675}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5020951427805768279 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4370111678170979691, guid: 5d2261cf9e644be47965fdde1cd9304f, type: 3}

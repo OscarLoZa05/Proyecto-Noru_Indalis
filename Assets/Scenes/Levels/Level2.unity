@@ -5911,7 +5911,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504720337}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 1c2e541d6ea5c5b48b505fb5deb12d1d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 7515c5d5f3e66b443862b5a13f5d9b5b, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -5925,12 +5925,14 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -11779,7 +11781,7 @@ MonoBehaviour:
   rawImageComponente: {fileID: 504720340}
   videoPlayer: {fileID: 504720339}
   primerVideo: {fileID: 32900000, guid: 128a4347146a05a408b56c8fea036656, type: 3}
-  segundoVideo: {fileID: 32900000, guid: 1c2e541d6ea5c5b48b505fb5deb12d1d, type: 3}
+  segundoVideo: {fileID: 32900000, guid: 7515c5d5f3e66b443862b5a13f5d9b5b, type: 3}
   objetosParaDesactivar:
   - {fileID: 286436770}
   - {fileID: 195155596}
@@ -14896,7 +14898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1283239164
 Transform:
   m_ObjectHideFlags: 0
@@ -15440,37 +15442,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 24e85416f0fc9934295bde3d7af12966, type: 3}
   m_PrefabInstance: {fileID: 1337656084}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1339356458
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1339356459}
-  m_Layer: 0
-  m_Name: ----Drones Defensa
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1339356459
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1339356458}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -788.57275, y: -224.02663, z: 169.08842}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1344007492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22059,10 +22030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apeiron
       objectReference: {fileID: 0}
-    - target: {fileID: 5095772793068527108, guid: d38d9affafdee3841b94f657441e3fbe, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 5345176191931009111, guid: d38d9affafdee3841b94f657441e3fbe, type: 3}
+      propertyPath: damages
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f8729bf3d8e56f48bdadd877a082999, type: 3}
     - target: {fileID: 5345176191931009111, guid: d38d9affafdee3841b94f657441e3fbe, type: 3}
       propertyPath: '_patrolPoints.Array.data[0]'
       value: 
@@ -22071,10 +22042,6 @@ PrefabInstance:
       propertyPath: '_patrolPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 907426231}
-    - target: {fileID: 9065273268907933623, guid: d38d9affafdee3841b94f657441e3fbe, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24087,6 +24054,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6867307702321161066, guid: 501dce2fc21b60f4c87e8df47114808f, type: 3}
+      propertyPath: m_Text
+      value: Resume
+      objectReference: {fileID: 0}
     - target: {fileID: 7230451937084925964, guid: 501dce2fc21b60f4c87e8df47114808f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -25273,7 +25244,6 @@ SceneRoots:
   - {fileID: 1147721651}
   - {fileID: 1738847556}
   - {fileID: 1283239164}
-  - {fileID: 1339356459}
   - {fileID: 96547047}
   - {fileID: 725593525}
   - {fileID: 869747902}

@@ -57,7 +57,8 @@ public class Kenon : MonoBehaviour
     
 
     public IEnumerator Habilidad()
-    {
+    {   
+        GameManager.Instance.isChangingScene = true;
         _kenonAudio.ignoreListenerPause = true;
         AudioListener.pause = true;
         PlayerData.Instance.currentNoru = 0;
@@ -70,6 +71,7 @@ public class Kenon : MonoBehaviour
         Time.timeScale = 1;
         AudioListener.pause = false;
         AtaqueKenon();
+        GameManager.Instance.isChangingScene = true;
         Debug.Log("TUPUTAMDARE");
     }
 
