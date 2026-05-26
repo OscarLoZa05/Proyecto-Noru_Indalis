@@ -50,9 +50,12 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _EmissiveExposureWeight: 0.723
+    - _EmissiveIntensity: 33.52411
+    - _UseEmissiveIntensity: 1
     m_Colors:
-    - _EmissiveColor: {r: 0, g: 25.110214, b: 16.320333, a: 27.5}
-    - _EmissiveColorLDR: {r: 0, g: 0.9607843, b: 0.7938564, a: 1}
+    - _EmissiveColor: {r: 0, g: 25.110214, b: 16.320332, a: 33.52411}
+    - _EmissiveColorLDR: {r: 0, g: 0.88031507, b: 0.726611, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
