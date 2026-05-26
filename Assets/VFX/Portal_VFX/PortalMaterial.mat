@@ -101,7 +101,7 @@ Material:
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _PortalColor: {r: 41.120373, g: 31.802065, b: 155.74858, a: 0}
+    - _PortalColor: {r: 164.48149, g: 127.20826, b: 622.9943, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8120605787737546987
