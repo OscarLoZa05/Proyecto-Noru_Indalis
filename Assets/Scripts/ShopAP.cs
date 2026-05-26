@@ -133,11 +133,11 @@ public class ShopAP : MonoBehaviour, IInteractable
 
     void ManaText()
     {
-        manaText.text = ": " + manaCount.ToString();
+        manaText.text = manaCount.ToString();
     }
     void HealthText()
     {
-        healthText.text = ": " + healthCount.ToString();
+        healthText.text = healthCount.ToString();
     }
 
     public void PriceNow()

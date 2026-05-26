@@ -311,21 +311,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca9605be89047d43b2164459c69ab9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
   _audioFoots: {fileID: 0}
   _footSFX: {fileID: 0}
   _deadSFX: {fileID: 0}
-  currentState: 0
-  _detectionRange: 7
-  _attackRange: 4.26
-  _attackTimer: 0
+  _attackRange: 10.01
+  _escapeRange: 3.5
   _attackDelay: 2
-  _attackPosition: {fileID: 8525967010164304854}
-  _attackRadius: 16
-  _chargingTimer: 0
   _chargingDelay: 5
   _currentLife: 0
   _maxLife: 500
-  _isDead: 0
 --- !u!65 &1565060167681195841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -345,8 +340,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.088385, y: 5.866039, z: 2.1370544}
-  m_Center: {x: 0, y: 2.4330194, z: 0.5685272}
+  m_Size: {x: 4.3562202, y: 7.871275, z: 2.1370544}
+  m_Center: {x: 0, y: 3.4356375, z: 0.5685272}
 --- !u!54 &3594557937517253533
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -399,7 +394,7 @@ Transform:
   m_GameObject: {fileID: 7468427903443335653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10.2}
+  m_LocalPosition: {x: 0, y: 0, z: -8.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -755,7 +750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackPosition: {fileID: 842959135383697626}
-  _attackRadius: 10
+  _attackRadius: 22.98
+  _damage: 50
 --- !u!4 &6425138985790090411 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45e5f7ff2ac78ed4f9a7533f1dabf7a4, type: 3}

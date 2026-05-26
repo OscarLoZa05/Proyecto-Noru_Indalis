@@ -1,40 +1,66 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class AttackWendigo : MonoBehaviour
 {
+    private WendigoAI _parentAI;
 
-    private WendigoAI _wendigoAI;
-    public Transform _attackPosition;
-    public float _attackRadius = 50; 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Attack Area")]
+    [SerializeField] private Transform _attackPosition;
+    [SerializeField] private float _attackRadius = 5f;
+    [SerializeField] private int _damage = 50;
+
     void Awake()
     {
-        _wendigoAI = GetComponentInParent<WendigoAI>();
+        _parentAI = GetComponentInParent<WendigoAI>();
     }
 
-    public void Attack1()
+    // Pon este evento en el FRAME 0 de tu animación de ataque
+    public void StartAttackAnimation()
     {
-        Collider[] players = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
-            foreach (Collider item in players)
+        if (_parentAI != null) _parentAI.ForzarFreno(true);
+    }
+
+    // Pon este evento en el FRAME EXACTO del impacto visual
+    public void Attack()
+    {
+        if (_attackPosition == null) return;
+
+        Collider[] hitColliders = Physics.OverlapSphere(_attackPosition.position, _attackRadius);
+        foreach (Collider hit in hitColliders)
+        {
+            if (hit.CompareTag("Player"))
             {
-                if(item.gameObject.CompareTag("Player"))
+                // Busca el script de vida de tu jugador (Ajusta 'PlayerResources' al nombre real de tu script)
+                PlayerResources playerLife = hit.GetComponent<PlayerResources>();
+                if (playerLife != null)
                 {
-                    PlayerResources _playerResources = item.GetComponent<PlayerResources>();
-                    
-                    if(_playerResources != null)
-                    {
-                        _playerResources.TakeDamage(75);
-                        _wendigoAI.currentState = WendigoAI.EnemyState.Charging;
-                    }
+                    playerLife.TakeDamage(_damage); // Ajusta 'TakeDamage' al nombre de tu función
+                    Debug.Log("¡El jugador ha recibido daño del Wendigo!");
                 }
             }
-        
-            
+        }
     }
+
+    // Pon este evento en el ÚLTIMO FRAME de tu animación de ataque
+    public void EndAttackAnimation()
+    {
+        if (_parentAI != null) 
+        {
+            _parentAI.TerminarAtaqueYEntrarEnCooldown(); 
+        }
+    }
+
+    public void SoundFoot()
+    {
+        if (_parentAI != null) _parentAI.SoundFoot();
+    }
+
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
+        if (_attackPosition != null)
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
+        }
     }
 }

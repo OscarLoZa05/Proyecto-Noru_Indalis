@@ -125,7 +125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 5418701909750883398}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1549,6 +1549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b2596fab1a7054a93a31c115735a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speedAbilityMultiplier: 1.8
   _moveValue: {x: 0, y: 0}
   _lookValue: {x: 0, y: 0}
   _lookAtCamera: {fileID: 0}
@@ -2658,14 +2659,12 @@ MonoBehaviour:
   - {fileID: 311171368}
   _detectionRange: 20
   _attackRange: 2.8
-  _attackTimer: 0
   _attackDelay: 5
   _attackPosition: {fileID: 1893170754}
   _attackRadius: 1.82
   _damage: 25
   _currentLife: 0
   _maxLife: 150
-  _isDead: 0
   _dronUsed: 0
   _distanceToDron: 50
   VFXGraph: {fileID: 0}
@@ -3183,14 +3182,12 @@ MonoBehaviour:
   _patrolPoints: []
   _detectionRange: 20
   _attackRange: 2.8
-  _attackTimer: 0
   _attackDelay: 5
   _attackPosition: {fileID: 2058549287}
   _attackRadius: 2
   _damage: 25
   _currentLife: 0
   _maxLife: 150
-  _isDead: 0
   _dronUsed: 0
   _distanceToDron: 25
   VFXGraph: {fileID: 0}
@@ -4707,9 +4704,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 842959135383697626, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1493788496689559369, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
       propertyPath: m_Name
       value: Wendigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277715537381410771, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      propertyPath: _attackRadius
+      value: 22.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 5375388138323943894, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      propertyPath: _attackRange
+      value: 10.01
       objectReference: {fileID: 0}
     - target: {fileID: 8525967010164304854, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
       propertyPath: m_LocalPosition.x

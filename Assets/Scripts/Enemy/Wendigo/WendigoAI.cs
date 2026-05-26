@@ -4,47 +4,39 @@ using UnityEngine.AI;
 
 public class WendigoAI : MonoBehaviour
 {
-
-    private AudioSource _audioSource;
-    private NavMeshAgent _enemyAgent;
-    private Animator _animator;
-    [SerializeField] AudioSource _audioFoots;
-    [SerializeField] AudioClip _footSFX;
-    [SerializeField] AudioClip _deadSFX;
-    
-    public enum EnemyState
-    {
-        Chasing,
-        Charging,
-        Attacking,
-        Dead,
-    }
-
+    public enum EnemyState { Chasing, Charging, Attacking, Dead }
+    [Header("State Machine")]
     public EnemyState currentState;
 
-    //Chasing
-    [SerializeField] private float _detectionRange = 7f;
+    private NavMeshAgent _enemyAgent;
+    private Animator _animator;
+    private AudioSource _audioSource;
 
-    //Attack
-    [SerializeField] private float _attackRange = 2f;
-    [SerializeField] private float _attackTimer;
-    [SerializeField] private float _attackDelay = 2;
-    [SerializeField] private Transform _attackPosition;
-    [SerializeField] private int _attackRadius = 5;
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource _audioFoots;
+    [SerializeField] private AudioClip _footSFX;
+    [SerializeField] private AudioClip _deadSFX;
+    
+    [Header("Ranges & Hysteresis")]
+    [SerializeField] private float _attackRange = 2f;    // Distancia para iniciar el ataque
+    [SerializeField] private float _escapeRange = 3.5f;  // Colchón de seguridad para cancelar el ataque
 
-    //Charging
-    [SerializeField] private float _chargingTimer;
-    [SerializeField] private float _chargingDelay = 5;
+    [Header("Attack Settings")]
+    [SerializeField] private float _attackDelay = 2f;
+    private float _attackTimer;
+    private bool _yaAcoquillado = false; // Candado para evitar repeticiones de animación
 
-    //Player
-    private Transform _player;
+    [Header("Charging / Cooldown Settings")]
+    [SerializeField] private float _chargingDelay = 5f;
+    private float _chargingTimer;
 
-    //Life
+    [Header("Life Settings")]
     [SerializeField] private int _currentLife;
     [SerializeField] private int _maxLife = 500;
-    [SerializeField] private bool _isDead = false;
 
-    private AttackWendigo _attackWendigo;
+    private Transform _player;
+    private bool _isDead = false;
+    private bool _movimientoBloqueado = false;
 
     void Awake()
     {
@@ -52,175 +44,216 @@ public class WendigoAI : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _animator = GetComponentInChildren<Animator>();
 
-        _player = GameObject.FindWithTag("Player").transform;
-
-        _attackWendigo = GetComponentInChildren<AttackWendigo>();
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null) _player = playerObj.transform;
     }
 
     void Start()
     {
         _currentLife = _maxLife;
+        _enemyAgent.speed = 3.5f;
         currentState = EnemyState.Chasing;
-        _animator.SetBool("IsWalking", true);
-        _attackTimer = _attackDelay;
+        
+        if (_animator != null)
+        {
+            _animator.SetBool("IsWalking", true);
+            _animator.SetBool("IsCooldown", false);
+            _animator.SetBool("IsAttacking", false);
+        }
+        // Empezamos con el ataque cargado para el primer encuentro
+        _attackTimer = _attackDelay; 
     }
 
     void Update()
     {
-        switch(currentState)
+        if (_isDead) return;
+
+        // Si la animación de ataque bloquea el movimiento, congelamos al agente inmediatamente
+        if (_movimientoBloqueado)
+        {
+            _enemyAgent.isStopped = true;
+            _enemyAgent.velocity = Vector3.zero;
+            return;
+        }
+
+        float distanceToPlayer = (_player != null) ? Vector3.Distance(transform.position, _player.position) : float.MaxValue;
+
+        switch (currentState)
         {
             case EnemyState.Chasing:
-                Chasing();
-            break;
+                Chasing(distanceToPlayer);
+                break;
             case EnemyState.Charging:
-                Charging();
-            break;
+                Charging(distanceToPlayer);
+                break;
             case EnemyState.Attacking:
-                Attacking();
-            break;
+                Attacking(distanceToPlayer);
+                break;
             case EnemyState.Dead:
                 Dead();
-            break;
-            default:
-                Chasing();
-            break;
+                break;
         }
     }
 
-    void Chasing()
+    public void ForzarFreno(bool frenar)
     {
-        if(_isDead) return;
-        if(_currentLife <= 0)
+        _movimientoBloqueado = frenar;
+        if (frenar)
         {
-            Dead();
+            _enemyAgent.isStopped = true;
+            _enemyAgent.velocity = Vector3.zero;
         }
-    
-        _enemyAgent.SetDestination(_player.position);
+    }
+
+    // Método invocado por el hijo (AttackWendigo) en el ÚLTIMO FRAME de la animación
+    public void TerminarAtaqueYEntrarEnCooldown()
+    {
+        _movimientoBloqueado = false;
+        _yaAcoquillado = false; // Abrimos el candado para permitir futuros ataques
+        currentState = EnemyState.Charging;
+        _chargingTimer = 0;
+
+        if (_animator != null)
+        {
+            _animator.SetBool("IsAttacking", false); // Apagamos el booleano para salir de la animación
+            _animator.SetBool("IsCooldown", true); 
+            _animator.SetBool("IsWalking", false);
+        }
+    }
+
+    void Chasing(float distanceToPlayer)
+    {
         _enemyAgent.isStopped = false;
-        if(OnRange(_attackRange))
+        _enemyAgent.speed = 3.5f;
+
+        if (_player != null) _enemyAgent.SetDestination(_player.position);
+
+        if (distanceToPlayer <= _attackRange)
         {
             currentState = EnemyState.Attacking;
         }
     }
 
-    void Charging()
+    void Charging(float distanceToPlayer)
     {
-        if(_isDead) return;
-        if(_currentLife <= 0)
-        {
-            Dead();
-        }
+        // Forzamos reposo absoluto durante la recarga de energía
         _enemyAgent.isStopped = true;
-        _enemyAgent.speed = 0;
-        _enemyAgent.ResetPath();
+        _enemyAgent.velocity = Vector3.zero;
 
         _chargingTimer += Time.deltaTime;
 
-        if(_chargingTimer >= _chargingDelay)
+        if (_chargingTimer >= _chargingDelay)
         {
-            currentState = EnemyState.Chasing;
-            _enemyAgent.speed = 3.5f;
             _chargingTimer = 0;
+            
+            if (distanceToPlayer <= _attackRange)
+            {
+                // Si el jugador sigue al lado, atacamos directo sin pasar por caminar
+                _attackTimer = _attackDelay; 
+                currentState = EnemyState.Attacking;
+                if (_animator != null)
+                {
+                    _animator.SetBool("IsCooldown", false);
+                    _animator.SetBool("IsAttacking", true);
+                }
+            }
+            else
+            {
+                // Si el jugador se ha movido, volvemos a perseguir
+                if (_animator != null)
+                {
+                    _animator.SetBool("IsCooldown", false); 
+                    _animator.SetBool("IsWalking", true);
+                }
+                
+                // ATAQUE INSTANTÁNEO: Le damos el temporizador lleno para que
+                // en cuanto te toque corriendo, te pegue sin esperar.
+                _attackTimer = _attackDelay; 
+                
+                currentState = EnemyState.Chasing;
+            }
         }
     }
 
-    void Attacking()
+    void Attacking(float distanceToPlayer)
     {
-        if(_isDead) return;
-        if(_currentLife <= 0)
+        // Cancelamos el ataque solo si te alejas más allá de la zona de escape (Hysteresis)
+        if (distanceToPlayer > _escapeRange && !_yaAcoquillado)
         {
-            Dead();
-        }
-        if(OnRange(_attackRange))
-        {
-            
-            _enemyAgent.isStopped = true;
-
-            _attackTimer += Time.deltaTime;
-
-            if(_attackTimer >= _attackDelay)
-            {   
-                _animator.SetTrigger("IsAttacking");
-                _attackTimer = 0;
-                currentState = EnemyState.Charging;
-                _animator.SetBool("IsCooldawn", true);
-                _animator.SetBool("IsWalking", false);
-            }
-        }
-        if(!OnRange(_attackRange))
-        {
-            _animator.SetBool("IsCooldawn", false);
-            _animator.SetBool("IsWalking", true);
+            if (_animator != null) _animator.SetBool("IsAttacking", false);
             currentState = EnemyState.Chasing;
+            return;
+        }
+
+        _enemyAgent.isStopped = true;
+        _enemyAgent.velocity = Vector3.zero;
+
+        // Si la animación de ataque ya fue activada, salimos del método para no duplicar llamadas
+        if (_yaAcoquillado) return;
+
+        _attackTimer += Time.deltaTime;
+
+        if (_attackTimer >= _attackDelay)
+        {   
+            _yaAcoquillado = true; // Cerramos el candado: procesando ataque actual
+            if (_animator != null)
+            {
+                _animator.SetBool("IsWalking", false);
+                _animator.SetBool("IsAttacking", true); // Encendemos el booleano
+            }
+            _attackTimer = 0;
         }
     }
 
     public void SoundFoot()
     {
-        _audioFoots.PlayOneShot(_footSFX);
+        if (_audioFoots != null && _footSFX != null) _audioFoots.PlayOneShot(_footSFX);
+    }
+
+    public void RecibirDanio(int damage)
+    {
+        if (_isDead) return;
+        _currentLife -= damage;
+        if (_currentLife <= 0) 
+        {
+            _currentLife = 0;
+            Dead();
+        }
     }
 
     void Dead()
     {
-        PlayerData.Instance.currentNoru += 40;
-        _animator.SetTrigger("IsDead");
+        if (_isDead) return; 
         _isDead = true;
-        return;
-  
-    }
-    
-    
-    
 
-    void TurnToCharging()
-    {
-        currentState = EnemyState.Charging;
-    }
+        if (PlayerData.Instance != null) PlayerData.Instance.currentNoru += 40;
+        if (_audioSource != null && _deadSFX != null) _audioSource.PlayOneShot(_deadSFX);
 
-    void TakeDamage(int damage)
-    {
-        _currentLife -= damage;
-    }
-
-    
-
-    bool OnRange(float distance)
-    {
-        float distanceToPlayer = Vector3.Distance(transform.position, _player.position);
+        if (_animator != null) _animator.SetTrigger("IsDead");
         
-        if(distanceToPlayer <= distance)
-        {
-         return true;    
-        }
-        else
-        {
-            return false;
-        }  
+        _enemyAgent.isStopped = true;
+        _enemyAgent.enabled = false; 
     }
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.CompareTag("Arrow"))
+        if (collider.gameObject.CompareTag("Arrow"))
         {
-            TakeDamage(20);
+            RecibirDanio(20);
             collider.gameObject.SetActive(false);
         }
-        if(collider.gameObject.CompareTag("Fire"))
+        if (collider.gameObject.CompareTag("Fire"))
         {
             collider.gameObject.SetActive(false);
-            TakeDamage(50);
+            RecibirDanio(50);
         }
     }
-
-    
 
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _attackRange);
-
-        Gizmos.color = Color.gray;
-        Gizmos.DrawWireSphere(_attackPosition.position, _attackRadius);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, _escapeRange);
     }
 }
-
