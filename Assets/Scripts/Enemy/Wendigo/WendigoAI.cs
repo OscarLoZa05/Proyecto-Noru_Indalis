@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
 
-public class WendigoAI : MonoBehaviour
+public class WendigoAI : MonoBehaviour, IEnemy
 {
     public enum EnemyState { Chasing, Charging, Attacking, Dead }
     [Header("State Machine")]
@@ -209,7 +209,7 @@ public class WendigoAI : MonoBehaviour
         if (_audioSource != null && _footSFX != null) _audioSource.PlayOneShot(_footSFX);
     }
 
-    public void RecibirDanio(int damage)
+    public void TakeDamage(int damage)
     {
         if (_isDead) return;
         _currentLife -= damage;
@@ -238,13 +238,13 @@ public class WendigoAI : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Arrow"))
         {
-            RecibirDanio(20);
+            TakeDamage(20);
             collider.gameObject.SetActive(false);
         }
         if (collider.gameObject.CompareTag("Fire"))
         {
+            TakeDamage(50);
             collider.gameObject.SetActive(false);
-            RecibirDanio(50);
         }
     }
 

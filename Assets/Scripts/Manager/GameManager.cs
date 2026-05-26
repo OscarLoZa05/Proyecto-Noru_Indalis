@@ -57,9 +57,10 @@ public class GameManager : MonoBehaviour
             
             if(PauseCanvas != null) PauseCanvas.SetActive(true);
             
+            AudioListener.pause = true;
             // Pausamos los audios si están asignados
-            if(_BGM != null && _BGM.isPlaying) _BGM.Pause();
-            if(_playerSounds != null && _playerSounds.isPlaying) _playerSounds.Pause();
+            //if(_BGM != null && _BGM.isPlaying) _BGM.Pause();
+            //if(_playerSounds != null && _playerSounds.isPlaying) _playerSounds.Pause();
         }
         else
         {
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
             
             if(PauseCanvas != null) PauseCanvas.SetActive(false);
             
+            AudioListener.pause = false;
             // Reanudamos los audios
             if(_BGM != null) _BGM.UnPause();
             if(_playerSounds != null) _playerSounds.UnPause();

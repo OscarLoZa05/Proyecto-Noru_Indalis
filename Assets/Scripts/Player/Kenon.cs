@@ -14,6 +14,7 @@ public class Kenon : MonoBehaviour
     [Header("Kenon")]
     public float kenonRadius = 10;
     public Transform attackPosition;
+    public AudioSource _kenonAudio;
     
 
     void Awake()
@@ -57,7 +58,8 @@ public class Kenon : MonoBehaviour
 
     public IEnumerator Habilidad()
     {
-        
+        _kenonAudio.ignoreListenerPause = true;
+        AudioListener.pause = true;
         PlayerData.Instance.currentNoru = 0;
         _actualizacionesdeCanvas.UpdateKenonBar();
         Time.timeScale = 0;
@@ -66,6 +68,7 @@ public class Kenon : MonoBehaviour
         Debug.LogWarning("CHAVBL ESTO FALLA");
         kenonAbiltyVideo.SetActive(false);
         Time.timeScale = 1;
+        AudioListener.pause = false;
         AtaqueKenon();
         Debug.Log("TUPUTAMDARE");
     }
