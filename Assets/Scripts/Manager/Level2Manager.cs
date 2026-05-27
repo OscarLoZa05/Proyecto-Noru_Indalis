@@ -35,6 +35,9 @@ public class Level2Manager : MonoBehaviour
 
     private bool camaraActivada = false;
     public float nuevoValor = 0;
+    public DialogueManager _dialogueManager;
+    public DialogueData _dialogueData;
+    public GameObject _canvasDialogue;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -44,6 +47,9 @@ public class Level2Manager : MonoBehaviour
     
     void Start()
     {
+        GameManager.Instance.DesactivarControlesYCamara();
+        _canvasDialogue.SetActive(true);
+        _dialogueManager.IniciarDialogo(_dialogueData);
         GameManager.Instance.isChangingScene = false;
         targetRenderer = objetoConShader.GetComponent<Renderer>();
         targetRenderer.material.SetFloat("_Opacity", 0);
@@ -136,8 +142,9 @@ public class Level2Manager : MonoBehaviour
         
         // Opcional: Desactivar el canvas al terminar el segundo video si ya no quieres mostrar nada más
         // canvasObjeto.SetActive(false);
-        Wendigo(); 
-        camaraActivada = true;
+        //Wendigo(); 
+        //camaraActivada = true;
+        _dialogueManager.RetomarDialogo(_dialogueData);
         AudioListener.pause = false;
         
     }

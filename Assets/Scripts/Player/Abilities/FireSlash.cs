@@ -25,7 +25,7 @@ public class FireSlash : MonoBehaviour
     IEnumerator Slash()
     {
         yield return new WaitForSeconds(2);
-
         gameObject.SetActive(false);
     }
+    
 }

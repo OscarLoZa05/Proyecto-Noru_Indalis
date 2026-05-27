@@ -8,6 +8,9 @@ public class DronAttackAI : MonoBehaviour, IEnemy
     private NavMeshAgent _enemyAgent;
     [SerializeField] private Transform _bulletSpawn;
     [SerializeField] private Transform _originPlayer;
+    private AudioSource _as;
+    public AudioClip _attackSFX;
+    public AudioClip _deadSFX; 
 
     [SerializeField] private ParticleSystem[] _explosionVFX = new ParticleSystem[4];
     public enum EnemyState
@@ -37,6 +40,7 @@ public class DronAttackAI : MonoBehaviour, IEnemy
     {
         _enemyAgent = GetComponent<NavMeshAgent>();
         _player = GameObject.FindWithTag("Player").transform;
+        _as = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -99,6 +103,7 @@ public class DronAttackAI : MonoBehaviour, IEnemy
 
     void Attack()
     {
+        _as.PlayOneShot(_attackSFX);
         miEfectoVisual.Play();
         // 1. Calculas la dirección (Correcto)
         Vector3 direction = (_originPlayer.position - _bulletSpawn.position).normalized;
@@ -142,7 +147,9 @@ public class DronAttackAI : MonoBehaviour, IEnemy
         {
             item.Play();
         }
-        yield return new WaitForSeconds(0.1f);
+        _as.PlayOneShot(_deadSFX);
+        yield return new WaitForSeconds(1.8f);
+        
         Destroy(gameObject);
     }
 

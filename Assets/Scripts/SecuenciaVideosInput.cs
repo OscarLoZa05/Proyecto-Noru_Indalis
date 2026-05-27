@@ -33,6 +33,15 @@ public class SecuenciaVideosInput : MonoBehaviour
     {
         if (videoPlayer == null) return;
 
+        // --- 0. ATAJO PARA SALTAR TODO (Bloq Mayús / CapsLock) ---
+        if (Input.GetKeyDown(KeyCode.CapsLock))
+        {
+            Debug.Log("Secuencia saltada con Bloq Mayús.");
+            videoPlayer.Stop(); // Detiene el video actual
+            NextLevel();
+            return; // Salimos del Update para evitar interferencias
+        }
+
         // --- 1. CONTROL DE INPUTS ---
         switch (indiceActual)
         {
@@ -66,11 +75,6 @@ public class SecuenciaVideosInput : MonoBehaviour
         Debug.Log("¡EVENTO ANTICIPADO! Faltan " + segundosAntesDeTerminar + " segundos para que termine el video final.");
         
         Debug.Log("PUTAMADRE");
-        // EJEMPLOS DE LO QUE PUEDES HACER AQUÍ:
-        // - Iniciar un Fade Out de la pantalla.
-        // - Cargar la siguiente escena en segundo plano (SceneManager.LoadSceneAsync).
-        // - Activar un sonido o música.
-        // - Mostrar créditos o un menú.
     }
 
     void AlTerminarVideoInstancia(VideoPlayer vp)
@@ -102,8 +106,12 @@ public class SecuenciaVideosInput : MonoBehaviour
 
         Debug.Log("Reproduciendo Video " + indice + " (Modo Loop: " + videoPlayer.isLooping + ")");
     }
+
     void NextLevel()
     {
+        // Evitamos que se intente cambiar de nivel más de una vez si se presiona rápido
+        if (GameManager.Instance.isChangingScene) return;
+
         GameManager.Instance.isChangingScene = true;
         SceneController.Instance
             .NewTransition()
