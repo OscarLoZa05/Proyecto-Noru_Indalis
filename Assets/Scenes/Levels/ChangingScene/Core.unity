@@ -357,6 +357,8 @@ MonoBehaviour:
   _shopOpen: 0
   isChangingScene: 0
   haveKenon: 0
+  _playerInput: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   _BGM: {fileID: 0}
   _playerSounds: {fileID: 0}
 --- !u!1 &1098767283

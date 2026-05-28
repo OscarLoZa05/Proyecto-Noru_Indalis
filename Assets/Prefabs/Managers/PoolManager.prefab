@@ -57,3 +57,7 @@ MonoBehaviour:
     prefab: {fileID: 2726768385005418608, guid: 00d1e8dd8a6964d49a24b99be8d40b8b, type: 3}
     poolSize: 100
     pooledObjects: []
+  - parentName: Wendigo
+    prefab: {fileID: 4194822841357481400, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+    poolSize: 2
+    pooledObjects: []

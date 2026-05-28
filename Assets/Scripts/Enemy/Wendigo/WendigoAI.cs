@@ -15,6 +15,7 @@ public class WendigoAI : MonoBehaviour, IEnemy
     [Header("Audio Settings")]
     [SerializeField] private AudioClip _footSFX;
     [SerializeField] private AudioClip _deadSFX;
+    public AudioClip takedamage;
     
     [Header("Ranges & Hysteresis")]
     [SerializeField] private float _attackRange = 2f;    // Distancia para iniciar el ataque
@@ -229,6 +230,8 @@ public class WendigoAI : MonoBehaviour, IEnemy
         if (_audioSource != null && _deadSFX != null) _audioSource.PlayOneShot(_deadSFX);
 
         if (_animator != null) _animator.SetTrigger("IsDead");
+
+        _audioSource.PlayOneShot(_deadSFX);
         
         _enemyAgent.isStopped = true;
         _enemyAgent.enabled = false; 
@@ -239,6 +242,7 @@ public class WendigoAI : MonoBehaviour, IEnemy
         if (collider.gameObject.CompareTag("Arrow"))
         {
             TakeDamage(20);
+            _audioSource.PlayOneShot(takedamage);
             collider.gameObject.SetActive(false);
         }
         if (collider.gameObject.CompareTag("Fire"))

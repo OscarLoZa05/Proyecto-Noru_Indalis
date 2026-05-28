@@ -14,6 +14,8 @@ public class DialogueManager : MonoBehaviour
     public bool DialogueStarted;
     public GameObject DCanvas;
     public int Index;
+    public Level2Manager _level2Manager;
+    public Level2To3 _level23;
 
     public void Start()
     {
@@ -67,11 +69,13 @@ public class DialogueManager : MonoBehaviour
             {
                 DCanvas.SetActive(false); // Quitamos el Canvas de diálogos temporalmente
                 DialogueStarted = false;
+                Cursor.visible = true;
 
                 if (GameManager.Instance != null)
                 {
                     GameManager.Instance.ActivarControlesYCamara(); // Desbloqueamos controles y cámara
                 }
+                Cursor.visible = false;
 
                 // Hacemos un return aquí para congelar el Index en 2 hasta que llames a RetomarDialogo
                 return; 
@@ -93,7 +97,10 @@ public class DialogueManager : MonoBehaviour
                 // -------------------------------------------------------------
                 // ¡AQUÍ COLOCAS LO QUE QUIERES QUE PASE AL ACABAR EL 5º DIÁLOGO!
                 // -------------------------------------------------------------
-                Debug.Log("El quinto diálogo ha terminado. Ejecutando acción X...");
+                Cursor.visible = false;
+                _level2Manager.Wendigo();
+                _level23.canPass = true;
+
                 
                 // Pon aquí tu código. Ejemplos:
                 // GameManager.Instance.haveKenon = true;

@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 6263017924174180838}
   - component: {fileID: 4458361059517233383}
   - component: {fileID: 1116616701399976929}
+  - component: {fileID: 1119419051871046607}
   m_Layer: 0
   m_Name: Nillo_Player
   m_TagString: Player
@@ -402,6 +403,7 @@ MonoBehaviour:
   _dashSFX: {fileID: 8300000, guid: 4804dda11dd81d94888d87488d8f8eba, type: 3}
   freeLookCam: {fileID: 0}
   thirdPersonCam: {fileID: 0}
+  _isSpeedActiveAbility: 0
 --- !u!114 &715450768350930057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +423,7 @@ MonoBehaviour:
   imageAbility4: {fileID: 0}
   _fireSFX: {fileID: 8300000, guid: 054a426d8c018f547a9c77757385d8cb, type: 3}
   _fireStateSFX: {fileID: 8300000, guid: 879ef54b4357920428c7d4c04e3a496a, type: 3}
-  _waterStateSFX: {fileID: 8300000, guid: 879ef54b4357920428c7d4c04e3a496a, type: 3}
+  _waterStateSFX: {fileID: 8300000, guid: 7c38bbaa38115034ea2357f995310dde, type: 3}
   cooldownAbility1: 15
   currentCooldown1: 15
   ability1Used: 0
@@ -470,6 +472,7 @@ MonoBehaviour:
   healthText: {fileID: 0}
   moneyText: {fileID: 0}
   monetText: {fileID: 0}
+  _spawnPoint: {fileID: 0}
   animationID: MiAnimacionEspecial
 --- !u!114 &6263017924174180838
 MonoBehaviour:
@@ -601,6 +604,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1119419051871046607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812013013115137904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &835972927066999912
 GameObject:
   m_ObjectHideFlags: 0

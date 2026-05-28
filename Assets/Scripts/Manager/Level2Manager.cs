@@ -33,7 +33,7 @@ public class Level2Manager : MonoBehaviour
     [SerializeField] private GameObject objetoConShader;
     private Renderer targetRenderer;
 
-    private bool camaraActivada = false;
+    public bool camaraActivada = false;
     public float nuevoValor = 0;
     public DialogueManager _dialogueManager;
     public DialogueData _dialogueData;
@@ -73,7 +73,7 @@ public class Level2Manager : MonoBehaviour
         }
         if(camaraActivada == true && nuevoValor <= 1)
         {
-            nuevoValor += Time.deltaTime;
+            nuevoValor += Time.deltaTime * 0.05f;
             CambiarValorShader();
         }
         
@@ -146,6 +146,7 @@ public class Level2Manager : MonoBehaviour
         //camaraActivada = true;
         _dialogueManager.RetomarDialogo(_dialogueData);
         AudioListener.pause = false;
+        Cursor.visible = true;
         
     }
 
@@ -170,7 +171,7 @@ public class Level2Manager : MonoBehaviour
             .Perform();   
     }
 
-    void Wendigo()
+    public void Wendigo()
     {
         GameObject Wendigo = PoolManager.Instance.GetPooledObject("Wendigo", wendigoSpawn.position, wendigoSpawn.rotation);
         Wendigo.SetActive(true);

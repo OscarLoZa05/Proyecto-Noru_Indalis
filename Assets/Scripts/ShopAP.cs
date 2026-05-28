@@ -55,6 +55,7 @@ public class ShopAP : MonoBehaviour, IInteractable
     {
         if(_isOpenShop == false)
         {
+            Cursor.visible = true;
             //Canvas
             canvasPlayer.SetActive(false);
             canvasKenon.SetActive(false);
@@ -79,6 +80,7 @@ public class ShopAP : MonoBehaviour, IInteractable
 
     public void CloseShop()
     {
+        Cursor.visible = false;
         //Canvas
         canvasPlayer.SetActive(true);
         canvasKenon.SetActive(true);

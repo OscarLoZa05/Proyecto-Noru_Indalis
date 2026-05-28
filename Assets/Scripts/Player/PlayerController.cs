@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using Unity.Cinemachine;
+using Unity.Cinemachine; // Cinemachine 3.x
 using Unity.Mathematics;
 
 public class PlayerController : MonoBehaviour
@@ -12,10 +12,8 @@ public class PlayerController : MonoBehaviour
     {
         get
         {
-            // 1. Elegimos la velocidad base según si está apuntando (3) o no (11)
             float v = isAiming ? _aimingSpeed : _playerMovementSpeed;
 
-            // 2. Si la habilidad de agua está activa, multiplicamos esa base
             if (_isSpeedAbilityActive)
             {
                 v *= _speedAbilityMultiplier;
@@ -24,11 +22,10 @@ public class PlayerController : MonoBehaviour
             return v;
         }
     }
-    // --- CONTROL DE LA HABILIDAD DE VELOCIDAD ---
+    
     [Header("Habilidad de Velocidad")]
-    [SerializeField] private float _speedAbilityMultiplier = 1.8f; // Multiplica la velocidad (1.8 significa +80% de velocidad)
+    [SerializeField] private float _speedAbilityMultiplier = 1.8f; 
     private bool _isSpeedAbilityActive = false;
-
 
     //Componentes
     private CharacterController _controller;
@@ -51,7 +48,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform _lookAtCamera;
     [SerializeField] float _movementSpeed = 0;
     [SerializeField] float _rangoDeVision = 70;
-    //private InputAction Prueba;
     
     //Movimiento
     [Header("Movement")]
@@ -107,14 +103,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 _lastMoveDirection;
     private bool isDashing = false;
 
-    //Camara
     [Header("Aim")]
     public bool isAiming = false;
     [SerializeField] private GameObject _crosshair;
     [SerializeField] private int _aimingSpeed = 3;
     public float _aimingMultiplayer = 1;
 
-    //Potions
     [Header("Potions")]
     [SerializeField] private int _manaReg = 25;
     [SerializeField] private int _healthReg = 25;
@@ -124,8 +118,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip _dashSFX;
 
     [Header("Referencias de Cámaras")]
-    // En Cinemachine 3.x, ambos pueden referenciarse como CinemachineCamera
-    // pero usamos los tipos específicos si quieres acceder a sus ajustes.
     [SerializeField] private CinemachineCamera freeLookCam; 
     [SerializeField] private CinemachineCamera thirdPersonCam;
     private bool esFreeLookActiva = true;
@@ -144,7 +136,6 @@ public class PlayerController : MonoBehaviour
         _manaAction = InputSystem.actions["PotionsMana"];
         _healthAction = InputSystem.actions["PotionsHealth"];
         _aimingAction = InputSystem.actions["Aiming"];
-
         _lookAction = InputSystem.actions["Look"];
 
         _mainCamera = Camera.main.transform;
@@ -152,7 +143,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        // Inicialización: FreeLook manda al principio
         freeLookCam.Priority = 20;
         thirdPersonCam.Priority = 10;
 
@@ -160,81 +150,74 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.RegisterPlayerSounds(_audioSource);
         }
+        GameManager.Instance.RegisterPlayerInput(GetComponent<PlayerInput>());
     }
+
     void Update()
     {
-        //Debug.Log(_speed);
-        if(_interactAction.WasPressedThisFrame())
+        if (_interactAction.WasPressedThisFrame())
         {
             Interact();
         }
-        if(GameManager.Instance._isDead || GameManager.Instance._isPaused || GameManager.Instance._shopOpen) return;
+
+        // --- NUEVA SOLUCIÓN COMPATIBLE CON CINEMACHINE 3.X ---
+        if (GameManager.Instance._isDead || GameManager.Instance._isPaused || GameManager.Instance._shopOpen || !_moveAction.enabled)
+        {
+            // En Cinemachine 3, si desactivamos el componente de rotación o la lectura de la cámara activa, se congela.
+            // Para asegurar el tiro, si hay diálogo, desactivamos temporalmente los componentes de cinemachine de la escena:
+            if (freeLookCam != null && freeLookCam.enabled) freeLookCam.enabled = false;
+            if (thirdPersonCam != null && thirdPersonCam.enabled) thirdPersonCam.enabled = false;
+            
+            _animator.SetFloat("Speed", 0);
+            return; // Salimos del Update
+        }
+
+        // Si los diálogos terminan o se desbloquean, volvemos a encender las cámaras
+        if (freeLookCam != null && !freeLookCam.enabled) freeLookCam.enabled = true;
+        if (thirdPersonCam != null && !thirdPersonCam.enabled) thirdPersonCam.enabled = true;
+        // -----------------------------------------------------------------
+
         _moveValue = _moveAction.ReadValue<Vector2>();
         _lookValue = _lookAction.ReadValue<Vector2>();
 
         //Acciones
-        if(_jumpAction.WasPerformedThisFrame() && IsGrounded() && isAiming == false)
+        if (_jumpAction.WasPerformedThisFrame() && IsGrounded() && !isAiming)
         {
             Jump();
         }
-        if(_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown && !isAiming)
+        if (_dashAction.WasPressedThisFrame() && _moveValue != Vector2.zero && !isDashing && !isDashOnCooldown && !isAiming)
         {
             StartCoroutine(Dash());
         }
 
-        /*if(_aimingAction.WasPressedThisFrame() && IsGrounded())
-        {
-            Mouse();
-            Aiming();
-        }*/
         if (_aimingAction.WasPressedThisFrame() && IsGrounded())
         {
-            Mouse();
-            //Aiming();
             ToggleCameras();
         }
         
-
-
-
-
-        /*if(Prueba.WasPressedThisFrame())
-        {
-            LoseHealth();
-        }*/
         Movement();
-
         Gravity();
     }
 
-    /*void Start()
-    {
-        _currentZoom = _forward;
-    }*/ 
-
-    
     void Movement()
     {
-        if(isDashing) return;
+        if (isDashing) return;
         _playerSpeed = VelocidadCalculada;
         
-        if(isAiming == false)
+        if (!isAiming)
         {
-            
             Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
-
             float targetSpeed = _playerSpeed;
             
-            if(direction == Vector3.zero)
+            if (direction == Vector3.zero)
             {
                 targetSpeed = 0;
             }
 
             _speed = Mathf.SmoothDamp(_speed, targetSpeed * direction.magnitude, ref _smoothSpeed, 0.1f);
-
             _animationSpeed = Mathf.Lerp(_animationSpeed, targetSpeed, Time.deltaTime * _speedChangeRate);
 
-            if(_animationSpeed < 0.1f)
+            if (_animationSpeed < 0.1f)
             {
                 _animationSpeed = 0;
             }
@@ -251,9 +234,9 @@ public class PlayerController : MonoBehaviour
             }
 
             Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
-            _controller.Move(_speed * Time.deltaTime * moveDirection.normalized  + _playerGravity * Time.deltaTime);
+            _controller.Move(_speed * Time.deltaTime * moveDirection.normalized + _playerGravity * Time.deltaTime);
         }
-        else if(isAiming == true)
+        else 
         {
             Vector3 direction = new Vector3(_moveValue.x, 0, _moveValue.y);
 
@@ -263,16 +246,10 @@ public class PlayerController : MonoBehaviour
             _xRotation -= mouseY;
             _xRotation = Mathf.Clamp(_xRotation, -_rangoDeVision, _rangoDeVision);
 
-            // Rotación del personaje y de la cámara de apuntado
             transform.Rotate(Vector3.up, mouseX);
             _lookAtCamera.localRotation = Quaternion.Euler(_xRotation, 0, 0);
 
-            // --- CORRECCIÓN AQUÍ ---
-            // 1. Usamos '_playerSpeed' (que en tu método Aiming() ya se cambia a '_aimingSpeed', o sea, 3) 
-            //    en lugar de '_movementSpeed' que valía 0.
-            // 2. Sumamos la gravedad al movimiento final para evitar atascos con el suelo.
-
-            if(direction != Vector3.zero)
+            if (direction != Vector3.zero)
             {
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _mainCamera.eulerAngles.y;
                 Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
@@ -281,7 +258,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                // Si no te mueves, igual aplicamos gravedad para que el CharacterController no flote
                 _controller.Move(_playerGravity * Time.deltaTime);
             }
         }
@@ -292,25 +268,20 @@ public class PlayerController : MonoBehaviour
         isAiming = !isAiming;
         _crosshair.SetActive(isAiming);
         _animator.SetBool("IsAiming", isAiming);
-        Debug.Log(isAiming);
-        //CameraAim();
-        if(isAiming)
+
+        if (isAiming)
         {
             _playerSpeed = _aimingSpeed;
-            /*freeLookCamera.SetActive(false);
-            thirdPersonCamera.SetActive(true);*/
         }
-        if(!isAiming)
+        else
         {
             _playerSpeed = _playerMovementSpeed;
-            /*freeLookCamera.SetActive(true);
-            thirdPersonCamera.SetActive(false);*/
         }
     }
 
     void Jump()
     {
-        if(_jumpTimeOutDelta <= 0)
+        if (_jumpTimeOutDelta <= 0)
         {
             _animator.SetTrigger("Jump");
             _playerGravity.y = Mathf.Sqrt(_jumpHeight * -2 * _gravity);
@@ -321,18 +292,16 @@ public class PlayerController : MonoBehaviour
     {
         _animator.SetBool("Grounded", IsGrounded());
 
-        if(IsGrounded())
+        if (IsGrounded())
         {
             _fallTimeOutDelta = fallTimeOut;
-            
-            //_animator.SetBool("Jump", false);
             _animator.SetBool("Fall", false);
-            if(_playerGravity.y < 0)
+            if (_playerGravity.y < 0)
             {
                 _playerGravity.y = -2;
             }
 
-            if(_jumpTimeOutDelta >= 0)
+            if (_jumpTimeOutDelta >= 0)
             {
                 _jumpTimeOutDelta -= Time.deltaTime;
             }
@@ -341,7 +310,7 @@ public class PlayerController : MonoBehaviour
         {
             _jumpTimeOutDelta = jumpTimeOut;
 
-            if(_fallTimeOutDelta >= 0)
+            if (_fallTimeOutDelta >= 0)
             {
                 _fallTimeOutDelta -= Time.deltaTime;
             }
@@ -365,7 +334,7 @@ public class PlayerController : MonoBehaviour
         float timer = 0;
         _audioSource.PlayOneShot(_dashSFX);
 
-        while(timer < _dashTime)
+        while (timer < _dashTime)
         {
             _controller.Move(_lastMoveDirection.normalized * (_dashSpeed * _dashMultiplayer) * Time.deltaTime);
 
@@ -387,46 +356,29 @@ public class PlayerController : MonoBehaviour
     void Interact()
     {
         Collider[] objectsToGrab = Physics.OverlapBox(_interactionPosition.position, _interactionRadius);
-            foreach (Collider item in objectsToGrab)
+        foreach (Collider item in objectsToGrab)
+        {
+            if (item.gameObject.layer == 6)
             {
-                if(item.gameObject.layer == 6)
+                IInteractable interactableObject = item.GetComponent<IInteractable>();
+                if (interactableObject != null)
                 {
-                    IInteractable interactableObject = item.GetComponent<IInteractable>();
-                    if(interactableObject != null)
-                    {
-                        interactableObject.Interact(); 
-                    }
+                    interactableObject.Interact(); 
                 }
             }
+        }
     }
 
-    // --- MÉTODO PARA ACTIVAR DESDE OTROS SCRIPTS ---
     public void SetHabilidadVelocidad(bool activa)
     {
+        _isSpeedActiveAbility = activa; 
         _isSpeedAbilityActive = activa;
     }
 
-    /*void LoseHealth()
-    {
-        _playerResource.currentHealth -= 25;
-        _playerResource.UpdateHealthBar();
-    }*/
+    [SerializeField] private bool _isSpeedActiveAbility; 
 
-    void Mouse()
-    {
-        if(Cursor.visible == true)
-        {
-            Cursor.visible = false;
-            //Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.visible = true;
-            //Cursor.lockState = CursorLockMode.None;
-        }
-    }
 
-     public void ToggleCameras()
+    public void ToggleCameras()
     {
         esFreeLookActiva = !esFreeLookActiva;
         Aiming();
@@ -438,9 +390,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // --- SOLUCIÓN AL GIRO LOCO ---
-            // Sincronizamos la posición y rotación "en bruto" de la cámara de salida 
-            // a la de entrada ANTES de que el Brain haga el cambio.
             thirdPersonCam.ForceCameraPosition(
                 freeLookCam.State.RawPosition, 
                 freeLookCam.State.RawOrientation

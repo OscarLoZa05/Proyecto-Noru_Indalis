@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
 
         _isPaused = true;
         Time.timeScale = 0;
+        Cursor.visible = true;
         
         if (PauseCanvas != null) 
         {
@@ -73,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
+        Cursor.visible = false;
         _isPaused = false;
         Time.timeScale = 1;
         AudioListener.pause = false;
@@ -151,5 +153,10 @@ public class GameManager : MonoBehaviour
     public void RegisterBGM(AudioSource bgmSource) { _BGM = bgmSource; }
     public void RegisterPlayerSounds(AudioSource playerSource) { _playerSounds = playerSource; }
     public void UpdateSensiblity() { PlayerData.Instance.cameraSensitivity = 5; }
+    public void RegisterPlayerInput(PlayerInput playerInputComponent)
+{
+    _playerInput = playerInputComponent;
+    Debug.Log("PlayerInput registrado correctamente en el GameManager.");
+}
     public void QuitGame() { Application.Quit(); }
 }

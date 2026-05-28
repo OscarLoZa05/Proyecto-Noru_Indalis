@@ -141,6 +141,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &113648592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4194822841357481400, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+  m_PrefabInstance: {fileID: 6172000165125967957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &113648593
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113648592}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 14.210983, y: 4.1822243, z: 6.3540955}
+  m_Center: {x: 0, y: 14.478888, z: 2.6770477}
 --- !u!1 &115878313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,6 +1611,7 @@ MonoBehaviour:
   _dashSFX: {fileID: 0}
   freeLookCam: {fileID: 0}
   thirdPersonCam: {fileID: 0}
+  _isSpeedActiveAbility: 0
 --- !u!143 &328304842
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2673,6 +2700,7 @@ MonoBehaviour:
   walk: {fileID: 0}
   run: {fileID: 0}
   attack: {fileID: 0}
+  takedamage: {fileID: 0}
 --- !u!4 &967882027
 Transform:
   m_ObjectHideFlags: 0
@@ -3201,6 +3229,7 @@ MonoBehaviour:
   walk: {fileID: 0}
   run: {fileID: 0}
   attack: {fileID: 0}
+  takedamage: {fileID: 0}
 --- !u!4 &1291489064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 45d691a5b319f1245a781a2f2bcbc27e, type: 3}
@@ -6007,10 +6036,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2763574466661546526, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      propertyPath: m_Size.x
+      value: 4.21855
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763574466661546526, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      propertyPath: m_Size.y
+      value: 15.831687
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763574466661546526, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763574466661546526, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      propertyPath: m_Center.y
+      value: 7.4158435
+      objectReference: {fileID: 0}
     - target: {fileID: 4194822841357481400, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
       propertyPath: m_Name
       value: Wendigo
       objectReference: {fileID: 0}
+    - target: {fileID: 4920241023318253121, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      propertyPath: _deadSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6326f61326d15a34488a7abb1089d310, type: 3}
+    - target: {fileID: 4920241023318253121, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      propertyPath: takedamage
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f094abd971e51a49a475efcc832c02e, type: 3}
     - target: {fileID: 5029708604186465095, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 160
@@ -6054,7 +6107,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4194822841357481400, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 113648593}
   m_SourcePrefab: {fileID: 100100000, guid: 8e9dc77bace2c9c4aa05be9203e09a1a, type: 3}
 --- !u!114 &6844051195846173835
 MonoBehaviour:

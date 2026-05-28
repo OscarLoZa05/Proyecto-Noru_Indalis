@@ -32,6 +32,8 @@ public class PlayerResources : MonoBehaviour
     [Header("Money")]
     public Text monetText;   
 
+    public Transform _spawnPoint;
+
     //Player
     private PlayerAbility _playerAbility;
     [SerializeField] private string animationID = "life";
@@ -104,8 +106,13 @@ public class PlayerResources : MonoBehaviour
         _actualizacionesdeCanvas.UpdateHealthBar();
         if(PlayerData.Instance.currentHealth <= 0)
         {
-            GameManager.Instance._isDead = true;
-            _animator.SetTrigger("IsDead");
+            PlayerData.Instance.currentHealth = 100;
+            PlayerData.Instance.currentMana = 100;
+            _actualizacionesdeCanvas.UpdateHealthBar();
+            _actualizacionesdeCanvas.UpdateManaBar();
+            transform.position = _spawnPoint.position;
+            //GameManager.Instance._isDead = true;
+            //_animator.SetTrigger("IsDead");
             Debug.Log("Muerto");
             //Destroy(gameObject);
         }

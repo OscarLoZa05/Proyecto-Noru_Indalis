@@ -13,11 +13,40 @@ MonoBehaviour:
   m_Name: DialogosLvl2
   m_EditorClassIdentifier: 
   frases:
+  - nombrePersonaje: Nillo
+    lafrase: "Are you still there\u2026?"
+    Icono: {fileID: 790853596, guid: 22e06a9c94286bc478c155ad7fd73de0, type: 3}
+  - nombrePersonaje: ??
+    lafrase: You can move using WASD.
+    Icono: {fileID: 21300000, guid: e1731c5497db3e8428cc9bf5950b1e36, type: 3}
+  - nombrePersonaje: ??
+    lafrase: If I remember correctly, you can shoot icicles with the left mouse button.
+      Try aiming at that drone with the right mouse button.
+    Icono: {fileID: 21300000, guid: e1731c5497db3e8428cc9bf5950b1e36, type: 3}
   - nombrePersonaje: Kenon
-    lafrase: Tu madre que caliente se siente
+    lafrase: "I thought I'd be stuck in here forever\u2026"
+    Icono: {fileID: 21300000, guid: 73b09268c96289443a6dcaa976e1f04f, type: 3}
+  - nombrePersonaje: Kenon
+    lafrase: I can see that they've taken everything from you... just as they did
+      to my people.
+    Icono: {fileID: 21300000, guid: 73b09268c96289443a6dcaa976e1f04f, type: 3}
+  - nombrePersonaje: Nillo
+    lafrase: How did you find out?
     Icono: {fileID: 790853596, guid: 22e06a9c94286bc478c155ad7fd73de0, type: 3}
   - nombrePersonaje: Kenon
-    lafrase: Tu madre que caliente se siente
-    Icono: {fileID: 790853596, guid: 22e06a9c94286bc478c155ad7fd73de0, type: 3}
+    lafrase: I have merged with your body, so I have accessed your memories to find
+      out who you are and what you're doing on my planet.
+    Icono: {fileID: 21300000, guid: 73b09268c96289443a6dcaa976e1f04f, type: 3}
+  - nombrePersonaje: Kenon
+    lafrase: "You helped me despite everything\u2026 so I will help you on your journey,
+      I will walk with you, and I will grant you a fraction of my power."
+    Icono: {fileID: 21300000, guid: 73b09268c96289443a6dcaa976e1f04f, type: 3}
   Cooldowns:
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
   - 0.5

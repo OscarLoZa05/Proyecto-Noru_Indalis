@@ -53,6 +53,7 @@ public class AperionAI : MonoBehaviour, IEnemy
     public AudioClip walk;
     public AudioClip run;
     public AudioClip attack;
+    public AudioClip takedamage;
 
     void Awake()
     {
@@ -293,6 +294,14 @@ public class AperionAI : MonoBehaviour, IEnemy
         StartCoroutine(Destruccion());
     }
 
+    public void Caminar()
+    {
+        _aU.PlayOneShot(walk);
+    }
+        public void Correr()
+    {
+        _aU.PlayOneShot(run);
+    }
     IEnumerator Destruccion()
     {
         yield return new WaitForSeconds(10);
@@ -305,6 +314,7 @@ public class AperionAI : MonoBehaviour, IEnemy
         {
             collider.gameObject.SetActive(false);
             TakeDamage(20);   
+            _aU.PlayOneShot(takedamage);
         }
         if (collider.gameObject.CompareTag("Fire"))
         {

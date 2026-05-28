@@ -13,6 +13,7 @@ public class Level3Manager : MonoBehaviour
     
     void Start()
     {
+        Cursor.visible = false;
         GameManager.Instance.isChangingScene = false;
         _player.transform.position = _spawnPosition.position;
 

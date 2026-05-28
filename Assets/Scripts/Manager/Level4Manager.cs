@@ -11,6 +11,7 @@ public class Level4Manager : MonoBehaviour
     }
     void Start()
     {
+        Cursor.visible = false;
         GameManager.Instance.isChangingScene = false;
     }
 

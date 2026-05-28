@@ -11,6 +11,7 @@ public class DronAttackAI : MonoBehaviour, IEnemy
     private AudioSource _as;
     public AudioClip _attackSFX;
     public AudioClip _deadSFX; 
+    public AudioClip takedamage;
 
     [SerializeField] private ParticleSystem[] _explosionVFX = new ParticleSystem[4];
     public enum EnemyState
@@ -157,8 +158,9 @@ public class DronAttackAI : MonoBehaviour, IEnemy
     {
         if(collider.gameObject.CompareTag("Arrow"))
         {
-            Debug.Log("Me has hecho da´ñi");
+            Debug.Log("Me has hecho dañi");
             TakeDamage(10);
+            _as.PlayOneShot(takedamage);
             
             //collider.gameObject.SetActive(false);
         }
